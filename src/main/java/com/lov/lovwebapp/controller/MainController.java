@@ -54,6 +54,11 @@ public class MainController {
         return new ModelAndView("redirect:/login");
     }
 
+    @RequestMapping("/redirectToLogin")
+    public ModelAndView redirectToLogin(){return new ModelAndView("redirect:/login");}
+    @RequestMapping("/redirectToSignUp")
+    public ModelAndView redirectToSignUp(){return new ModelAndView("redirect:/signUp");}
+
     @RequestMapping("/verify-token")
     public ModelAndView verifyToken(@RequestParam String token) {
         userService.verifyToken(token);
