@@ -29,6 +29,7 @@ public class MainController {
         this.userService = userService;
     }
 
+
     @RequestMapping("/login")
     public String login() {
         return "login";
