@@ -1,4 +1,4 @@
-package com.lov.lovwebapp;
+package com.lov.lovwebapp.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

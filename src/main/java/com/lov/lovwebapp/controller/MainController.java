@@ -7,6 +7,7 @@ import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ public class MainController {
     private UserRepo userRepo;
     private PasswordEncoder passwordEncoder;
     private UserService userService;
+   // private boolean check;
 
     @Autowired
     public MainController(UserRepo userRepo, PasswordEncoder passwordEncoder, UserService userService) {
@@ -41,17 +43,22 @@ public class MainController {
     }
 
     @RequestMapping("/signUp")
-    public ModelAndView signUp() {
+    public ModelAndView signUp(Model model) {
+ //      model.addAttribute("check",check);
         return new ModelAndView("register", "user", new User());
+
     }
 
     @RequestMapping("/register")
     public ModelAndView register(User user, HttpServletRequest httpServletRequest) {
-        try {
-            userService.addNewUser(user, httpServletRequest);
-        } catch (javax.mail.MessagingException e) {
-        }
-        return new ModelAndView("redirect:/login");
+      //  if(check) {
+            try {
+                userService.addNewUser(user, httpServletRequest);
+            } catch (javax.mail.MessagingException e) {
+            }
+            return new ModelAndView("redirect:/login");
+     //   }
+     //   return null;
     }
 
     @RequestMapping("/redirectToLogin")
