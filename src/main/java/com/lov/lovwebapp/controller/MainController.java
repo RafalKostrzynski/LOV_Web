@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,15 +17,13 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class MainController {
 
-    private UserRepo userRepo;
-    private PasswordEncoder passwordEncoder;
     private UserService userService;
-   // private boolean check;
+    private String email = "";
+    // private boolean check;
 
     @Autowired
-    public MainController(UserRepo userRepo, PasswordEncoder passwordEncoder, UserService userService) {
-        this.userRepo = userRepo;
-        this.passwordEncoder = passwordEncoder;
+    public MainController(UserService userService) {
+
         this.userService = userService;
     }
 
@@ -42,33 +38,39 @@ public class MainController {
         return "main";
     }
 
-    @RequestMapping("/signUp")
-    public ModelAndView signUp(Model model) {
- //      model.addAttribute("check",check);
+    @RequestMapping("/signup")
+    public ModelAndView signUp() {
         return new ModelAndView("register", "user", new User());
 
     }
 
     @RequestMapping("/register")
     public ModelAndView register(User user, HttpServletRequest httpServletRequest) {
-      //  if(check) {
-            try {
-                userService.addNewUser(user, httpServletRequest);
-            } catch (javax.mail.MessagingException e) {
-            }
-            return new ModelAndView("redirect:/login");
-     //   }
-     //   return null;
+        userService.saveUser(user, httpServletRequest);
+        email = user.getEmail();
+        return new ModelAndView("redirect:/token-sent");
     }
 
     @RequestMapping("/redirectToLogin")
-    public ModelAndView redirectToLogin(){return new ModelAndView("redirect:/login");}
+    public ModelAndView redirectToLogin() {
+        return new ModelAndView("redirect:/login");
+    }
+
     @RequestMapping("/redirectToSignUp")
-    public ModelAndView redirectToSignUp(){return new ModelAndView("redirect:/signUp");}
+    public ModelAndView redirectToSignUp() {
+        return new ModelAndView("redirect:/signup");
+    }
 
     @RequestMapping("/verify-token")
-    public ModelAndView verifyToken(@RequestParam String token) {
-        userService.verifyToken(token);
+    public ModelAndView verifyToken(@RequestParam String token, User user) {
+        userService.verifyToken(user, token);
+        email = user.getEmail();
         return new ModelAndView("redirect:/login");
+    }
+
+    @RequestMapping("/token-sent")
+    public String tokenSent(Model model) {
+        model.addAttribute("email", email);
+        return "token-sent";
     }
 }
