@@ -90,3 +90,9 @@ p{
 #register-now{
     color: #2890E1;
 }
+
+#wrongpass{
+    padding-top: 2px;
+    font-size: 11px;
+    color: red;
+}
