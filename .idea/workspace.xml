@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075be9d9-b473-4a8f-b9a6-ef1a8667f932" name="LW-42 format dat" comment="LW-42 format dat">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
@@ -110,48 +108,10 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lovwebapp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/lovwebapp.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/LovwebappApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/Goal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/VerificationToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/GoalRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/UserRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/VerificationTokenRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/GoalService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/MailSenderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/VerificationTokenService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/GoalServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/goalsstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/loginstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/mainstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/registerstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/lovbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/lovlogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/addgoal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/editgoal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/goals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/loginerror.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/registererror.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/token-sent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/lov/lovwebapp/LovwebappApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/GoalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/GoalServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goals.html" afterDir="false" />
     </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -231,7 +191,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LW-43" />
+        <entry key="$PROJECT_DIR$" value="LW-42" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -524,8 +484,8 @@
       <option name="presentableId" value="LW-42" />
       <option name="project" value="LW" />
       <option name="type" value="BUG" />
-      <updated>1585752945918</updated>
-      <workItem from="1585752945964" duration="72000" />
+      <updated>1585753063600</updated>
+      <workItem from="1585752945964" duration="1004000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
@@ -547,7 +507,8 @@
     <MESSAGE value="LW-27 Baza danych użytkowników" />
     <MESSAGE value="LW-31 Potwierdzenie mailem(token)" />
     <MESSAGE value="LW-35 Lista do wyświetlania" />
-    <option name="LAST_COMMIT_MESSAGE" value="LW-35 Lista do wyświetlania" />
+    <MESSAGE value="LW-42 format dat" />
+    <option name="LAST_COMMIT_MESSAGE" value="LW-42 format dat" />
   </component>
   <component name="WindowStateProjectService">
     <state x="447" y="119" key="#Project_Structure" timestamp="1584635662561">
@@ -583,72 +544,72 @@
     </state>
     <state x="826" y="208" width="450" height="595" key="#xdebugger.evaluate/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585254587800" />
     <state x="734" y="184" width="667" height="592" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1585150021739" />
-    <state x="432" y="36" key="CommitChangelistDialog2" timestamp="1585752995583">
+    <state x="432" y="16" key="CommitChangelistDialog2" timestamp="1585754119252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="62" key="CommitChangelistDialog2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255006136" />
-    <state x="432" y="36" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585752995583" />
+    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585754119252" />
     <state x="480" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1585301196887" />
     <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1585414345120">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
     <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1585414345120" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1585754025594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
     <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585754025594" />
     <state width="1664" height="243" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1585754025593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585754025593" />
     <state width="1664" height="243" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1585752915987">
+    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1585754025594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585752915987" />
+    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585754025594" />
     <state width="1664" height="243" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
     <state width="1664" height="299" key="GridCell.Tab.2.bottom" timestamp="1585745755958">
       <screen x="0" y="0" width="1707" height="920" />
@@ -674,17 +635,17 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1585752945958">
+    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1585754060910">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255219682" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585752945958" />
+    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585754060910" />
     <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1585152734336" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585750961197">
+    <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585753074772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="219" key="Vcs.Push.Dialog.v2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255238830" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585750961197" />
+    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585753074772" />
     <state x="447" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1585301205103" />
     <state width="859" height="466" key="XDebugger.FullValuePopup" timestamp="1584631176061">
       <screen x="0" y="0" width="1707" height="920" />

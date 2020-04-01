@@ -3,20 +3,30 @@ package com.lov.lovwebapp.model;
 import javax.persistence.*;
 
 @Entity
-public class Token {
+public class VerificationToken {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String value;
+
     @OneToOne
     private User user;
 
-    public Token() {
+    public VerificationToken(User user, String value) {
+        this.user = user;
+        this.value = value;
     }
 
-    public Token(String value, User user) {
-        this.value=value;
-        this.user=user;
+    public VerificationToken() {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {
@@ -33,13 +43,5 @@ public class Token {
 
     public void setValue(String value) {
         this.value = value;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
