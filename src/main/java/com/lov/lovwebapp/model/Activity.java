@@ -1,5 +1,8 @@
 package com.lov.lovwebapp.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +14,7 @@ public class Activity {
     private String activityName;
     private String activityUnit;
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Goal activityGoal;
     private int activityPoints;
     private int activityAmount;

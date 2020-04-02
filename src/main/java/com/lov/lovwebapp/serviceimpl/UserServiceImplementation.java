@@ -32,13 +32,13 @@ public class UserServiceImplementation implements UserService {
         this.verificationTokenService = verificationTokenService;
         this.mailSenderService = mailSenderService;
 
-        userRepo.save(new User("admin", "admin@wp.pl",
-                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m",
-                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m", 0, true));
-
-        userRepo.save(new User("admin123", "admin123@wp.pl",
-                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m",
-                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m", 0, true));
+//        userRepo.save(new User("admin", "admin@wp.pl",
+//                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m",
+//                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m", 0, true));
+//
+//        userRepo.save(new User("admin123", "admin123@wp.pl",
+//                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m",
+//                "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m", 0, true));
 
     }
 

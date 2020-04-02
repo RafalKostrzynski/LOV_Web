@@ -33,8 +33,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/main").authenticated()
                 .antMatchers("signup").permitAll()
-                .antMatchers("/goals").authenticated()
-                .antMatchers("/addgoal").authenticated()
+                .antMatchers("/goals/**").authenticated()
+                .antMatchers("/activities/**").authenticated()
+                .antMatchers("/addgoal/**").authenticated()
+                .antMatchers("/addactivity/**").authenticated()
                 .and()
                 .formLogin().loginPage("/login").defaultSuccessUrl("/main").permitAll()
 //                .and()
