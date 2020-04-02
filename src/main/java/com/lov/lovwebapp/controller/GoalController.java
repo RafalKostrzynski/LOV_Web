@@ -43,6 +43,11 @@ public class GoalController {
         return new ModelAndView("redirect:/goals");
     }
 
+    @RequestMapping("/redirectToMain")
+    public ModelAndView redirectToMain() {
+        return new ModelAndView("redirect:/main");
+    }
+
     @RequestMapping("/redirectToAddGoal")
     public ModelAndView redirectToAddGoal() {
         return new ModelAndView("redirect:/addgoal");
