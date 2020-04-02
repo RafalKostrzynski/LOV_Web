@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LOV</title>
+    <link href="../static/css/addgoalstyle.css" th:href="@{/css/addgoalstyle.css}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<a th:href="@{/redirectToActivities}"><input type="button" value="Return" id="back-button"></a>
+
+<div id="wrapper">
+    <h1>Create new activity!</h1>
+    <form th:action="@{/saveactivity}" th:object="${activity}" method="post" onsubmit="return validation()">
+        <p class="label"><b>Choose activity name:</b></p>
+        <select id="activitytemplates" onchange="myFunction(this)">
+            <option value="-">-</option>
+            <option value="Do pushups">Do pushups</option>
+            <option value="Read book">Read book</option>
+            <option value="Study">Study</option>
+            <option value="Go for a walk">Go for a walk</option>
+        </select>
+        <p class="label"><b>or create your own:</b></p>
+        <input type="text" id="activityname" name="activityname" th:field="*{activityName}"/> <br />
+        <p class="label"><b>Activity amount:</b></p>
+        <input type="number" min="1" value="1" max="1000000" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
+        <p class="label"><b>Activity unit:</b></p>
+        <input type="text" id="activityunit" name="activityunit" th:field="*{activityUnit}"/><br /><br />
+        <p class="label"><b>Activity points:</b></p>
+        <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
+        <p class="label"><b>Choose goal for your activity:</b></p>
+        <select id="availablegoals" th:field="*{activityGoal}">
+            <option value="-">-</option>
+            <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>
+        </select>
+        <input type="submit" value="Add" id="add-button"/><br /><br />
+    </form>
+</div>
+</body>
+
+
+<script>
+    function validation() {
+        var activityName=document.getElementById("activityname").value;
+        var goalName=document.getElementById("availablegoals").value;
+        // var activityAmount=document.getElementById("activityamount").value;
+        var activityUnit=document.getElementById("activityunit").value;
+        // var activityPoints=document.getElementById("activitypoints").value;
+
+        if (activityName !== "" && goalName !== "-" && activityUnit !== "") {
+            return true;
+        }
+        alert("Invalid data!");
+        return false;
+    }
+
+    function myFunction(data) {
+        document.getElementById("activityname").value=data.value;
+    }
+
+</script>
+</html>

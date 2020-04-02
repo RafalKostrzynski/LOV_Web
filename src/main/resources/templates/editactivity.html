@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LOV</title>
+    <link href="../static/css/addgoalstyle.css" th:href="@{/css/addgoalstyle.css}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<a th:href="@{/redirectToGoals}"><input type="button" value="Return" id="back-button"></a>
+
+
+<div id="wrapper">
+    <h1>Edit your goal!</h1>
+    <form th:action="@{/activity/editactivity/{id}(id=${activity.id})}" th:object="${activity}" method="post" onsubmit="return dateValidation()">
+        <p class="label"><b>Activity name:</b></p>
+        <input type="text" id="activityname" name="activityname" th:field="*{activityName}"/> <br />
+        <p class="label"><b>Activity amount:</b></p>
+        <input type="number" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
+        <p class="label"><b>Activity unit:</b></p>
+        <input type="text" id="activityunit" name="activityunit" th:field="*{activityUnit}"/><br /><br />
+        <p class="label"><b>Activity points:</b></p>
+        <input type="number" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
+        <input type="submit" value="Edit" id="add-button" /><br /><br />
+    </form>
+</div>
+
+<script>
+    function dateValidation() {
+        let startDate=new Date(document.getElementById("startdate").value);
+        let endDate=new Date(document.getElementById("enddate").value);
+        var goalName=document.getElementById("goalname").value;
+        if (goalName !== "" && startDate <= endDate) {
+            return true;
+        }
+        alert("Invalid data!")
+        return false;
+    }
+</script>
+</body>
+</html>

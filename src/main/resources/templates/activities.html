@@ -9,8 +9,8 @@
 <body>
 <div class="topnav" id="myTopnav">
     <a th:href="@{/redirectToMain}" >Home</a>
-    <a th:href="@{/goals}" class="active">Goals</a>
-    <a th:href="@{/activities}">Activities</a>
+    <a th:href="@{/goals}">Goals</a>
+    <a th:href="@{/activities}" class="active">Activities</a>
     <a th:href="@{/profile}">Profile</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -20,27 +20,31 @@
     </div>
 </div>
 
-<a th:href="@{/redirectToAddGoal}"><input type="button" id="addgoal-button" value="Add new goal"></a>
+<a th:href="@{/redirectToAddActivity}"><input type="button" id="addgoal-button" value="Add new activity"></a>
 
 <div class="wrapper">
     <div class="goalsdiv">
         <table>
             <tr>
-                <th>Goal Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
+                <th>Activity Name</th>
+                <th>Activity Amount</th>
+                <th>Activity Unit</th>
+                <th>Activity Points</th>
+                <th>Activity Goal</th>
             </tr>
-            <tr th:each="goal: ${goalList}">
-                <td th:text="${goal.goalName}" />
-                <td th:text="${#temporals.format(goal.goalStartDate, 'dd.MM.yyyy')}" />
-                <td th:text="${#temporals.format(goal.goalEndDate, 'dd.MM.yyyy')}" />
+            <tr th:each="activity: ${activityList}">
+                <td th:text="${activity.activityName}" />
+                <td th:text="${activity.activityAmount}" />
+                <td th:text="${activity.activityUnit}" />
+                <td th:text="${activity.activityPoints}" />
+                <td th:text="${activity.activityGoal.goalName}" />
                 <td>
-                    <a th:href="@{/goals/delete/{id}(id=${goal.id})}">
-                    <input type="button" value="Delete" id="delete-button" >
+                    <a th:href="@{/activities/delete/{id}(id=${activity.id})}">
+                        <input type="button" value="Delete" id="delete-button" >
                     </a>
                 </td>
                 <td>
-                    <a th:href="@{/editgoal/{id}(id=${goal.id})}">
+                    <a th:href="@{/editActivity/{id}(id=${activity.id})}">
                         <input type="button" value="Edit" id="edit-button" >
                     </a>
                 </td>

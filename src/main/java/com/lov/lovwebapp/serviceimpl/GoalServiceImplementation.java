@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class GoalServiceImpl implements GoalService {
+public class GoalServiceImplementation implements GoalService {
     private GoalRepo goalRepo;
 
     @Autowired
-    public GoalServiceImpl(GoalRepo goalRepo) {
+    public GoalServiceImplementation(GoalRepo goalRepo) {
         this.goalRepo = goalRepo;
     }
 

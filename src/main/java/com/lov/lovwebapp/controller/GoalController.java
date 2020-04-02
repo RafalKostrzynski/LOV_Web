@@ -1,21 +1,17 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.Goal;
-import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 public class GoalController {
@@ -26,7 +22,7 @@ public class GoalController {
     @Autowired
     public GoalController(GoalService goalService, UserService userService) {
         this.goalService = goalService;
-        this.userService= userService;
+        this.userService = userService;
     }
 
     @RequestMapping("/goals")
@@ -35,8 +31,8 @@ public class GoalController {
         return "goals";
     }
 
-    @RequestMapping(value="goals/delete/{id}", method = RequestMethod.GET)
-    public String deleteGoal (@PathVariable Long id) {
+    @RequestMapping(value = "goals/delete/{id}", method = RequestMethod.GET)
+    public String deleteGoal(@PathVariable Long id) {
         goalService.deleteGoal(id);
         return "redirect:/goals";
     }
@@ -57,8 +53,8 @@ public class GoalController {
         return new ModelAndView("addgoal", "goal", new Goal());
     }
 
-    @RequestMapping(value="goals/editgoal/{id}", method = RequestMethod.POST)
-    public String updateGoal (@PathVariable Long id, Goal goal,  Principal principal) {
+    @RequestMapping(value = "goals/editgoal/{id}", method = RequestMethod.POST)
+    public String updateGoal(@PathVariable Long id, Goal goal, Principal principal) {
         goal.setUser(userService.getUserByName(principal.getName()));
         goal.setId(id);
         goalService.updateGoal(goal);
@@ -74,9 +70,9 @@ public class GoalController {
 
     @RequestMapping("/savegoal")
     public ModelAndView saveGoal(Goal goal, Principal principal) {
-            goal.setUser(userService.getUserByName(principal.getName()));
-            goalService.addGoal(goal);
-            return new ModelAndView("redirect:/goals");
+        goal.setUser(userService.getUserByName(principal.getName()));
+        goalService.addGoal(goal);
+        return new ModelAndView("redirect:/goals");
     }
 
 }

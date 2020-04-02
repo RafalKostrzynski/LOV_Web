@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class Goal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String goalName;
     private @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate goalStartDate;
