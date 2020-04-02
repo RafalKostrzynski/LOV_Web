@@ -8,7 +8,9 @@ import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
@@ -57,4 +59,9 @@ public class ActivityController {
         return new ModelAndView("redirect:/activities");
     }
 
+    @RequestMapping(value = "/activities/delete/{id}", method = RequestMethod.GET)
+    public String deleteActivity(@PathVariable Long id) {
+        activityService.deleteActivity(id);
+        return "redirect:/activities";
+    }
 }
