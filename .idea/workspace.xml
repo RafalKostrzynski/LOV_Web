@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="833de4b7-23e6-4d37-aeec-7872b49d0a89" name="LW-47 Logika biznesowa dodawania" comment="" />
+    <list default="true" id="fc056af8-a668-4e9e-aa85-ffdb525cf63a" name="LW-50 Logika usuwania" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/ActivityServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/ActivityServiceImplementation.java" afterDir="false" />
+    </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
     <list id="d8cb8f36-f7d8-4055-b335-8b35f533155b" name="LW-28 Logika biznesowa logowania" comment="LW-28 Logika biznesowa logowania" />
@@ -9,26 +11,8 @@
     <list id="995f79cf-f226-4924-9ba4-76629eec26c6" name="LW-31 Potwierdzenie mailem(token)" comment="LW-31 Potwierdzenie mailem(token)" />
     <list id="3916f159-0e06-42c0-b641-9313de29405c" name="LW-39 Walidacja danych" comment="LW-39 Walidacja danych" />
     <list id="075be9d9-b473-4a8f-b9a6-ef1a8667f932" name="LW-42 format dat" comment="LW-42 format dat" />
-    <list id="bf1ab87a-f2a8-47b8-847c-8428dd37bfa3" name="LW-44 Powtórka username/email" comment="LW-44 Powtórka username/email">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/repo/ActivityRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/ActivityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/ActivityServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Goal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Goal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/GoalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/GoalServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/Goal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/Goal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/GoalServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
-    </list>
+    <list id="bf1ab87a-f2a8-47b8-847c-8428dd37bfa3" name="LW-44 Powtórka username/email" comment="LW-44 Powtórka username/email" />
+    <list id="833de4b7-23e6-4d37-aeec-7872b49d0a89" name="LW-47 Logika biznesowa dodawania" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LW-44" />
+        <entry key="$PROJECT_DIR$" value="LW-47" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -352,7 +336,7 @@
       <workItem from="1585754061009" duration="1100000" />
       <workItem from="1585818567865" duration="11821000" />
     </task>
-    <task active="true" id="LW-47" summary="Logika biznesowa dodawania">
+    <task id="LW-47" summary="Logika biznesowa dodawania">
       <branch name="LW-44" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" original="true" />
       <branch name="LW-47" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" />
       <changelist id="833de4b7-23e6-4d37-aeec-7872b49d0a89" name="LW-47 Logika biznesowa dodawania" comment="" />
@@ -363,8 +347,22 @@
       <option name="number" value="47" />
       <option name="presentableId" value="LW-47" />
       <option name="project" value="LW" />
-      <updated>1585830407187</updated>
-      <workItem from="1585830407288" duration="12000" />
+      <updated>1585830581131</updated>
+      <workItem from="1585830407288" duration="174000" />
+    </task>
+    <task active="true" id="LW-50" summary="Logika usuwania">
+      <branch name="LW-47" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" original="true" />
+      <branch name="LW-50" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" />
+      <changelist id="fc056af8-a668-4e9e-aa85-ffdb525cf63a" name="LW-50 Logika usuwania" comment="" />
+      <option name="closed" value="true" />
+      <created>1585758583913</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-50</url>
+      <option name="number" value="50" />
+      <option name="presentableId" value="LW-50" />
+      <option name="project" value="LW" />
+      <updated>1585830581131</updated>
+      <workItem from="1585830581206" duration="91000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
@@ -524,11 +522,11 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1585830407271">
+    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1585830581189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255219682" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585830407271" />
+    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585830581189" />
     <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1585152734336" />
     <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585753074772">
       <screen x="0" y="0" width="1536" height="824" />

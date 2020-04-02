@@ -44,6 +44,7 @@ public class ActivityServiceImplementation implements ActivityService {
         return false;
     }
 
+
     @Override
     public boolean updateActivity(Activity activity) {
         addActivity(activity);
