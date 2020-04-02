@@ -56,7 +56,7 @@ public class GoalController {
     @RequestMapping(value = "goals/editgoal/{id}", method = RequestMethod.POST)
     public String updateGoal(@PathVariable Long id, Goal goal, Principal principal) {
         goal.setUser(userService.getUserByName(principal.getName()));
-        goal.setId(id);
+        //goal.setId(id);
         goalService.updateGoal(goal);
         return "redirect:/goals";
     }

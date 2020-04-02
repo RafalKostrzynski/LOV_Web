@@ -39,7 +39,9 @@ body {
     background: #2890E1;
 }
 
-#goaltemplates, #goalname, #startdate, #enddate, #activitytemplates, #activityname, #activityamount, #activitypoints, #activityunit, #availablegoals{
+#goaltemplates, #goalname, #startdate, #enddate, #activitytemplates, #activityname,
+#activityamount, #activitypoints, #activityunit, #availablegoals, #activityDataList,
+#activityDataTemplates{
     width: 300px;
     height: 50px;
     border: none;

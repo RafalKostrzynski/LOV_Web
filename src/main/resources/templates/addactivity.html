@@ -13,20 +13,29 @@
 <div id="wrapper">
     <h1>Create new activity!</h1>
     <form th:action="@{/saveactivity}" th:object="${activity}" method="post" onsubmit="return validation()">
-        <p class="label"><b>Choose activity name:</b></p>
-        <select id="activitytemplates" onchange="myFunction(this)">
-            <option value="-">-</option>
+        <p class="label"><b>Choose activity name or write your own:</b></p>
+        <input id="activityDataTemplates" list="activitytemplates" name="activitytemplates" th:field="*{activityName}">
+        <datalist id="activitytemplates" >
             <option value="Do pushups">Do pushups</option>
             <option value="Read book">Read book</option>
             <option value="Study">Study</option>
             <option value="Go for a walk">Go for a walk</option>
-        </select>
-        <p class="label"><b>or create your own:</b></p>
-        <input type="text" id="activityname" name="activityname" th:field="*{activityName}"/> <br />
+        </datalist>
+<!--        <p class="label"><b>or create your own:</b></p>-->
+<!--        <input type="text" id="activityname" name="activityname" th:field="*{activityName}"/> <br />-->
         <p class="label"><b>Activity amount:</b></p>
         <input type="number" min="1" value="1" max="1000000" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
         <p class="label"><b>Activity unit:</b></p>
-        <input type="text" id="activityunit" name="activityunit" th:field="*{activityUnit}"/><br /><br />
+        <input id="activityDataList" list="activityList" name="activityList" th:field="*{activityUnit}">
+        <datalist id="activityList">
+            <option value="kilograms">
+            <option value="pages">
+            <option value="kilometres">
+            <option value="minutes">
+            <option value="hours">
+            <option value="repeats">
+        </datalist> <br /><br>
+<!--        <input type="text" id="activityunit" name="activityunit" th:field="*{activityUnit}"/><br /><br />-->
         <p class="label"><b>Activity points:</b></p>
         <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>
