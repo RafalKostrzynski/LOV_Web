@@ -18,7 +18,7 @@
             <input type="email" class="email2" name="email" placeholder="E-mail address"th:field="*{email}"/> <br />
             <input type="password" class="password" name="password" placeholder="Password" th:field="*{password}"/> <br />
             <input type="password" class="password" name="repeatpassword" placeholder="Repeat password" th:field="*{passwordRepeat}"/> <br />
-            <span id="wrongpass">Check if your username contain between 3 to 15 characters and your password must contain between 9 to 20 characters, at least one numeric digit, one uppercase and one lowercase letter! Username or email might be taken.</span><br />
+            <span id="wrongpass">Check if your username contain between 3 to 15 characters and your password must contain between 9 to 20 characters, at least one numeric digit, one uppercase and one lowercase letter!</span><br />
             <input type="submit" value="Register" id="register-button"/>
             <br />
             <p>Already registered? <a th:href="@{/redirectToLogin}" id="login-now"><b>  LOGIN NOW</b></a></p>

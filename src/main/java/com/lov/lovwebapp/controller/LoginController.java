@@ -49,11 +49,19 @@ public class LoginController {
     @RequestMapping("/register")
     public ModelAndView register(User user, HttpServletRequest httpServletRequest) {
         if(checkData(user)) {
-            userService.saveUser(user, httpServletRequest);
-            email = user.getEmail();
-            return new ModelAndView("redirect:/token-sent");
+            if (!checkIfTaken(user)) {
+                userService.saveUser(user, httpServletRequest);
+                email = user.getEmail();
+                return new ModelAndView("redirect:/token-sent");
+            }
+            return new ModelAndView("redirect:/signuperrortaken");
         }
         return new ModelAndView("redirect:/signuperror");
+    }
+
+    @RequestMapping("/signuperrortaken")
+    public ModelAndView signUpErrorTaken() {
+        return new ModelAndView("registererrortaken", "user", new User());
     }
 
     @RequestMapping("/token-sent")
@@ -65,10 +73,14 @@ public class LoginController {
     private boolean checkData(User user) {
         String patternPassword="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,}$";
         String patternUsername="^(?=\\S+$).{3,}$";
-        List<User> userList = userService.getAllUsers();
-        boolean present = userList.stream().anyMatch(e -> e.getUsername().equals(user.getUsername()) || e.getEmail().equals(user.getEmail()));
+
         return user.getPassword().matches(patternPassword) && user.getPassword().equals(user.getPasswordRepeat())
-                && user.getUsername().matches(patternUsername) && !present;
+                && user.getUsername().matches(patternUsername);
+    }
+
+    private boolean checkIfTaken(User user) {
+        List<User> userList = userService.getAllUsers();
+        return userList.stream().anyMatch(e -> e.getUsername().equals(user.getUsername()) || e.getEmail().equals(user.getEmail()));
     }
 
     @RequestMapping("/redirectToLogin")
