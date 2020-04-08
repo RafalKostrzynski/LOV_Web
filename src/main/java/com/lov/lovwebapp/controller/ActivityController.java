@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class ActivityController {
@@ -38,18 +39,18 @@ public class ActivityController {
                 "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m", 0, true);
 
         userRepo.save(user);
-
-        Goal goal = new Goal("goalName", LocalDate.now(), LocalDate.now(), user);
-        Goal goal2 = new Goal("goalName2", LocalDate.now(), LocalDate.now(), user);
-
-        goalService.addGoal(goal);
-        goalService.addGoal(goal2);
-
-        Activity activity = new Activity("activityName", "activityUnit", goal, 5, 5);
-        Activity activity2 = new Activity("activityName2", "activityUnit2", goal2, 5, 5);
-
-        activityService.addActivity(activity);
-        activityService.addActivity(activity2);
+////
+////        Goal goal = new Goal("goalName", LocalDate.now(), LocalDate.now(), user);
+////        Goal goal2 = new Goal("goalName2", LocalDate.now(), LocalDate.now(), user);
+////
+////        goalService.addGoal(goal);
+////        goalService.addGoal(goal2);
+////
+////        Activity activity = new Activity("activityName", "activityUnit", goal, 5, 5);
+////        Activity activity2 = new Activity("activityName2", "activityUnit2", goal2, 5, 5);
+////
+////        activityService.addActivity(activity);
+////        activityService.addActivity(activity2);
 
     }
 
@@ -60,8 +61,10 @@ public class ActivityController {
     }
 
     @RequestMapping("/redirectToAddActivity")
-    public ModelAndView redirectToAddActivity() {
-        return new ModelAndView("redirect:/addactivity");
+    public ModelAndView redirectToAddActivity(Principal principal) {
+        List<Goal>goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
+        if(!goalList.isEmpty()) return new ModelAndView("redirect:/addactivity");
+        return new ModelAndView("redirect:/addgoalnoactivity");
     }
 
     @RequestMapping("/addactivity")
@@ -72,8 +75,7 @@ public class ActivityController {
     }
 
     @RequestMapping("/saveactivity")
-    public ModelAndView saveActivity(Activity activity, Principal principal) {
-//        goal.setUser(userService.getUserByName(principal.getName()));
+    public ModelAndView saveActivity(Activity activity) {
         activityService.addActivity(activity);
         return new ModelAndView("redirect:/activities");
     }
@@ -103,8 +105,6 @@ public class ActivityController {
 
     @RequestMapping(value = "activities/editactivity/{id}", method = RequestMethod.POST)
     public String updateActivity(@PathVariable Long id, Activity activity) {
-        //goal.setUser(userService.getUserByName(principal.getName()));
-//        activity.setId(id);
         activityService.updateActivity(activity);
         return "redirect:/activities";
     }

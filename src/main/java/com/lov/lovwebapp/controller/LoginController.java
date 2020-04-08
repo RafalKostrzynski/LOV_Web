@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -32,7 +33,8 @@ public class LoginController {
     }
 
     @RequestMapping("/main")
-    public String main() {
+    public String main(Model model, Principal principal) {
+        model.addAttribute("points", userService.getUserByName(principal.getName()).getPoints());
         return "main";
     }
 
