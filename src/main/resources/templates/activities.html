@@ -26,6 +26,8 @@
     <div class="goalsdiv">
         <table>
             <tr>
+                <th>Activity completed</th>
+                <th>Activity failed</th>
                 <th>Activity Name</th>
                 <th>Activity Amount</th>
                 <th>Activity Unit</th>
@@ -33,6 +35,16 @@
                 <th>Activity Goal</th>
             </tr>
             <tr th:each="activity: ${activityList}">
+                <td>
+                    <a th:href="@{/activities/deleteCompleted/{id}(id=${activity.id})}" onclick="">
+                        <input type="button" value="Completed" id="completed-button" >
+                    </a>
+                </td>
+                <td>
+                    <a th:href="@{/activities/deleteFailed/{id}(id=${activity.id})}" onclick="">
+                        <input type="button" value="Failed" id="failed-button" >
+                    </a>
+                </td>
                 <td th:text="${activity.activityName}" />
                 <td th:text="${activity.activityAmount}" />
                 <td th:text="${activity.activityUnit}" />

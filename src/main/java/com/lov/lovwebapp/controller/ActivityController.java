@@ -89,6 +89,18 @@ public class ActivityController {
         return "redirect:/activities";
     }
 
+    @RequestMapping(value = "/activities/deleteCompleted/{id}", method = RequestMethod.GET)
+    public String deleteCompletedActivity(@PathVariable Long id) {
+        activityService.deleteCompletedActivity(id);
+        return "redirect:/activities";
+    }
+
+    @RequestMapping(value = "/activities/deleteFailed/{id}", method = RequestMethod.GET)
+    public String deleteFailedActivity(@PathVariable Long id) {
+        activityService.deleteFailedActivity(id);
+        return "redirect:/activities";
+    }
+
     @RequestMapping(value = "activities/editactivity/{id}", method = RequestMethod.POST)
     public String updateActivity(@PathVariable Long id, Activity activity) {
         //goal.setUser(userService.getUserByName(principal.getName()));

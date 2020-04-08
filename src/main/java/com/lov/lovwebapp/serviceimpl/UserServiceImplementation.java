@@ -80,6 +80,11 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public User getUserByID(long id) {
+        return userRepo.findById(id).get();
+    }
+
+    @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepo.findAllByUsername(s);
     }

@@ -14,5 +14,9 @@ public interface ActivityService {
 
     boolean deleteActivity(long id);
 
+    void deleteFailedActivity(long id);
+
+    void deleteCompletedActivity(long id);
+
     boolean updateActivity(Activity activity);
 }

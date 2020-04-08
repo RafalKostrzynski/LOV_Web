@@ -1,8 +1,10 @@
 package com.lov.lovwebapp.serviceimpl;
 
 import com.lov.lovwebapp.model.Activity;
+import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.repo.ActivityRepo;
 import com.lov.lovwebapp.service.ActivityService;
+import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +15,12 @@ import java.util.Optional;
 public class ActivityServiceImplementation implements ActivityService {
 
     private ActivityRepo activityRepo;
+    private UserService userService;
 
     @Autowired
-    public ActivityServiceImplementation(ActivityRepo activityRepo) {
+    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService) {
         this.activityRepo = activityRepo;
+        this.userService = userService;
     }
 
     @Override
@@ -42,6 +46,26 @@ public class ActivityServiceImplementation implements ActivityService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void deleteFailedActivity(long id) {
+        Activity activity = activityRepo.findById(id).get();
+        User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
+        int points = user.getPoints();
+        points = points-activity.getActivityPoints();
+        if(points<0)points=0;
+        user.setPoints(points);
+        activityRepo.deleteById(id);
+    }
+
+    @Override
+    public void deleteCompletedActivity(long id) {
+        Activity activity = activityRepo.findById(id).get();
+        User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
+        int points = user.getPoints();
+        user.setPoints(points+activity.getActivityPoints());
+        activityRepo.deleteById(id);
     }
 
 
