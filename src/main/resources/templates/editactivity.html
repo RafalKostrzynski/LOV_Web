@@ -23,7 +23,7 @@
             <option value="Go for a walk">Go for a walk</option>
         </datalist>
         <p class="label"><b>Activity amount:</b></p>
-        <input type="number" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
+        <input type="number" min="1" value="1" max="1000000" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
         <p class="label"><b>Activity unit:</b></p>
         <input id="activityDataList" list="activityList" name="activityList" th:field="*{activityUnit}">
         <datalist id="activityList">
@@ -35,7 +35,7 @@
             <option value="repeats">
         </datalist>
         <p class="label"><b>Activity points:</b></p>
-        <input type="number" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
+        <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>
         <select id="availablegoals" th:field="*{activityGoal}">
             <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>

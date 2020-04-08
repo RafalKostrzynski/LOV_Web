@@ -20,7 +20,7 @@
             <input type="password" class="password" name="password" placeholder="Password" th:field="*{password}"/> <br />
             <input type="password" class="password" name="repeatpassword" placeholder="Repeat password"  th:field="*{passwordRepeat}"/> <br />
             <span id="wrongpass"></span><br />
-            <input type="submit" value="Register" id="register-button" onclick="checkPassword(document.form1.password,document.form1.username)"/>
+            <input type="submit" value="Register" id="register-button"/>
             <br />
             <p>Already registered? <a th:href="@{/redirectToLogin}" id="login-now"><b>  LOGIN NOW</b></a></p>
         </form>

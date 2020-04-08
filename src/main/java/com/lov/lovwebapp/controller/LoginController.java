@@ -48,8 +48,8 @@ public class LoginController {
 
     @RequestMapping("/register")
     public ModelAndView register(User user, HttpServletRequest httpServletRequest) {
-        if(checkData(user)) {
-            if (!checkIfTaken(user)) {
+        if(userService.checkData(user)) {
+            if (!userService.checkIfTaken(user)) {
                 userService.saveUser(user, httpServletRequest);
                 email = user.getEmail();
                 return new ModelAndView("redirect:/token-sent");
@@ -68,19 +68,6 @@ public class LoginController {
     public String tokenSent(Model model) {
         model.addAttribute("email", email);
         return "token-sent";
-    }
-
-    private boolean checkData(User user) {
-        String patternPassword="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,}$";
-        String patternUsername="^(?=\\S+$).{3,}$";
-
-        return user.getPassword().matches(patternPassword) && user.getPassword().equals(user.getPasswordRepeat())
-                && user.getUsername().matches(patternUsername);
-    }
-
-    private boolean checkIfTaken(User user) {
-        List<User> userList = userService.getAllUsers();
-        return userList.stream().anyMatch(e -> e.getUsername().equals(user.getUsername()) || e.getEmail().equals(user.getEmail()));
     }
 
     @RequestMapping("/redirectToLogin")

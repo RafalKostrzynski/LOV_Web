@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14863554-3254-45ee-9fab-feaadf09a4fe" name="LW-45 template powtórki użytkownika" comment="">
+    <list default="true" id="14863554-3254-45ee-9fab-feaadf09a4fe" name="LW-45 template powtórki użytkownika" comment="LW-45 template powtórki użytkownika">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/editprofilestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/profilestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-taken.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-wrongdata.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/lovwebapp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
@@ -81,8 +99,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.jetbrains.youtrack.notifications" value="114-4021" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.jetbrains.youtrack.notifications" value="114-4202 114-4205 114-4207" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -95,24 +113,24 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.lov.lovwebapp" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\controller" />
-      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\model" />
-      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\repo" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp\src\main\resources\static\css" />
+      <recent name="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp\src\main\resources\templates" />
       <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\resources\templates" />
       <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\resources\static\css" />
+      <recent name="X:\Pobrane chrome\lovwebapp2-20200325T113306Z-001\lovwebapp2\src\main\java\com\lov\lovwebapp\service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lov.lovwebapp.serviceimpl" />
       <recent name="com.lov.lovwebapp.model" />
       <recent name="com.lov.lovwebapp.repo" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\controller" />
+      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\model" />
+      <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\java\com\lov\lovwebapp\repo" />
       <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\resources\templates" />
       <recent name="E:\lovwebapp-tokenDone\lovwebapp-tokenDone\src\main\resources\static\css" />
-      <recent name="X:\Pobrane chrome\lovwebapp2-20200325T113306Z-001\lovwebapp2\src\main\java\com\lov\lovwebapp\service" />
-      <recent name="C:\lovwebapp\lovwebapp2\src\main\resources\static\css" />
-      <recent name="C:\lovwebapp\lovwebapp2\src\main\resources\static\scripts" />
     </key>
   </component>
   <component name="RunManager">
@@ -438,13 +456,17 @@
       <option name="presentableId" value="LW-45" />
       <option name="project" value="LW" />
       <option name="type" value="BUG" />
-      <updated>1585842420958</updated>
-      <workItem from="1585842421013" duration="226000" />
+      <updated>1585842715014</updated>
+      <workItem from="1585842421013" duration="333000" />
+      <workItem from="1585900312844" duration="1228000" />
+      <workItem from="1585997158522" duration="121000" />
+      <workItem from="1586270280946" duration="629000" />
+      <workItem from="1586345596167" duration="14580000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
       <YouTrack url="https://amwgdynia.myjetbrains.com/youtrack">
-        <option name="defaultSearch" value="project:Lov-Web Sprints: {Sprint 3}" />
+        <option name="defaultSearch" value="project:Lov-Web Sprints: {Sprint 4}" />
         <option name="preferredOpenTaskState">
           <CustomTaskState id="Done" name="Done" />
         </option>
@@ -463,7 +485,8 @@
     <MESSAGE value="LW-35 Lista do wyświetlania" />
     <MESSAGE value="LW-42 format dat" />
     <MESSAGE value="LW-50 Logika usuwania" />
-    <option name="LAST_COMMIT_MESSAGE" value="LW-50 Logika usuwania" />
+    <MESSAGE value="LW-45 template powtórki użytkownika" />
+    <option name="LAST_COMMIT_MESSAGE" value="LW-45 template powtórki użytkownika" />
   </component>
   <component name="WindowStateProjectService">
     <state x="447" y="119" key="#Project_Structure" timestamp="1584635662561">
@@ -480,11 +503,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1584547627863" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1585823362695">
+    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1586347966931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585251186118" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585823362695" />
+    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586347966931" />
     <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1585234947047" />
     <state x="462" y="386" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585227454240">
       <screen x="0" y="0" width="1707" height="920" />
@@ -499,102 +522,102 @@
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585136567116" />
     <state x="555" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1585144241808" />
-    <state x="661" y="165" width="488" height="472" key="#xdebugger.evaluate" timestamp="1585826145690">
+    <state x="568" y="352" width="488" height="472" key="#xdebugger.evaluate" timestamp="1586359081005">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="826" y="208" width="450" height="595" key="#xdebugger.evaluate/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585254587800" />
-    <state x="661" y="165" width="488" height="472" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1585826145690" />
+    <state x="568" y="352" width="488" height="472" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1586359081005" />
     <state x="734" y="184" width="667" height="592" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1585150021739" />
-    <state x="432" y="16" key="CommitChangelistDialog2" timestamp="1585830696112">
+    <state x="432" y="16" key="CommitChangelistDialog2" timestamp="1585842713995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="62" key="CommitChangelistDialog2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255006136" />
-    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585830696112" />
+    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585842713995" />
     <state x="480" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1585301196887" />
-    <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1585414345120">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="571" y="193" key="FileChooserDialogImpl" timestamp="1585997273977">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
+    <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585997273977" />
     <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1585414345120" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1585842664350">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1586360010780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842664350" />
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586360010780" />
     <state width="1664" height="243" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1585842664335">
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1586360010779">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585842664335" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586360010779" />
     <state width="1664" height="243" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1585842664317">
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1586360010779">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585842664317" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586360010779" />
     <state width="1664" height="243" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1585842664337">
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1586360010780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585842664337" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586360010780" />
     <state width="1664" height="243" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1585842664353">
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1586360010781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
     <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842664353" />
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586360010781" />
     <state width="1664" height="243" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1585842664352">
+    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1586360010780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585842664352" />
+    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586360010780" />
     <state width="1664" height="243" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1585842664351">
+    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1586360010780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585842664351" />
+    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586360010780" />
     <state width="1664" height="243" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1585842664352">
+    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1586360010781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
     <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585842664352" />
+    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586360010781" />
     <state width="1664" height="243" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1585837831587">
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1586359480745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585837831587" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586359480745" />
     <state width="1664" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1585837831586">
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1586359480745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586359480745" />
     <state width="1664" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1585837831586">
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1586359480745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586359480745" />
     <state width="1664" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1585837831586">
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1586359480745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586359480745" />
     <state width="1664" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
     <state x="364" y="103" key="SettingsEditor" timestamp="1584619927993">
       <screen x="0" y="0" width="1707" height="920" />
@@ -606,22 +629,22 @@
     <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255219682" />
     <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585842421004" />
     <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1585152734336" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585830704861">
+    <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585842725981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="219" key="Vcs.Push.Dialog.v2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255238830" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585830704861" />
+    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585842725981" />
     <state x="447" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1585301205103" />
     <state width="859" height="466" key="XDebugger.FullValuePopup" timestamp="1584631176061">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="859" height="466" key="XDebugger.FullValuePopup/0.0.1707.920@0.0.1707.920" timestamp="1584631176061" />
-    <state x="426" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1585818575314">
+    <state x="426" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1585997183540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="533" y="267" key="com.intellij.ide.util.TipDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585238328698" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585296537917" />
-    <state x="426" y="212" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585818575314" />
+    <state x="426" y="212" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585997183540" />
     <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1585242732109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
