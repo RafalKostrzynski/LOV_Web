@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LOV</title>
+    <link href="../static/css/editprofilestyle.css" th:href="@{/css/editprofilestyle.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="login-box">
+    <div id="login-wrapper">
+        <h1>Profile Edition</h1>
+        <form name="form1" th:action="@{/register}" method="post" th:object="${user}">
+            <input type="text" id="username" name="username" placeholder="Username" th:field="*{username}"/> <br />
+            <input type="password" class="password" name="password" placeholder="Password" th:field="*{password}"/> <br />
+            <input type="password" class="password" name="repeatpassword" placeholder="Repeat password"  th:field="*{passwordRepeat}"/> <br />
+            <span id="wrongpass"></span>
+            <input type="submit" value="Apply" id="edit-button" onclick="checkPassword(document.form1.password,document.form1.username)"/>
+            <a th:href="@{/redirectToProfiles}"><input type="button" value="Return" id="back-button"></a>
+        </form>
+    </div>
+</div>
+<script>
+    function checkIfDataChanged(user) {
+    var username = document.getElementById("username".value);
+    var password = document.getElementById("password".value);
+    var repeatPassword = document.getElementById("repeatPassword".value);
+
+    if (username !== user.username || (password !== "" && repeatPassword !== "")) return true;
+    alert("You have not changed anything. Please click return button.");
+    return false;}
+</script>
+</body>
+</html>
