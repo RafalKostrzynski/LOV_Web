@@ -40,7 +40,7 @@
         <select id="availablegoals" th:field="*{activityGoal}">
             <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>
         </select>
-        <input type="submit" value="Edit" id="add-button" /><br /><br />
+        <input type="submit" value="Save" id="add-button" /><br /><br />
     </form>
 </div>
 
