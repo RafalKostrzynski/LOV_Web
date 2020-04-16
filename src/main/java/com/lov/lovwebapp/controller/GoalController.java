@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
@@ -61,10 +62,10 @@ public class GoalController {
     }
 
     @RequestMapping("/addgoalnoactivity")
-    public ModelAndView addGoalNoActivity(Model model) {
-        boolean activityExist = false;
-        model.addAttribute("activityExist",activityExist);
-        return new ModelAndView("addgoal", "goal", new Goal());
+    public ModelAndView addGoalNoActivity(Model model,@RequestParam String warning) {
+        warning = warning.replace("_"," ");
+        model.addAttribute("warning",warning);
+        return new ModelAndView("addgoalnoactivity", "goal", new Goal());
     }
 
 

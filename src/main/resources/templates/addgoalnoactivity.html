@@ -11,7 +11,7 @@
 <a th:href="@{/redirectToGoals}"><input type="button" value="Return" id="back-button"></a>
 
 <div id="wrapper">
-    <h3>Before adding an activity, create a goal first!</h3>
+    <h3>Before adding <span th:text="${warning}"></span>, create a goal first!</h3>
     <form th:action="@{/savegoal}" th:object="${goal}" method="post" onsubmit="return dateValidation()">
         <p class="label"><b>Choose goal name:</b></p>
         <select id="goaltemplates" onchange="myFunction(this)">

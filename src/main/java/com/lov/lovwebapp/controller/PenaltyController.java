@@ -1,5 +1,6 @@
 package com.lov.lovwebapp.controller;
 
+import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.Penalty;
 import com.lov.lovwebapp.model.Reward;
 import com.lov.lovwebapp.model.User;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class PenaltyController {
@@ -39,8 +41,10 @@ public class PenaltyController {
     }
 
     @RequestMapping("/redirectToAddPenalty")
-    public ModelAndView redirectToAddPenalty() {
-        return new ModelAndView("redirect:/addpenalty");
+    public ModelAndView redirectToAddActivity(Principal principal, Model model) {
+        List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
+        if(!goalList.isEmpty()) return new ModelAndView("redirect:/addpenalty");
+        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_penalty");
     }
 
     @RequestMapping("/addpenalty")

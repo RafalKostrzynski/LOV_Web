@@ -1,12 +1,11 @@
 package com.lov.lovwebapp.controller;
 
-import com.lov.lovwebapp.model.Activity;
+import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.Reward;
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.RewardService;
 import com.lov.lovwebapp.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class RewardController {
@@ -38,8 +38,10 @@ public class RewardController {
     }
 
     @RequestMapping("/redirectToAddReward")
-    public ModelAndView redirectToAddReward() {
-        return new ModelAndView("redirect:/addreward");
+    public ModelAndView redirectToAddActivity(Principal principal, Model model) {
+        List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
+        if(!goalList.isEmpty()) return new ModelAndView("redirect:/addreward");
+        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_reward");
     }
 
     @RequestMapping("/addreward")
