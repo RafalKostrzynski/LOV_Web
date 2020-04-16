@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/RewardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Penalty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Reward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/repo/PenaltyRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/repo/RewardRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/RewardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/RewardServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addgoalnoactivity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editreward.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/rewards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/choosegoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/choosegoal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" afterDir="false" />
-    </list>
+    <list default="true" id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
     <list id="d8cb8f36-f7d8-4055-b335-8b35f533155b" name="LW-28 Logika biznesowa logowania" comment="LW-28 Logika biznesowa logowania" />
@@ -41,56 +17,12 @@
     <list id="fc056af8-a668-4e9e-aa85-ffdb525cf63a" name="LW-50 Logika usuwania" comment="LW-50 Logika usuwania" />
     <list id="0ea3840c-9e35-42d6-9e59-8d812649baa7" name="LW-51 Przycisk do usuwania" comment="" />
     <list id="70d368f5-c757-404f-943c-54622ecaaaa1" name="LW-52 Logika edycji" comment="" />
-    <list id="43f83246-cbae-4edb-84b2-541ecd3854ec" name="LW-53 Zablokowanie dostępu w przypadku braku goala" comment="LW-53 Zablokowanie dostępu w przypadku braku goala">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/editprofilestyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/profilestyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-taken.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-wrongdata.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/mainstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/mainstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/registerstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/registerstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addgoal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registererror.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registererror.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editgoal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
-    </list>
-    <list id="c7e32b8e-cefa-4db3-b510-39b400d76b86" name="LW-56 Mechanika naliczania pukntów" comment="LW-56 Mechanika naliczania pukntów">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
-    </list>
-    <list id="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" name="LW-57 Wyświetlanie zdobytych punktów" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/goalsstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/mainstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/mainstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/registerstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/registerstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registererror.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registererror.html" afterDir="false" />
-    </list>
-    <list id="22ca41b5-7a62-4b9e-9e5c-865105c1f900" name="LW-58 Zmiana przycisku edycji" comment="LW-58 Zmiana przycisku edycji">
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/lovwebapp.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
-    </list>
-    <list id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" afterDir="false" />
-    </list>
+    <list id="43f83246-cbae-4edb-84b2-541ecd3854ec" name="LW-53 Zablokowanie dostępu w przypadku braku goala" comment="LW-53 Zablokowanie dostępu w przypadku braku goala" />
+    <list id="c7e32b8e-cefa-4db3-b510-39b400d76b86" name="LW-56 Mechanika naliczania pukntów" comment="LW-56 Mechanika naliczania pukntów" />
+    <list id="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" name="LW-57 Wyświetlanie zdobytych punktów" comment="" />
+    <list id="22ca41b5-7a62-4b9e-9e5c-865105c1f900" name="LW-58 Zmiana przycisku edycji" comment="LW-58 Zmiana przycisku edycji" />
+    <list id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="" />
+    <list id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,101 +58,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LW-57" />
+        <entry key="$PROJECT_DIR$" value="LW-72" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/resources/templates/editgoal.html">
-      <ranges>
-        <range start1="22" end1="23" start2="22" end2="23" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="34" end1="35" start2="34" end2="35" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="18" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="5" end1="6" start2="19" end2="27" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="15" end1="15" start2="36" end2="37" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="21" end1="21" start2="43" end2="93" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="25" end1="25" start2="97" end2="100" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="53" end1="54" start2="128" end2="129" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="57" end1="57" start2="132" end2="223" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="65" end1="65" start2="231" end2="234" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="75" end1="75" start2="244" end2="245" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="83" end1="85" start2="253" end2="255" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="86" end1="86" start2="256" end2="262" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="97" end1="101" start2="273" end2="278" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="103" end1="103" start2="280" end2="282" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="109" end1="110" start2="288" end2="292" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="112" end1="115" start2="294" end2="294" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="428" end1="429" start2="607" end2="608" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="440" end1="442" start2="619" end2="713" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="446" end1="450" start2="717" end2="718" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="456" end1="456" start2="724" end2="737" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="458" end1="458" start2="739" end2="740" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="465" end1="466" start2="747" end2="751" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="472" end1="473" start2="757" end2="758" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="475" end1="478" start2="760" end2="763" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="482" end1="483" start2="767" end2="768" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="486" end1="488" start2="771" end2="777" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="496" end1="498" start2="785" end2="787" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="499" end1="500" start2="788" end2="789" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="507" end1="509" start2="796" end2="798" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="511" end1="514" start2="800" end2="803" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="517" end1="519" start2="806" end2="808" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="521" end1="522" start2="810" end2="811" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="523" end1="526" start2="812" end2="815" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="528" end1="529" start2="817" end2="818" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="530" end1="533" start2="819" end2="822" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="535" end1="536" start2="824" end2="825" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="537" end1="540" start2="826" end2="829" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="542" end1="543" start2="831" end2="832" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="544" end1="547" start2="833" end2="836" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="549" end1="550" start2="838" end2="839" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="551" end1="554" start2="840" end2="843" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="556" end1="557" start2="845" end2="846" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="558" end1="561" start2="847" end2="850" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="563" end1="564" start2="852" end2="853" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="565" end1="568" start2="854" end2="857" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="570" end1="571" start2="859" end2="860" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="572" end1="576" start2="861" end2="865" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="578" end1="582" start2="867" end2="871" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="584" end1="588" start2="873" end2="877" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="590" end1="594" start2="879" end2="883" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="596" end1="600" start2="885" end2="889" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="601" end1="601" start2="890" end2="891" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="602" end1="604" start2="892" end2="894" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="605" end1="606" start2="895" end2="896" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="607" end1="610" start2="897" end2="900" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="612" end1="614" start2="902" end2="904" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="618" end1="619" start2="908" end2="909" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="621" end1="622" start2="911" end2="912" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-        <range start1="623" end1="624" start2="913" end2="914" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/resources/templates/editactivity.html">
-      <ranges>
-        <range start1="24" end1="36" start2="24" end2="39" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-        <range start1="37" end1="38" start2="40" end2="41" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-        <range start1="42" end1="43" start2="45" end2="46" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-        <range start1="47" end1="47" start2="50" end2="51" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java">
-      <ranges>
-        <range start1="57" end1="58" start2="57" end2="58" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="59" end1="59" start2="59" end2="61" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css">
-      <ranges>
-        <range start1="19" end1="19" start2="19" end2="28" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="20" end1="21" start2="29" end2="39" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
-        <range start1="171" end1="171" start2="189" end2="205" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
-      </ranges>
-    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -694,7 +535,7 @@
       <updated>1586441534456</updated>
       <workItem from="1586440461931" duration="1070000" />
     </task>
-    <task active="true" id="LW-60" summary="Pola unit i amount obok siebie">
+    <task id="LW-60" summary="Pola unit i amount obok siebie">
       <branch name="LW-57" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" original="true" />
       <branch name="LW-60" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" />
       <changelist id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="" />
@@ -706,16 +547,61 @@
       <option name="presentableId" value="LW-60" />
       <option name="project" value="LW" />
       <option name="type" value="BUG" />
-      <updated>1586441534456</updated>
+      <updated>1587037914206</updated>
       <workItem from="1586441534533" duration="98000" />
       <workItem from="1586481364073" duration="4214000" />
       <workItem from="1586517728885" duration="308000" />
-      <workItem from="1587032035072" duration="5771000" />
+      <workItem from="1587032035072" duration="5867000" />
+    </task>
+    <task id="LW-68" summary="Logika biznesowa edycji nagrody">
+      <branch name="LW-60" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-68" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="" name="LW-68 Logika biznesowa edycji nagrody" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035318653</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-68</url>
+      <option name="number" value="68" />
+      <option name="presentableId" value="LW-68" />
+      <option name="project" value="LW" />
+      <updated>1587037920397</updated>
+      <workItem from="1587037914308" duration="7000" />
+    </task>
+    <task id="LW-72" summary="Logika usuwania nagrody">
+      <branch name="LW-68" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-72" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="" name="LW-72 Logika usuwania nagrody" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035744615</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-72</url>
+      <option name="number" value="72" />
+      <option name="presentableId" value="LW-72" />
+      <option name="project" value="LW" />
+      <updated>1587037956253</updated>
+      <workItem from="1587037921110" duration="35000" />
+    </task>
+    <task active="true" id="LW-66" summary="Logika dodawania nagrody">
+      <branch name="LW-72" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-66" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035272614</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-66</url>
+      <option name="number" value="66" />
+      <option name="presentableId" value="LW-66" />
+      <option name="project" value="LW" />
+      <updated>1587037956253</updated>
+      <workItem from="1587037956279" duration="131000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
       <YouTrack url="https://amwgdynia.myjetbrains.com/youtrack">
-        <option name="defaultSearch" value="project:Lov-Web Sprints: {Sprint 5}" />
+        <option name="defaultSearch" value="project:Lov-Web Sprints: { Sprint 5} " />
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="Done" name="Done" />
+        </option>
         <username>przemkooo98</username>
       </YouTrack>
     </servers>
@@ -805,61 +691,61 @@
     </state>
     <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
     <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1586351098489" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1587037756374">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037756374" />
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1587037756373">
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587037756373" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1587037756373">
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1587037834896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587037756373" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587037834896" />
     <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1587037756373">
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587037756373" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1587037756374">
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1587037834898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037756374" />
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037834898" />
     <state width="1664" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1587037756374">
+    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587037756374" />
+    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1587037756374">
+    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587037756374" />
+    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1587037756374">
+    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1587037834897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587037756374" />
+    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
     <state width="1664" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
     <state width="1664" height="299" key="GridCell.Tab.2.bottom" timestamp="1586353662188">
       <screen x="0" y="0" width="1707" height="920" />
@@ -890,11 +776,11 @@
     </state>
     <state x="409" y="116" key="SettingsEditor/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440498186" />
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="673" y="312" key="SimpleOpenTaskDialog" timestamp="1586441534520">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1587037956268">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441534520" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585842421004" />
+    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1587037956268" />
     <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1586357058762" />
     <state x="447" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586353791778">
       <screen x="0" y="0" width="1707" height="920" />

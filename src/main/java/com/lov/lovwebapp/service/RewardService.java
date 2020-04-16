@@ -1,6 +1,5 @@
 package com.lov.lovwebapp.service;
 
-import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.Reward;
 
 import java.util.List;
