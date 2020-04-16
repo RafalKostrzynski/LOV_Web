@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LOV</title>
+    <link href="../static/css/addgoalstyle.css" th:href="@{/css/addgoalstyle.css}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<a th:href="@{/redirectToRewards}"><input type="button" value="Return" id="back-button"></a>
+
+<div id="wrapper">
+    <h1>Create new reward!</h1>
+    <form th:action="@{/savereward}" th:object="${reward}" method="post">
+        <p class="label"><b>Choose reward:</b></p>
+        <select id="rewardtemplates" onchange="myFunction(this)">
+            <option value="-">-</option>
+            <option value="Play video games">Play video games</option>
+            <option value="Cheat meal">Cheat meal</option>
+            <option value="Free day">Free day</option>
+        </select>
+        <p class="label"><b>or create your own:</b></p>
+        <input type="text" id="rewardcontents" name="rewardcontents" th:field="*{rewardContents}"/> <br />
+        <p class="label"><b>Choose goal for your reward:</b></p>
+        <select id="availablegoals" th:field="*{rewardGoal}">
+            <option value="-">-</option>
+            <option th:each="goal: ${rewards}" th:text="${reward.rewardContents}" th:value="${reward.id}"></option>
+        </select>
+        <input type="submit" value="Add" id="add-button"/><br /><br />
+    </form>
+</div>
+</body>
+
+
+<script>
+    function myFunction(data) {
+        document.getElementById("rewardcontents").value=data.value;
+    }
+</script>
+</html>

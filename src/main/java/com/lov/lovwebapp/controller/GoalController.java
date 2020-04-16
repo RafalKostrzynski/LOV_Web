@@ -1,6 +1,7 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.Goal;
+import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class GoalController {
     @RequestMapping("/goals")
     public String goals(Model model, Principal principal) {
         model.addAttribute("goalList", goalService.getAllGoals(userService.getUserByName(principal.getName()).getId()));
+        User user = userService.getUserByName(principal.getName());
+        model.addAttribute("user", user);
         return "goals";
     }
 
@@ -36,7 +39,6 @@ public class GoalController {
         goalService.deleteGoal(id);
         return "redirect:/goals";
     }
-
 
     @RequestMapping("/redirectToGoals")
     public ModelAndView redirectToGoals() {
@@ -72,7 +74,6 @@ public class GoalController {
         goalService.updateGoal(goal);
         return "redirect:/goals";
     }
-
 
     @RequestMapping("/editgoal/{id}")
     public String editGoal(@PathVariable Long id, Model model) {

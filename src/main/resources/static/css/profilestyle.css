@@ -37,21 +37,6 @@ body {
     background-color: #1490a6;
 }
 
-.pointsbox{
-    padding-top: 12px;
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    margin-right: 120px;
-}
-
-.points{
-
-
-    font-size: 20px;
-    color: white;
-}
 
 .topnav a {
     float: left;
@@ -101,4 +86,83 @@ body {
         display: block;
         text-align: left;
     }
+}
+
+#profile-wrapper{
+    background: white;
+    text-align: center;
+    border-radius: 40px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    margin-top: 50px;
+    transform: translate(-50%, -80%);
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#profile-box{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#left-box{
+    float: left;
+    text-align: right;
+    margin-left: 80px;
+    width: 100px;
+}
+
+#right-box{
+    width: 100px;
+    text-align: left;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+#edit-button{
+    height: 50px;
+    width: 120px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 40px;
+    background: #50B3FF;
+    color: white;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+#edit-button:hover{
+    width: 140px;
+    background: #2890E1;
+}
+
+#success{
+    padding-top: 2px;
+    font-size: 11px;
+    color: chartreuse;
+}
+
+.text{
+    font-size: 10px;
+    color: gray;
+}
+
+.pointsbox{
+    padding-top: 12px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    margin-right: 120px;
+}
+
+.points{
+
+
+    font-size: 20px;
+    color: white;
 }

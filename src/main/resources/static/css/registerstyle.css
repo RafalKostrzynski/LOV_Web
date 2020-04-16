@@ -118,3 +118,8 @@ p{
 #login-now{
     color: #2890E1;
 }
+
+.text{
+    font-size: 10px;
+    color: gray;
+}

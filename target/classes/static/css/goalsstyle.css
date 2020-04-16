@@ -17,8 +17,26 @@ body {
     transition: 0.4s;
     background: #2890E1;
 }
+#completed-button{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    transition: 0.4s;
+    background: green;
+}
 
-#delete-button:hover{
+#failed-button {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    transition: 0.4s;
+    background: red;
+}
+#delete-button:hover, #completed-button:hover, #failed-button:hover{
     background: #50B3FF;
 }
 
@@ -168,4 +186,20 @@ tr:nth-child(even) {
 
 #addgoal-button:hover{
     background: #50B3FF;
+}
+
+.pointsbox{
+    padding-top: 12px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    margin-right: 120px;
+}
+
+.points{
+
+
+    font-size: 20px;
+    color: white;
 }

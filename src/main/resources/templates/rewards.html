@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>LOV</title>
     <link href="../static/css/goalsstyle.css" th:href="@{/css/goalsstyle.css}" rel="stylesheet"/>
-
 </head>
 <body>
 <div class="topnav" id="myTopnav">
     <a th:href="@{/redirectToMain}" >Home</a>
-    <a th:href="@{/goals}">Goals</a>
-    <a th:href="@{/activities}" class="active">Activities</a>
+    <a th:href="@{/goals}" >Goals</a>
+    <a th:href="@{/activities}">Activities</a>
     <a th:href="@{/profile}">Profile</a>
-    <a th:href="@{/rewards}">Rewards</a>
+    <a th:href="@{/rewards}" class="active">Rewards</a>
     <a th:href="@{/penalties}">Penalties</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -22,45 +21,29 @@
     </div>
     <div class="pointsbox">
         <span class="points" >Points: </span>
-        <span class="points" th:text="${user.points}"></span>
+        <span class="points" th:text="${user.points}" ></span>
     </div>
 </div>
 
-<a th:href="@{/redirectToAddActivity}"><input type="button" id="addgoal-button" value="Add new activity"></a>
+<a th:href="@{/redirectToAddReward}"><input type="button" id="addgoal-button" value="Add new reward"></a>
 
 <div class="wrapper">
     <div class="goalsdiv">
         <table>
             <tr>
-                <th>Activity Name</th>
-                <th>Activity Amount</th>
-                <th>Activity Unit</th>
-                <th>Activity Points</th>
-                <th>Activity Goal</th>
+                <th>Reward</th>
+                <th>Goal</th>
             </tr>
-            <tr th:each="activity: ${activityList}">
+            <tr th:each="reward: ${rewards}">
+                <td th:text="${reward.content}" />
+                <td th:text="${reward.goalName}" />
                 <td>
-                <a th:href="@{/activities/deleteCompleted/{id}(id=${activity.id})}" onclick="">
-                <input type="button" value="Completed" id="completed-button" >
-                </a>
-                </td>
-                <td>
-                    <a th:href="@{/activities/deleteFailed/{id}(id=${activity.id})}" onclick="">
-                        <input type="button" value="Failed" id="failed-button" >
-                    </a>
-                </td>
-                <td th:text="${activity.activityName}" />
-                <td th:text="${activity.activityAmount}" />
-                <td th:text="${activity.activityUnit}" />
-                <td th:text="${activity.activityPoints}" />
-                <td th:text="${activity.activityGoal.goalName}" />
-                <td>
-                    <a th:href="@{/activities/delete/{id}(id=${activity.id})}" onclick="return deleteConfirmation()">
+                    <a th:href="@{/rewards/delete/{id}(id=${reward.id})}" onclick="return deleteConfirmation()">
                         <input type="button" value="Delete" id="delete-button" >
                     </a>
                 </td>
                 <td>
-                    <a th:href="@{/editactivity/{id}(id=${activity.id})}">
+                    <a th:href="@{/editreward/{id}(id=${reward.id})}">
                         <input type="button" value="Edit" id="edit-button" >
                     </a>
                 </td>

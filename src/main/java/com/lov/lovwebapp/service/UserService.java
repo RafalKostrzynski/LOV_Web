@@ -4,6 +4,7 @@ import com.lov.lovwebapp.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.List;
 
 public interface UserService extends UserDetailsService {
@@ -17,4 +18,12 @@ public interface UserService extends UserDetailsService {
     User getUserByName(String username);
 
     User getUserByID(long id);
+
+    boolean checkData(User user);
+
+    boolean checkIfTaken(User user);
+
+    boolean checkIfTakenEdit(User user);
+
+    void updateUser(User user, Principal principal);
 }

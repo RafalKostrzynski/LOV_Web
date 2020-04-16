@@ -18,6 +18,10 @@
     <div class="logout">
         <a th:href="@{/logout}" id="logouta"><input type="button" id="logoutbutton" value="Logout"></a>
     </div>
+    <div class="pointsbox">
+        <span class="points" >Points: </span>
+        <span class="points" th:text="${user.points}" ></span>
+    </div>
 </div>
 
 <a th:href="@{/redirectToAddGoal}"><input type="button" id="addgoal-button" value="Add new goal"></a>
@@ -35,7 +39,7 @@
                 <td th:text="${#temporals.format(goal.goalStartDate, 'dd.MM.yyyy')}" />
                 <td th:text="${#temporals.format(goal.goalEndDate, 'dd.MM.yyyy')}" />
                 <td>
-                    <a th:href="@{/goals/delete/{id}(id=${goal.id})}">
+                    <a th:href="@{/goals/delete/{id}(id=${goal.id})}" onclick="return deleteConfirmation()">
                     <input type="button" value="Delete" id="delete-button" >
                     </a>
                 </td>
@@ -51,6 +55,10 @@
 
 
 <script>
+    function deleteConfirmation() {
+        return window.confirm("Are you sure you want to delete this Goal?");
+    }
+
     function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {

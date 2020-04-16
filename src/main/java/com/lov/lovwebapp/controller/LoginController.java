@@ -34,7 +34,9 @@ public class LoginController {
 
     @RequestMapping("/main")
     public String main(Model model, Principal principal) {
-        model.addAttribute("points", userService.getUserByName(principal.getName()).getPoints());
+        //model.addAttribute("points", userService.getUserByName(principal.getName()).getPoints());
+        User user = userService.getUserByName(principal.getName());
+        model.addAttribute("user", user);
         return "main";
     }
 
@@ -73,8 +75,8 @@ public class LoginController {
     }
 
     private boolean checkData(User user) {
-        String patternPassword="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,}$";
-        String patternUsername="^(?=\\S+$).{3,}$";
+        String patternPassword="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,20}$";
+        String patternUsername="^(?=\\S+$).{3,15}$";
 
         return user.getPassword().matches(patternPassword) && user.getPassword().equals(user.getPasswordRepeat())
                 && user.getUsername().matches(patternUsername);

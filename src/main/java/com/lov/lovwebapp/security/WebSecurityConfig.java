@@ -37,6 +37,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/activities/**").authenticated()
                 .antMatchers("/addgoal/**").authenticated()
                 .antMatchers("/addactivity/**").authenticated()
+                .antMatchers("/profile/**").authenticated()
+                .antMatchers("/editprofile/**").authenticated()
                 .and()
                 .formLogin().loginPage("/login").defaultSuccessUrl("/main").permitAll()
 //                .and()

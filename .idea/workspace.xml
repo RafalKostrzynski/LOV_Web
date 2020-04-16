@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14863554-3254-45ee-9fab-feaadf09a4fe" name="LW-45 template powtórki użytkownika" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" afterDir="false" />
+    <list default="true" id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addgoalnoactivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/rewards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/choosegoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/choosegoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" afterDir="false" />
     </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
@@ -13,16 +26,71 @@
     <list id="3916f159-0e06-42c0-b641-9313de29405c" name="LW-39 Walidacja danych" comment="LW-39 Walidacja danych" />
     <list id="075be9d9-b473-4a8f-b9a6-ef1a8667f932" name="LW-42 format dat" comment="LW-42 format dat" />
     <list id="bf1ab87a-f2a8-47b8-847c-8428dd37bfa3" name="LW-44 Powtórka username/email" comment="LW-44 Powtórka username/email" />
+    <list id="14863554-3254-45ee-9fab-feaadf09a4fe" name="LW-45 template powtórki użytkownika" comment="LW-45 template powtórki użytkownika" />
     <list id="833de4b7-23e6-4d37-aeec-7872b49d0a89" name="LW-47 Logika biznesowa dodawania" comment="" />
     <list id="f40bcd0b-225b-4fcd-8202-44a86fc233ab" name="LW-48 Formularz dodawania aktywności" comment="" />
     <list id="1089f531-aee9-4952-9c77-7d040e498056" name="LW-49 Przycisk i formularz do edycji" comment="" />
     <list id="fc056af8-a668-4e9e-aa85-ffdb525cf63a" name="LW-50 Logika usuwania" comment="LW-50 Logika usuwania" />
     <list id="0ea3840c-9e35-42d6-9e59-8d812649baa7" name="LW-51 Przycisk do usuwania" comment="" />
     <list id="70d368f5-c757-404f-943c-54622ecaaaa1" name="LW-52 Logika edycji" comment="" />
+    <list id="43f83246-cbae-4edb-84b2-541ecd3854ec" name="LW-53 Zablokowanie dostępu w przypadku braku goala" comment="LW-53 Zablokowanie dostępu w przypadku braku goala">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/editprofilestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/profilestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-taken.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile-wrongdata.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/GoalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/mainstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/mainstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/registerstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/registerstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registererror.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registererror.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
+    </list>
+    <list id="c7e32b8e-cefa-4db3-b510-39b400d76b86" name="LW-56 Mechanika naliczania pukntów" comment="LW-56 Mechanika naliczania pukntów">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
+    </list>
+    <list id="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" name="LW-57 Wyświetlanie zdobytych punktów" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editactivity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editgoal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/goalsstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/goalsstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/mainstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/mainstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/registerstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/registerstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registererror.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registererror.html" afterDir="false" />
+    </list>
+    <list id="22ca41b5-7a62-4b9e-9e5c-865105c1f900" name="LW-58 Zmiana przycisku edycji" comment="LW-58 Zmiana przycisku edycji">
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/lovwebapp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
+    </list>
+    <list id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -51,10 +119,55 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LW-48" />
+        <entry key="$PROJECT_DIR$" value="LW-57" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/resources/templates/editgoal.html">
+      <ranges>
+        <range start1="22" end1="23" start2="22" end2="23" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
+        <range start1="34" end1="35" start2="34" end2="35" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/templates/main.html">
+      <ranges>
+        <range start1="13" end1="13" start2="13" end2="15" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
+        <range start1="16" end1="17" start2="18" end2="18" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="21" end1="21" start2="22" end2="26" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/templates/editactivity.html">
+      <ranges>
+        <range start1="24" end1="36" start2="24" end2="39" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="37" end1="38" start2="40" end2="41" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="42" end1="43" start2="45" end2="46" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="47" end1="47" start2="50" end2="51" changelist="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/templates/activities.html">
+      <ranges>
+        <range start1="14" end1="14" start2="14" end2="16" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
+        <range start1="20" end1="20" start2="22" end2="26" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="28" end1="30" start2="34" end2="34" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="38" end1="41" start2="42" end2="45" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+        <range start1="70" end1="71" start2="74" end2="75" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/templates/goals.html">
+      <ranges>
+        <range start1="14" end1="14" start2="14" end2="16" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
+        <range start1="20" end1="20" start2="22" end2="26" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/static/css/goalsstyle.css">
+      <ranges>
+        <range start1="19" end1="19" start2="19" end2="28" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
+        <range start1="20" end1="21" start2="29" end2="39" changelist="4fc504ee-7663-49cf-891b-0ec559f9f948" />
+        <range start1="171" end1="171" start2="189" end2="205" changelist="43f83246-cbae-4edb-84b2-541ecd3854ec" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -62,6 +175,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ZJBhXiP9Jjgrp4l9Xfk75H0G9E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -73,6 +189,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -81,9 +198,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.jetbrains.youtrack.notifications" value="114-4021" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.jetbrains.youtrack.notifications" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -426,7 +549,7 @@
       <updated>1585842420958</updated>
       <workItem from="1585841630210" duration="790000" />
     </task>
-    <task active="true" id="LW-45" summary="template powtórki użytkownika">
+    <task id="LW-45" summary="template powtórki użytkownika">
       <branch name="LW-48" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" original="true" />
       <branch name="LW-45" repository="C:\Users\Przemek\Desktop\lov\lovwebapp-TEMPLATE123\lovwebapp-TEMPLATE" />
       <changelist id="14863554-3254-45ee-9fab-feaadf09a4fe" name="LW-45 template powtórki użytkownika" comment="" />
@@ -438,24 +561,130 @@
       <option name="presentableId" value="LW-45" />
       <option name="project" value="LW" />
       <option name="type" value="BUG" />
-      <updated>1585842420958</updated>
-      <workItem from="1585842421013" duration="226000" />
+      <updated>1586350451120</updated>
+      <workItem from="1585842421013" duration="333000" />
+      <workItem from="1586350096705" duration="271000" />
+    </task>
+    <task id="LW-58" summary="Zmiana przycisku edycji">
+      <branch name="LW-45" repository="G:\lovwebapp\lovwebapp" original="true" />
+      <branch name="LW-58" repository="G:\lovwebapp\lovwebapp" />
+      <changelist id="22ca41b5-7a62-4b9e-9e5c-865105c1f900" name="LW-58 Zmiana przycisku edycji" comment="" />
+      <option name="closed" value="true" />
+      <created>1586350275611</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-58</url>
+      <option name="number" value="58" />
+      <option name="presentableId" value="LW-58" />
+      <option name="project" value="LW" />
+      <option name="type" value="BUG" />
+      <updated>1586351546435</updated>
+      <workItem from="1586350368399" duration="1139000" />
+    </task>
+    <task id="LW-59" summary="Potwierdzenie usuwania">
+      <branch name="LW-58" repository="G:\lovwebapp\lovwebapp" original="true" />
+      <branch name="LW-59" repository="G:\lovwebapp\lovwebapp" />
+      <changelist id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="" />
+      <option name="closed" value="true" />
+      <created>1586350315740</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-59</url>
+      <option name="number" value="59" />
+      <option name="presentableId" value="LW-59" />
+      <option name="project" value="LW" />
+      <option name="type" value="BUG" />
+      <updated>1586353782767</updated>
+      <workItem from="1586351509322" duration="2172000" />
+    </task>
+    <task id="LW-56" summary="Mechanika naliczania pukntów">
+      <branch name="LW-59" repository="G:\lovwebapp\lovwebapp" original="true" />
+      <branch name="LW-56" repository="G:\lovwebapp\lovwebapp" />
+      <changelist id="c7e32b8e-cefa-4db3-b510-39b400d76b86" name="LW-56 Mechanika naliczania pukntów" comment="" />
+      <option name="closed" value="true" />
+      <created>1586346663930</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-56</url>
+      <option name="number" value="56" />
+      <option name="presentableId" value="LW-56" />
+      <option name="project" value="LW" />
+      <updated>1586357058714</updated>
+      <workItem from="1586353685074" duration="3369000" />
+    </task>
+    <task id="LW-53" summary="Zablokowanie dostępu w przypadku braku goala">
+      <branch name="LW-56" repository="G:\lovwebapp\lovwebapp" original="true" />
+      <branch name="LW-53" repository="G:\lovwebapp\lovwebapp" />
+      <changelist id="43f83246-cbae-4edb-84b2-541ecd3854ec" name="LW-53 Zablokowanie dostępu w przypadku braku goala" comment="" />
+      <option name="closed" value="true" />
+      <created>1585902412814</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-53</url>
+      <option name="number" value="53" />
+      <option name="presentableId" value="LW-53" />
+      <option name="project" value="LW" />
+      <updated>1586440461821</updated>
+      <workItem from="1586357059251" duration="45000" />
+      <workItem from="1586436342737" duration="3974000" />
+    </task>
+    <task id="LW-57" summary="Wyświetlanie zdobytych punktów">
+      <branch name="LW-53" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" original="true" />
+      <branch name="LW-57" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" />
+      <changelist id="ee274186-b11b-43ed-9fd9-ff47a7d2aa63" name="LW-57 Wyświetlanie zdobytych punktów" comment="" />
+      <option name="closed" value="true" />
+      <created>1586346685799</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-57</url>
+      <option name="number" value="57" />
+      <option name="presentableId" value="LW-57" />
+      <option name="project" value="LW" />
+      <updated>1586441534456</updated>
+      <workItem from="1586440461931" duration="1070000" />
+    </task>
+    <task active="true" id="LW-60" summary="Pola unit i amount obok siebie">
+      <branch name="LW-57" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" original="true" />
+      <branch name="LW-60" repository="C:\Users\Bartek\Desktop\lovwebappnew\lovwebapp" />
+      <changelist id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="" />
+      <option name="closed" value="true" />
+      <created>1586350366928</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-60</url>
+      <option name="number" value="60" />
+      <option name="presentableId" value="LW-60" />
+      <option name="project" value="LW" />
+      <option name="type" value="BUG" />
+      <updated>1586441534456</updated>
+      <workItem from="1586441534533" duration="98000" />
+      <workItem from="1586481364073" duration="4214000" />
+      <workItem from="1586517728885" duration="308000" />
+      <workItem from="1587032433316" duration="2445000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
       <YouTrack url="https://amwgdynia.myjetbrains.com/youtrack">
-        <option name="defaultSearch" value="project:Lov-Web Sprints: {Sprint 3}" />
+        <option name="defaultSearch" value="project:Lov-Web Sprints: {Sprint 4}" />
         <option name="preferredOpenTaskState">
           <CustomTaskState id="Done" name="Done" />
         </option>
-        <username>przemkooo98</username>
+        <username>rudzbartosz97@gmail.com</username>
       </YouTrack>
     </servers>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="User DataBase" />
     <MESSAGE value="LW-28 Logika biznesowa logowania" />
     <MESSAGE value="LW-27 Baza danych użytkowników" />
@@ -463,29 +692,32 @@
     <MESSAGE value="LW-35 Lista do wyświetlania" />
     <MESSAGE value="LW-42 format dat" />
     <MESSAGE value="LW-50 Logika usuwania" />
-    <option name="LAST_COMMIT_MESSAGE" value="LW-50 Logika usuwania" />
+    <MESSAGE value="LW-45 template powtórki użytkownika" />
+    <MESSAGE value="LW-58 Zmiana przycisku edycji" />
+    <MESSAGE value="LW-59 Potwierdzenie usuwania" />
+    <option name="LAST_COMMIT_MESSAGE" value="LW-59 Potwierdzenie usuwania" />
   </component>
   <component name="WindowStateProjectService">
     <state x="447" y="119" key="#Project_Structure" timestamp="1584635662561">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="447" y="119" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1584635662561" />
-    <state x="402" y="107" key="#Servers" timestamp="1585750899698">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="503" y="135" key="#Servers" timestamp="1586440430737">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="503" y="135" key="#Servers/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585254956865" />
+    <state x="503" y="135" key="#Servers/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440430737" />
     <state x="402" y="107" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1585750899698" />
-    <state x="447" y="119" key="#Servers/0.0.1707.920@0.0.1707.920" timestamp="1584620254020" />
+    <state x="447" y="119" key="#Servers/0.0.1707.920@0.0.1707.920" timestamp="1586350322223" />
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584547627863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1584547627863" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1585823362695">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1586352612317">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585251186118" />
     <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585823362695" />
-    <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1585234947047" />
+    <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1586352612317" />
     <state x="462" y="386" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585227454240">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -505,121 +737,122 @@
     <state x="826" y="208" width="450" height="595" key="#xdebugger.evaluate/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585254587800" />
     <state x="661" y="165" width="488" height="472" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1585826145690" />
     <state x="734" y="184" width="667" height="592" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1585150021739" />
-    <state x="432" y="16" key="CommitChangelistDialog2" timestamp="1585830696112">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="480" y="55" key="CommitChangelistDialog2" timestamp="1586357094382">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="540" y="62" key="CommitChangelistDialog2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255006136" />
-    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585830696112" />
-    <state x="480" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1585301196887" />
-    <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1585414345120">
+    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585842713995" />
+    <state x="480" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586357094382" />
+    <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1586351098489">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
-    <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1585414345120" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1585842664350">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1586351098489" />
+    <state width="1877" height="571" key="GridCell.Tab.0.bottom" timestamp="1586441631515">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842664350" />
-    <state width="1664" height="243" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1585842664335">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.0.center" timestamp="1586441631515">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585842664335" />
-    <state width="1664" height="243" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1585842664317">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585842753277" />
+    <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.0.left" timestamp="1586441631515">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585842664317" />
-    <state width="1664" height="243" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1585842664337">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585842753277" />
+    <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.0.right" timestamp="1586441631515">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585842664337" />
-    <state width="1664" height="243" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1585842664353">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.1.bottom" timestamp="1586441631516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
+    <state width="1877" height="571" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842664353" />
-    <state width="1664" height="243" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1585842664352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.1.center" timestamp="1586441631516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585842664352" />
-    <state width="1664" height="243" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1585842664351">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.1.left" timestamp="1586441631516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585842664351" />
-    <state width="1664" height="243" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1585747441462" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1585842664352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1877" height="571" key="GridCell.Tab.1.right" timestamp="1586441631516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261219" />
+    <state width="1877" height="571" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585842664352" />
-    <state width="1664" height="243" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1585747441463" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1585837831587">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585837831587" />
-    <state width="1664" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1585837831586">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
-    <state width="1664" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1585837831586">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
-    <state width="1664" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1585837831586">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1585837831586" />
-    <state width="1664" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1585745755958" />
-    <state x="364" y="103" key="SettingsEditor" timestamp="1584619927993">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
+    <state width="1664" height="299" key="GridCell.Tab.2.bottom" timestamp="1586353662188">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1585842421004">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
+    <state width="1664" height="299" key="GridCell.Tab.2.center" timestamp="1586353662188">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255219682" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
+    <state width="1664" height="299" key="GridCell.Tab.2.left" timestamp="1586353662188">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
+    <state width="1664" height="299" key="GridCell.Tab.2.right" timestamp="1586353662188">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1585842753278" />
+    <state width="1664" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
+    <state x="409" y="116" key="SettingsEditor" timestamp="1586440498186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="409" y="116" key="SettingsEditor/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440498186" />
+    <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
+    <state x="673" y="312" key="SimpleOpenTaskDialog" timestamp="1586441534520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441534520" />
     <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1585842421004" />
-    <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1585152734336" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2" timestamp="1585830704861">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1586357058762" />
+    <state x="447" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586353791778">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="503" y="219" key="Vcs.Push.Dialog.v2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255238830" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585830704861" />
-    <state x="447" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1585301205103" />
+    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585842725981" />
+    <state x="447" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586353791778" />
     <state width="859" height="466" key="XDebugger.FullValuePopup" timestamp="1584631176061">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="859" height="466" key="XDebugger.FullValuePopup/0.0.1707.920@0.0.1707.920" timestamp="1584631176061" />
-    <state x="426" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1585818575314">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="533" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1587032434973">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="533" y="267" key="com.intellij.ide.util.TipDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585238328698" />
+    <state x="533" y="267" key="com.intellij.ide.util.TipDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587032434973" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585296537917" />
     <state x="426" y="212" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585818575314" />
     <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1585242732109">
@@ -638,5 +871,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585241598841" />
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1587032835216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587032835216" />
   </component>
 </project>
