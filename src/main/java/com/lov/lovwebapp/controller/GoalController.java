@@ -67,6 +67,7 @@ public class GoalController {
         return new ModelAndView("addgoal", "goal", new Goal());
     }
 
+
     @RequestMapping(value = "goals/editgoal/{id}", method = RequestMethod.POST)
     public String updateGoal(@PathVariable Long id, Goal goal, Principal principal) {
         goal.setUser(userService.getUserByName(principal.getName()));

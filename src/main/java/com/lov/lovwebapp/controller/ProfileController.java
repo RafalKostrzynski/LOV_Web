@@ -45,6 +45,7 @@ public class ProfileController {
         return "profile";
     }
 
+
     @RequestMapping(value = "/updateprofile", method = RequestMethod.POST)
     public String editProfile(User user, Principal principal) {
         if (userService.checkData(user)) {

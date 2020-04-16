@@ -54,6 +54,7 @@ public class ActivityController {
 
     }
 
+
     @RequestMapping("/activities")
     public String activities(Model model, Principal principal) {
         model.addAttribute("activityList", activityService.getAllActivities(userService.getUserByName(principal.getName()).getId()));
