@@ -40,8 +40,8 @@ body {
 }
 
 #goaltemplates, #goalname, #startdate, #enddate, #activitytemplates, #activityname,
-#activityamount, #activitypoints, #activityunit, #availablegoals, #activityDataList,
-#activityDataTemplates{
+#activitypoints, #activityunit, #availablegoals,
+#activityDataTemplates, #rewardtemplates, #rewardcontents{
     width: 300px;
     height: 50px;
     border: none;
@@ -70,4 +70,18 @@ input[type=date]::-webkit-inner-spin-button {
 
 #back-button:hover{
     background: #50B3FF;
+}
+
+#activityDataList, #activityamount{
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    background: #CBCBCB;
+    padding-left: 20px;
+}
+
+#left-box{
+    float: left;
+    margin-left: 40px;
 }

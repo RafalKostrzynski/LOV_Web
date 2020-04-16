@@ -55,8 +55,10 @@ public class ActivityController {
     }
 
     @RequestMapping("/activities")
-    public String goals(Model model, Principal principal) {
+    public String activities(Model model, Principal principal) {
         model.addAttribute("activityList", activityService.getAllActivities(userService.getUserByName(principal.getName()).getId()));
+        User user = userService.getUserByName(principal.getName());
+        model.addAttribute("user", user);
         return "activities";
     }
 

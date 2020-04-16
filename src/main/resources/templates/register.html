@@ -15,12 +15,13 @@
         <h1>Sign up to LOV!</h1>
         <form name="form1" th:action="@{/register}" method="post" th:object="${user}">
             <input type="text" id="username" name="username" placeholder="Username" th:field="*{username}"/> <br />
-            <span id="wrongusername"></span><br />
+            <span class="text">Username must contain 3-15 characters!</span><br />
             <input type="email" class="email" name="email" placeholder="E-mail address"th:field="*{email}"/> <br />
             <input type="password" class="password" name="password" placeholder="Password" th:field="*{password}"/> <br />
             <input type="password" class="password" name="repeatpassword" placeholder="Repeat password"  th:field="*{passwordRepeat}"/> <br />
+            <span class="text">Password must contain between 9 to 20 characters, at least one numeric digit,<br /> one uppercase, one lowercase letter and special sign!</span><br />
             <span id="wrongpass"></span><br />
-            <input type="submit" value="Register" id="register-button" onclick="checkPassword(document.form1.password,document.form1.username)"/>
+            <input type="submit" value="Register" id="register-button"/>
             <br />
             <p>Already registered? <a th:href="@{/redirectToLogin}" id="login-now"><b>  LOGIN NOW</b></a></p>
         </form>

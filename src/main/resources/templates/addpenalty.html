@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LOV</title>
+    <link href="../static/css/addgoalstyle.css" th:href="@{/css/addgoalstyle.css}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<a th:href="@{/redirectToPenalties}"><input type="button" value="Return" id="back-button"></a>
+
+<div id="wrapper">
+    <h1>Create new penalty!</h1>
+    <form th:action="@{/savepenalty}" th:object="${penalties}" method="post">
+        <p class="label"><b>Choose penalty:</b></p>
+        <select id="penaltytemplates" onchange="myFunction(this)">
+            <option value="-">-</option>
+            <option value="Additional excersise">Additional excersise</option>
+            <option value="Do the dishes">Do the dishes</option>
+            <option value="Stay home and study">Stay home and study</option>
+        </select>
+        <p class="label"><b>or create your own:</b></p>
+        <input type="text" id="penaltycontents" name="penaltycontents" th:field="*{penaltycontents}"/> <br />
+        <p class="label"><b>Choose goal for your penalty:</b></p>
+        <select id="availablegoals" th:field="*{penaltyGoal}">
+            <option value="-">-</option>
+            <option th:each="goal: ${penalties}" th:text="${penalty.penaltyContents}" th:value="${penalty.id}"></option>
+        </select>
+        <input type="submit" value="Add" id="add-button"/><br /><br />
+    </form>
+</div>
+</body>
+
+
+<script>
+    function myFunction(data) {
+        document.getElementById("rewardcontents").value=data.value;
+    }
+</script>
+</html>

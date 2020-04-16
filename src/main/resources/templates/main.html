@@ -11,14 +11,19 @@
     <a th:href="@{/redirectToGoals}">Goals</a>
     <a th:href="@{/activities}">Activities</a>
     <a th:href="@{/profile}">Profile</a>
+    <a th:href="@{/rewards}">Rewards</a>
+    <a th:href="@{/penalties}">Penalties</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
-    <label th:text="${points}"></label>
     <div class="logout">
         <a th:href="@{/redirectToLogout}" id="logouta"><input type="button" id="logoutbutton" value="Logout"></a>
 <!--        <a href="<c:url value="/logout" id="logouta"><input type="button" id="logoutbutton" value="Logout"></a>-->
 
+    </div>
+    <div class="pointsbox">
+        <span class="points" >Points: </span>
+        <span class="points" th:text="${user.points}" ></span>
     </div>
 </div>
 

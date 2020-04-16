@@ -21,8 +21,11 @@
             <option value="Study">Study</option>
             <option value="Go for a walk">Go for a walk</option>
         </datalist>
+        <div id="left-box">
         <p class="label"><b>Activity amount:</b></p>
-        <input type="number" min="1" value="1" max="1000000" id="activityamount" name="activityamount" th:field="*{activityAmount}"/><br />
+        <input type="number" min="1" value="1" max="1000000" id="activityamount" name="activityamount" th:field="*{activityAmount}"/>
+        </div>
+        <div id="right-box">
         <p class="label"><b>Activity unit:</b></p>
         <input id="activityDataList" list="activityList" name="activityList" th:field="*{activityUnit}">
         <datalist id="activityList">
@@ -32,7 +35,7 @@
             <option value="minutes">
             <option value="hours">
             <option value="repeats">
-        </datalist> <br /><br>
+        </datalist> </div><br /><br>
         <p class="label"><b>Activity points:</b></p>
         <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>
