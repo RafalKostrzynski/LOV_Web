@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<a th:href="@{/redirectToAddReward}"><input type="button" id="addgoal-button" value="Add new reward"></a>
+<a th:href="@{/redirectToAddPenalty}"><input type="button" id="addgoal-button" value="Add new penalty"></a>
 
 <div class="wrapper">
     <div class="goalsdiv">
@@ -34,9 +34,9 @@
                 <th>Penalty</th>
                 <th>Goal</th>
             </tr>
-            <tr th:each="penalty: ${penalties}">
-                <td th:text="${penalty.content}" />
-                <td th:text="${penalty.goalName}" />
+            <tr th:each="penalty: ${penaltyList}">
+                <td th:text="${penalty.contents}" />
+                <td th:text="${penalty.goal.goalName}" />
                 <td>
                     <a th:href="@{/penalties/delete/{id}(id=${penalty.id})}" onclick="return deleteConfirmation()">
                         <input type="button" value="Delete" id="delete-button" >

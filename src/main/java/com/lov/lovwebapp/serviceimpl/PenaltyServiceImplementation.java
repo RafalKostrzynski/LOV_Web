@@ -37,11 +37,16 @@ public class PenaltyServiceImplementation implements PenaltyService {
 
     @Override
     public boolean deletePenalty(Long id) {
+        if (penaltyRepo.findById(id).isPresent()) {
+            penaltyRepo.deleteById(id);
+            return true;
+        }
         return false;
     }
 
     @Override
     public boolean updatePenalty(Penalty penalty) {
-        return false;
+        addPenalty(penalty);
+        return penaltyRepo.findById(penalty.getId()).get().equals(penalty);
     }
 }

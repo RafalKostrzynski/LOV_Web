@@ -12,7 +12,7 @@
 
 <div id="wrapper">
     <h1>Create new penalty!</h1>
-    <form th:action="@{/savepenalty}" th:object="${penalties}" method="post">
+    <form th:action="@{/savepenalty}" th:object="${penalty}" method="post" onsubmit="return dataValidation()">
         <p class="label"><b>Choose penalty:</b></p>
         <select id="penaltytemplates" onchange="myFunction(this)">
             <option value="-">-</option>
@@ -21,11 +21,11 @@
             <option value="Stay home and study">Stay home and study</option>
         </select>
         <p class="label"><b>or create your own:</b></p>
-        <input type="text" id="penaltycontents" name="penaltycontents" th:field="*{penaltycontents}"/> <br />
+        <input type="text" id="penaltycontents" name="penaltycontents" th:field="*{contents}"/> <br />
         <p class="label"><b>Choose goal for your penalty:</b></p>
-        <select id="availablegoals" th:field="*{penaltyGoal}">
+        <select id="availablegoals" th:field="*{goal}">
             <option value="-">-</option>
-            <option th:each="goal: ${penalties}" th:text="${penalty.penaltyContents}" th:value="${penalty.id}"></option>
+            <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>
         </select>
         <input type="submit" value="Add" id="add-button"/><br /><br />
     </form>
@@ -34,8 +34,17 @@
 
 
 <script>
+    function dataValidation() {
+        var penaltycontents=document.getElementById("penaltycontents").value;
+        if (penaltycontents !== "") {
+            return true;
+        }
+        alert("Invalid data!");
+        return false;
+    }
+
     function myFunction(data) {
-        document.getElementById("rewardcontents").value=data.value;
+        document.getElementById("penaltycontents").value=data.value;
     }
 </script>
 </html>

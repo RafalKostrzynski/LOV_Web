@@ -12,7 +12,7 @@
 
 <div id="wrapper">
     <h1>Edit your reward!</h1>
-    <form th:action="@{/rewards/editreward/{id}(id=${reward.id})}" th:object="${reward}" method="post">
+    <form th:action="@{/rewards/editreward/{id}(id=${reward.id})}" th:object="${reward}" method="post" onsubmit="return dataValidation()">
         <p class="label"><b>Choose reward:</b></p>
         <select id="rewardtemplates" onchange="myFunction(this)">
             <option value="-">-</option>
@@ -33,6 +33,15 @@
 
 
 <script>
+    function dataValidation() {
+        var rewardcontents=document.getElementById("rewardcontents").value;
+        if (rewardcontents !== "") {
+            return true;
+        }
+        alert("Invalid data!");
+        return false;
+    }
+
     function myFunction(data) {
         document.getElementById("rewardcontents").value=data.value;
     }

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
+    <list default="true" id="f717ae48-2817-4ed0-a65f-4d2bb21ea120" name="LW-64 Logika biznesowa edycji kary" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/PenaltyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editpenalty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/addgoalstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editreward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editreward.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/addgoalstyle.css" afterDir="false" />
+    </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
     <list id="d8cb8f36-f7d8-4055-b335-8b35f533155b" name="LW-28 Logika biznesowa logowania" comment="LW-28 Logika biznesowa logowania" />
@@ -23,6 +33,13 @@
     <list id="22ca41b5-7a62-4b9e-9e5c-865105c1f900" name="LW-58 Zmiana przycisku edycji" comment="LW-58 Zmiana przycisku edycji" />
     <list id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="" />
     <list id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="" />
+    <list id="1bdcfcad-7d66-4233-bab7-2f73bd4d7b8b" name="LW-62 Logika biznesowa dodawania kary" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/PenaltyServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/PenaltyServiceImplementation.java" afterDir="false" />
+    </list>
+    <list id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
+    <list id="6ad83a1f-de5f-45bd-b355-5c38d7286fad" name="LW-74 Logika usuwania kary" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/PenaltyServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/PenaltyServiceImplementation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,10 +75,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LW-72" />
+        <entry key="$PROJECT_DIR$" value="LW-74" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/PenaltyServiceImplementation.java">
+      <ranges>
+        <range start1="39" end1="39" start2="39" end2="43" changelist="1bdcfcad-7d66-4233-bab7-2f73bd4d7b8b" />
+        <range start1="44" end1="45" start2="48" end2="50" changelist="6ad83a1f-de5f-45bd-b355-5c38d7286fad" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -581,7 +606,7 @@
       <updated>1587037956253</updated>
       <workItem from="1587037921110" duration="35000" />
     </task>
-    <task active="true" id="LW-66" summary="Logika dodawania nagrody">
+    <task id="LW-66" summary="Logika dodawania nagrody">
       <branch name="LW-72" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
       <branch name="LW-66" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
       <changelist id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
@@ -592,8 +617,50 @@
       <option name="number" value="66" />
       <option name="presentableId" value="LW-66" />
       <option name="project" value="LW" />
-      <updated>1587037956253</updated>
-      <workItem from="1587037956279" duration="131000" />
+      <updated>1587038449137</updated>
+      <workItem from="1587037956279" duration="492000" />
+    </task>
+    <task id="LW-62" summary="Logika biznesowa dodawania kary">
+      <branch name="LW-66" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-62" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="1bdcfcad-7d66-4233-bab7-2f73bd4d7b8b" name="LW-62 Logika biznesowa dodawania kary" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035213456</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-62</url>
+      <option name="number" value="62" />
+      <option name="presentableId" value="LW-62" />
+      <option name="project" value="LW" />
+      <updated>1587038583660</updated>
+      <workItem from="1587038449209" duration="135000" />
+    </task>
+    <task id="LW-74" summary="Logika usuwania kary">
+      <branch name="LW-62" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-74" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="6ad83a1f-de5f-45bd-b355-5c38d7286fad" name="LW-74 Logika usuwania kary" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035761529</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-74</url>
+      <option name="number" value="74" />
+      <option name="presentableId" value="LW-74" />
+      <option name="project" value="LW" />
+      <updated>1587038631168</updated>
+      <workItem from="1587038583895" duration="47000" />
+    </task>
+    <task active="true" id="LW-64" summary="Logika biznesowa edycji kary">
+      <branch name="LW-74" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" original="true" />
+      <branch name="LW-64" repository="C:\Users\Przemek\Desktop\lov\lovwebapp" />
+      <changelist id="f717ae48-2817-4ed0-a65f-4d2bb21ea120" name="LW-64 Logika biznesowa edycji kary" comment="" />
+      <option name="closed" value="true" />
+      <created>1587035242285</created>
+      <option name="issue" value="true" />
+      <url>https://amwgdynia.myjetbrains.com/youtrack/issue/LW-64</url>
+      <option name="number" value="64" />
+      <option name="presentableId" value="LW-64" />
+      <option name="project" value="LW" />
+      <updated>1587038631168</updated>
+      <workItem from="1587038631223" duration="1163000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers>
@@ -651,16 +718,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1584547627863" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1587035550656">
+    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1587038782695">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585251186118" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587035550656" />
+    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587038782695" />
     <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1586352612317" />
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587033077941">
+    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587038227862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587033077941" />
+    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587038227862" />
     <state x="462" y="386" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585227454240">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -691,61 +758,61 @@
     </state>
     <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
     <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1586351098489" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1587039796563">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587039796563" />
     <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1587039796562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587039796562" />
     <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1587037834896">
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1587039796562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587037834896" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587039796562" />
     <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1587039796562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
     <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587039796562" />
     <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1587037834898">
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1587039796564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587037834898" />
+    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587039796564" />
     <state width="1664" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1587039796563">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587039796563" />
     <state width="1664" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1587039796563">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587039796563" />
     <state width="1664" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1587037834897">
+    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1587039796564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="571" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
     <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587037834897" />
+    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587039796564" />
     <state width="1664" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1586357048270" />
     <state width="1664" height="299" key="GridCell.Tab.2.bottom" timestamp="1586353662188">
       <screen x="0" y="0" width="1707" height="920" />
@@ -776,11 +843,11 @@
     </state>
     <state x="409" y="116" key="SettingsEditor/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440498186" />
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1587037956268">
+    <state x="538" y="247" key="SimpleOpenTaskDialog" timestamp="1587038631213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441534520" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1587037956268" />
+    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1587038631213" />
     <state x="598" y="276" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1586357058762" />
     <state x="447" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586353791778">
       <screen x="0" y="0" width="1707" height="920" />
