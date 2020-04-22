@@ -20,37 +20,11 @@ public class Activity {
     private Goal activityGoal;
     private int activityPoints;
     private int activityAmount;
-
     private String frequency;
     private int counter;
     private LocalDate startDate;
     private String counterString;
-
-    public String getCounterString() {
-        return counterString;
-    }
-
-    public void setCounterString(String counterString) {
-        this.counterString = counterString;
-    }
-
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
-
     private LocalDateTime endDateTime;
-
-    public LocalDateTime getEndDateTime() {
-        return endDateTime;
-    }
-
-    public void setEndDateTime(LocalDateTime endDateTime) {
-        this.endDateTime = endDateTime;
-    }
 
     public Activity(String activityName, String activityUnit, Goal activityGoal, int activityPoints,
                     int activityAmount, String frequency, int counter, LocalDateTime endDateTime) {
@@ -74,6 +48,30 @@ public class Activity {
     }
 
     public Activity() {
+    }
+
+    public String getCounterString() {
+        return counterString;
+    }
+
+    public void setCounterString(String counterString) {
+        this.counterString = counterString;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDateTime() {
+        return endDateTime;
+    }
+
+    public void setEndDateTime(LocalDateTime endDateTime) {
+        this.endDateTime = endDateTime;
     }
 
     public String getFrequency() {

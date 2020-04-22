@@ -19,6 +19,8 @@ import java.security.Principal;
 import java.time.LocalDate;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 @Controller
 public class ActivityController {
 
@@ -80,6 +82,8 @@ public class ActivityController {
 
     @RequestMapping("/saveactivity")
     public ModelAndView saveActivity(Activity activity) {
+        if(DAYS.between(activity.getActivityGoal().getGoalEndDate(),LocalDate.now())<7){}//TODO tutaj nowy endpoint jezeli goal nie ma trwa tygodnia od dzisiaj
+
         activityService.addActivity(activity);
         return new ModelAndView("redirect:/activities");
     }
