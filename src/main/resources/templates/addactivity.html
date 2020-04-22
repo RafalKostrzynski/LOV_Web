@@ -35,7 +35,12 @@
             <option value="minutes">
             <option value="hours">
             <option value="repeats">
-        </datalist> </div><br /><br>
+        </datalist> </div>
+        <p>Please select frequency:</p>
+        <input type="radio" id="daily" name="frequency" value="daily" th:field="*{frequency}">
+        <label for="daily">Daily</label><br>
+        <input type="radio" id="weekly" name="frequency" value="weekly" th:field="*{frequency}">
+        <label for="weekly">Weekly</label><br>
         <p class="label"><b>Activity points:</b></p>
         <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>

@@ -21,7 +21,7 @@
             <option value="Stay home and study">Stay home and study</option>
         </select>
         <p class="label"><b>or create your own:</b></p>
-        <input type="text" id="rewardcontents" name="rewardcontents" th:field="*{contents}"/> <br />
+        <input type="text" id="penaltycontents" name="penaltycontents" th:field="*{contents}"/> <br />
         <p class="label"><b>Choose goal for your reward:</b></p>
         <select id="availablegoals" th:field="*{goal}">
             <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>

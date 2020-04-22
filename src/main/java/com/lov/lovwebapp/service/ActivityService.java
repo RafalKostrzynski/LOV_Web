@@ -2,6 +2,7 @@ package com.lov.lovwebapp.service;
 
 import com.lov.lovwebapp.model.Activity;
 
+import java.security.Principal;
 import java.util.List;
 
 public interface ActivityService {
@@ -19,4 +20,6 @@ public interface ActivityService {
     void deleteCompletedActivity(long id);
 
     boolean updateActivity(Activity activity);
+
+    void deleteExpiredActivity(Principal principal);
 }

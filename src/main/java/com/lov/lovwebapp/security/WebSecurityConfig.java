@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/profile/**").authenticated()
                 .antMatchers("/editprofile/**").authenticated()
                 .and()
-                .formLogin().loginPage("/login").defaultSuccessUrl("/main").permitAll()
+                .formLogin().loginPage("/login").defaultSuccessUrl("/login-success").permitAll()
 //                .and()
 //                .rememberMe().tokenRepository(persistentTokenRepository())
                 .and()

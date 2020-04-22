@@ -11,6 +11,8 @@ public interface UserService extends UserDetailsService {
 
     void saveUser(User user, HttpServletRequest request);
 
+    void saveUser(User user);
+
     void verifyToken(User user, String token);
 
     List<User> getAllUsers();

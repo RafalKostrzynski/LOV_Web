@@ -1,10 +1,9 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.User;
-import com.lov.lovwebapp.repo.UserRepo;
+import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,17 +18,24 @@ import java.util.List;
 public class LoginController {
 
     private UserService userService;
+    private ActivityService activityService;
     private String email;
 
     @Autowired
-    public LoginController(UserService userService) {
-
+    public LoginController(UserService userService, ActivityService activityService) {
+        this.activityService = activityService;
         this.userService = userService;
     }
 
     @RequestMapping("/login")
     public String login() {
         return "login";
+    }
+
+    @RequestMapping("/login-success")
+    public String loginSuccess(Principal principal) {
+        activityService.deleteExpiredActivity(principal);
+        return "redirect:/main";
     }
 
     @RequestMapping("/main")
@@ -52,7 +58,7 @@ public class LoginController {
 
     @RequestMapping("/register")
     public ModelAndView register(User user, HttpServletRequest httpServletRequest) {
-        if(checkData(user)) {
+        if (checkData(user)) {
             if (!checkIfTaken(user)) {
                 userService.saveUser(user, httpServletRequest);
                 email = user.getEmail();
@@ -75,8 +81,8 @@ public class LoginController {
     }
 
     private boolean checkData(User user) {
-        String patternPassword="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,20}$";
-        String patternUsername="^(?=\\S+$).{3,15}$";
+        String patternPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{9,20}$";
+        String patternUsername = "^(?=\\S+$).{3,15}$";
 
         return user.getPassword().matches(patternPassword) && user.getPassword().equals(user.getPasswordRepeat())
                 && user.getUsername().matches(patternUsername);

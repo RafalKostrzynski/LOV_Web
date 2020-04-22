@@ -36,7 +36,8 @@
 <script>
     function dataValidation() {
         var penaltycontents=document.getElementById("penaltycontents").value;
-        if (penaltycontents !== "") {
+        var goalName=document.getElementById("availablegoals").value;
+        if (penaltycontents !== "" && goalName !== "-") {
             return true;
         }
         alert("Invalid data!");

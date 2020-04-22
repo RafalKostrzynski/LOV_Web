@@ -65,6 +65,11 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public void saveUser(User user) {
+        userRepo.save(user);
+    }
+
+    @Override
     public void verifyToken(User user, String token) {
         verificationTokenService.verifyToken(user, token);
         userRepo.save(user);
