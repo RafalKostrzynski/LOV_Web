@@ -12,7 +12,7 @@
 
 <div id="wrapper">
     <h3>Before adding <span th:text="${warning}"></span>, create a goal first!</h3>
-    <form th:action="@{/savegoal}" th:object="${goal}" method="post" onsubmit="return dateValidation()">
+    <form th:action="@{|/savegoalnoactivity/${endpoint}|}" th:object="${goal}" method="post" onsubmit="return dateValidation()">
         <p class="label"><b>Choose goal name:</b></p>
         <select id="goaltemplates" onchange="myFunction(this)">
             <option value="-">-</option>

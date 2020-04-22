@@ -68,7 +68,6 @@ public class GoalController {
         return new ModelAndView("addgoalnoactivity", "goal", new Goal());
     }
 
-
     @RequestMapping(value = "goals/editgoal/{id}", method = RequestMethod.POST)
     public String updateGoal(@PathVariable Long id, Goal goal, Principal principal) {
         goal.setUser(userService.getUserByName(principal.getName()));
@@ -90,4 +89,21 @@ public class GoalController {
         return new ModelAndView("redirect:/goals");
     }
 
+    @RequestMapping("/savegoalnoactivity/{endpoint}")
+    public ModelAndView saveGoalNoActivity(@PathVariable String endpoint, Goal goal, Principal principal) {
+        goal.setUser(userService.getUserByName(principal.getName()));
+        goalService.addGoal(goal);
+        switch (endpoint){
+            case "activity":
+                return new ModelAndView("redirect:/addactivity");
+
+            case "reward":
+                return new ModelAndView("redirect:/addreward");
+
+            case "penalty":
+                return new ModelAndView("redirect:/addpenalty");
+
+            default: return new ModelAndView("redirect:/goals");
+        }
+    }
 }

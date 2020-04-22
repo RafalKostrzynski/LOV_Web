@@ -41,7 +41,7 @@ public class RewardController {
     public ModelAndView redirectToAddActivity(Principal principal, Model model) {
         List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
         if(!goalList.isEmpty()) return new ModelAndView("redirect:/addreward");
-        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_reward");
+        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_reward&endpoint=reward");
     }
 
     @RequestMapping("/addreward")
