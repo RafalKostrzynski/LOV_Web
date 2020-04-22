@@ -70,7 +70,7 @@ public class ActivityController {
     public ModelAndView redirectToAddActivity(Principal principal) {
         List<Goal>goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
         if(!goalList.isEmpty()) return new ModelAndView("redirect:/addactivity");
-        return new ModelAndView("redirect:/addgoalnoactivity?warning=an_activity");
+        return new ModelAndView("redirect:/addgoalnoactivity?warning=an_activity&endpoint=activity");
     }
 
     @RequestMapping("/addactivity")

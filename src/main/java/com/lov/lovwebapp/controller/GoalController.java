@@ -62,12 +62,30 @@ public class GoalController {
     }
 
     @RequestMapping("/addgoalnoactivity")
-    public ModelAndView addGoalNoActivity(Model model,@RequestParam String warning) {
+    public ModelAndView addGoalNoActivity(Model model,@RequestParam String warning,@RequestParam String endpoint) {
         warning = warning.replace("_"," ");
         model.addAttribute("warning",warning);
+        model.addAttribute("endpoint",endpoint);
         return new ModelAndView("addgoalnoactivity", "goal", new Goal());
     }
 
+    @RequestMapping("/savegoalnoactivity/{endpoint}")
+    public ModelAndView saveGoalNoActivity(@PathVariable String endpoint, Goal goal, Principal principal) {
+        goal.setUser(userService.getUserByName(principal.getName()));
+        goalService.addGoal(goal);
+        switch (endpoint){
+            case "activity":
+                return new ModelAndView("redirect:/addactivity");
+
+            case "reward":
+                return new ModelAndView("redirect:/addreward");
+
+            case "penalty":
+                return new ModelAndView("redirect:/addpenalty");
+
+            default: return new ModelAndView("redirect:/goals");
+        }
+    }
 
     @RequestMapping(value = "goals/editgoal/{id}", method = RequestMethod.POST)
     public String updateGoal(@PathVariable Long id, Goal goal, Principal principal) {

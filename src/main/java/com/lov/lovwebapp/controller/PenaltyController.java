@@ -44,7 +44,7 @@ public class PenaltyController {
     public ModelAndView redirectToAddActivity(Principal principal, Model model) {
         List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
         if(!goalList.isEmpty()) return new ModelAndView("redirect:/addpenalty");
-        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_penalty");
+        return new ModelAndView("redirect:/addgoalnoactivity?warning=a_penalty&endpoint=penalty");
     }
 
     @RequestMapping("/addpenalty")

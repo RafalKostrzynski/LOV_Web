@@ -1,5 +1,8 @@
 package com.lov.lovwebapp.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +13,7 @@ public class Reward {
     private long id;
     private String contents;
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Goal goal;
 
     public Reward() {
