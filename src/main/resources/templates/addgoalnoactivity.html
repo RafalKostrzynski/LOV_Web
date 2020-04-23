@@ -37,7 +37,7 @@
         let startDate=new Date(document.getElementById("startdate").value);
         let endDate=new Date(document.getElementById("enddate").value);
         var goalName=document.getElementById("goalname").value;
-        if (goalName !== "" && startDate <= endDate && endDate>=Date.now()) {
+        if (goalName !== "" && startDate <= endDate && endDate>=Date.now().getDate()) {
             return true;
         }
         alert("Invalid data!")
