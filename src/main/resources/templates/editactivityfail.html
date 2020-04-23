@@ -10,10 +10,11 @@
 
 <a th:href="@{/redirectToActivities}"><input type="button" value="Return" id="back-button"></a>
 
+
 <div id="wrapper">
-    <h1>Create new activity!</h1>
-    <form th:action="@{/saveactivity}" th:object="${activity}" method="post" onsubmit="return validation()">
-        <p class="label"><b>This goal is too short for a weekly activity:</b></p>
+    <h1>The chosen Goal is too short for a weekly activity!</h1>
+    <form th:action="@{/activities/editactivity/{id}(id=${activity.id})}" th:object="${activity}" method="post" onsubmit="return validation()">
+        <p class="label"><b>Activity name:</b></p>
         <input id="activityDataTemplates" list="activitytemplates" name="activitytemplates" th:field="*{activityName}">
         <datalist id="activitytemplates" >
             <option value="Do pushups">Do pushups</option>
@@ -35,7 +36,7 @@
                 <option value="minutes">
                 <option value="hours">
                 <option value="repeats">
-            </datalist> </div>
+            </datalist> </div><br /><br>
         <p>Please select frequency:</p>
         <input type="radio" id="daily" name="frequency" value="daily" th:field="*{frequency}">
         <label for="daily">Daily</label><br>
@@ -47,25 +48,24 @@
         <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>
         <select id="availablegoals" th:field="*{activityGoal}">
-            <option value="-">-</option>
             <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>
         </select>
-        <input type="submit" value="Add" id="add-button"/><br /><br />
+        <input type="submit" value="Apply" id="add-button" /><br /><br />
     </form>
 </div>
-</body>
-
 
 <script>
+
     function validation() {
         var activityName=document.getElementById("activityDataTemplates").value;
         var goalName=document.getElementById("availablegoals").value;
         var activityUnit=document.getElementById("activityDataList").value;
-        if (goalName !== "-" && activityUnit !== "" && activityName !== "") {
+        if (goalName !== "-" && activityUnit !== "" && activityName !== "" ) {
             return true;
         }
         alert("Invalid data!");
         return false;
     }
 </script>
+</body>
 </html>

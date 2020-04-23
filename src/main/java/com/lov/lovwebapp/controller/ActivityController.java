@@ -82,7 +82,7 @@ public class ActivityController {
 
     @RequestMapping("/saveactivity")
     public ModelAndView saveActivity(Activity activity,Model model, Principal principal) {
-        if(DAYS.between(LocalDate.now(),activity.getActivityGoal().getGoalEndDate())<7){
+        if(activity.getFrequency().equals("weekly") && DAYS.between(LocalDate.now(),activity.getActivityGoal().getGoalEndDate())<7){
             model.addAttribute("goalList", goalService.getAllGoals(userService.getUserByName(principal.getName()).getId()));
             model.addAttribute("goalId", 0);
             return new ModelAndView("addactivitynotaweek", "activity", new Activity());
@@ -115,7 +115,12 @@ public class ActivityController {
     }
 
     @RequestMapping(value = "activities/editactivity/{id}", method = RequestMethod.POST)
-    public String updateActivity(@PathVariable Long id, Activity activity) {
+    public String updateActivity(@PathVariable Long id, Activity activity,Model model, Principal principal) {
+        if(activity.getFrequency().equals("weekly") && DAYS.between(LocalDate.now(),activity.getActivityGoal().getGoalEndDate())<7){
+            model.addAttribute("goalList", goalService.getAllGoals(userService.getUserByName(principal.getName()).getId()));
+            model.addAttribute("activity", activityService.getActivity(id));
+            return "editactivityfail";
+        }
         activityService.updateActivity(activity);
         return "redirect:/activities";
     }

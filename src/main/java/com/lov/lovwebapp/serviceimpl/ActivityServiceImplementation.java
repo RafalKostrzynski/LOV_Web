@@ -119,6 +119,7 @@ public class ActivityServiceImplementation implements ActivityService {
 
     @Override
     public boolean updateActivity(Activity activity) {
+        activity.setStartDate(LocalDate.now());
         setStringCounter(activity);
         addActivity(activity);
         return activityRepo.findById(activity.getId()).get().equals(activity);

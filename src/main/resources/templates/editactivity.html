@@ -37,6 +37,13 @@
                 <option value="hours">
                 <option value="repeats">
             </datalist> </div><br /><br>
+        <p>Please select frequency:</p>
+        <input type="radio" id="daily" name="frequency" value="daily" th:field="*{frequency}">
+        <label for="daily">Daily</label><br>
+        <input type="radio" id="weekly" name="frequency" value="weekly" th:field="*{frequency}">
+        <label for="weekly">Weekly</label><br>
+        <input type="radio" id="single_activity" name="frequency" value="single" th:field="*{frequency}">
+        <label for="weekly">Single activity</label><br>
         <p class="label"><b>Activity points:</b></p>
         <input type="number" min="1" value="1" max="5" id="activitypoints" name="activitypoints" th:field="*{activityPoints}"/> <br />
         <p class="label"><b>Choose goal for your activity:</b></p>
@@ -53,8 +60,7 @@
         var activityName=document.getElementById("activityDataTemplates").value;
         var goalName=document.getElementById("availablegoals").value;
         var activityUnit=document.getElementById("activityDataList").value;
-
-        if (goalName !== "-" && activityUnit !== "" && activityName !== "") {
+        if (goalName !== "-" && activityUnit !== "" && activityName !== "" ) {
             return true;
         }
         alert("Invalid data!");
