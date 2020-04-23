@@ -81,9 +81,12 @@ public class ActivityController {
     }
 
     @RequestMapping("/saveactivity")
-    public ModelAndView saveActivity(Activity activity) {
-        if(DAYS.between(activity.getActivityGoal().getGoalEndDate(),LocalDate.now())<7){}//TODO tutaj nowy endpoint jezeli goal nie ma trwa tygodnia od dzisiaj
-
+    public ModelAndView saveActivity(Activity activity,Model model, Principal principal) {
+        if(DAYS.between(LocalDate.now(),activity.getActivityGoal().getGoalEndDate())<7){
+            model.addAttribute("goalList", goalService.getAllGoals(userService.getUserByName(principal.getName()).getId()));
+            model.addAttribute("goalId", 0);
+            return new ModelAndView("addactivitynotaweek", "activity", new Activity());
+        }
         activityService.addActivity(activity);
         return new ModelAndView("redirect:/activities");
     }

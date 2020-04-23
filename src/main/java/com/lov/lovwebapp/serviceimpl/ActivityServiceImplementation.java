@@ -46,18 +46,24 @@ public class ActivityServiceImplementation implements ActivityService {
     public void addActivity(Activity activity) {
         Goal activityGoal = activity.getActivityGoal();
         activity.setStartDate(LocalDate.now());
-        if(activity.getFrequency().equals("daily")) {
-            activity.setCounter((int) DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()));
-            activity.setEndDateTime(LocalDateTime.now().plusDays(1));
-            activity.setCounterString(getBeginningOfCounter(activity) + "/" + DAYS.between(activity.getStartDate(),
-                    activity.getActivityGoal().getGoalEndDate()));
+        switch (activity.getFrequency()){
+            case "daily":
+                activity.setCounter((int) DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()));
+                activity.setEndDateTime(LocalDateTime.now().plusDays(1));
+                activity.setCounterString(getBeginningOfCounter(activity) + "/" + DAYS.between(activity.getStartDate(),
+                        activity.getActivityGoal().getGoalEndDate()));
+                break;
+            case "weekly":
+                activity.setCounter(((int)DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()))/7);
+                activity.setEndDateTime(LocalDateTime.now().plusDays(7));
+                activity.setCounterString(getBeginningOfCounterWeekly(activity) + "/"
+                        + (DAYS.between(activity.getStartDate(), activity.getActivityGoal().getGoalEndDate())/7));
+                break;
+            case "single":
+                activity.setCounter(0);
+                activity.setCounterString("1/1");
         }
-        else if(activity.getFrequency().equals("weekly")) {
-            activity.setCounter(((int)DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()))/7);
-            activity.setEndDateTime(LocalDateTime.now().plusDays(7));
-            activity.setCounterString(getBeginningOfCounterWeekly(activity) + "/"
-                    + (DAYS.between(activity.getStartDate(), activity.getActivityGoal().getGoalEndDate())/7));
-        }
+
         activityRepo.save(activity);
     }
 
