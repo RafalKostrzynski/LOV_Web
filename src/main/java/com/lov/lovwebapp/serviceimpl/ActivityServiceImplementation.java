@@ -4,6 +4,7 @@ import com.lov.lovwebapp.model.Activity;
 import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.repo.ActivityRepo;
+import com.lov.lovwebapp.repo.GoalRepo;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,13 @@ public class ActivityServiceImplementation implements ActivityService {
 
     private ActivityRepo activityRepo;
     private UserService userService;
+    private GoalRepo goalRepo;
 
     @Autowired
-    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService) {
+    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService,GoalRepo goalRepo) {
         this.activityRepo = activityRepo;
         this.userService = userService;
+        this.goalRepo=goalRepo;
     }
 
     @Override
@@ -63,7 +66,6 @@ public class ActivityServiceImplementation implements ActivityService {
                 activity.setCounter(0);
                 activity.setCounterString("1/1");
         }
-
         activityRepo.save(activity);
     }
 
@@ -81,6 +83,7 @@ public class ActivityServiceImplementation implements ActivityService {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
         setStringCounter(activity);
+        GoalSucceededAndFailedActivityCounter(activity,false);
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
         points = points - activity.getActivityPoints();
@@ -89,6 +92,19 @@ public class ActivityServiceImplementation implements ActivityService {
         userService.saveUser(user);
         if(activity.getCounter() <= 0)
         activityRepo.deleteById(id);
+    }
+
+    private void GoalSucceededAndFailedActivityCounter(Activity activity, boolean succeedFailed) {
+        Goal goal=activity.getActivityGoal();
+        int counter=0;
+        if(succeedFailed){
+            counter= goal.getSucceededActivityCounter();
+            goal.setSucceededActivityCounter(++counter);
+        }else{
+            counter=goal.getFailedActivityCounter();
+            goal.setFailedActivityCounter(++counter);
+        }
+        goalRepo.save(goal);
     }
 
     private Activity setStringCounter(Activity activity){
@@ -108,6 +124,7 @@ public class ActivityServiceImplementation implements ActivityService {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
         setStringCounter(activity);
+        GoalSucceededAndFailedActivityCounter(activity,true);
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
         user.setPoints(points + activity.getActivityPoints());
@@ -115,7 +132,6 @@ public class ActivityServiceImplementation implements ActivityService {
         if(activity.getCounter() <= 0)
         activityRepo.deleteById(id);
     }
-
 
     @Override
     public boolean updateActivity(Activity activity) {

@@ -20,12 +20,32 @@
 
     <div class="logout">
         <a th:href="@{/redirectToLogout}" id="logouta"><input type="button" id="logoutbutton" value="Logout"></a>
-<!--        <a href="<c:url value="/logout" id="logouta"><input type="button" id="logoutbutton" value="Logout"></a>-->
-
     </div>
     <div class="pointsbox">
         <span class="points" >Points: </span>
         <span class="points" th:text="${user.points}" ></span>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="goalsdiv">
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Points</th>
+            </tr>
+            <tr class="current-user-ranking">
+                <td th:text="${currentUserRank}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.points}"></td>
+
+            </tr>
+            <tr th:each="user: ${rankingList}" th:if="${userStat.index}<10">
+                <td th:text="${userStat.count}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.points}"></td>
+            </tr>
+        </table>
     </div>
 </div>
 

@@ -12,6 +12,8 @@ public class Goal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String goalName;
+    private int failedActivityCounter;
+    private int succeededActivityCounter;
     private @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate goalStartDate;
     private @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate goalEndDate;
     @ManyToOne
@@ -22,6 +24,22 @@ public class Goal {
         this.goalStartDate = goalStartDate;
         this.goalEndDate = goalEndDate;
         this.user=user;
+    }
+
+    public int getFailedActivityCounter() {
+        return failedActivityCounter;
+    }
+
+    public void setFailedActivityCounter(int failedActivityCounter) {
+        this.failedActivityCounter = failedActivityCounter;
+    }
+
+    public int getSucceededActivityCounter() {
+        return succeededActivityCounter;
+    }
+
+    public void setSucceededActivityCounter(int succededActivityCounter) {
+        this.succeededActivityCounter = succededActivityCounter;
     }
 
     public Goal(long id) {

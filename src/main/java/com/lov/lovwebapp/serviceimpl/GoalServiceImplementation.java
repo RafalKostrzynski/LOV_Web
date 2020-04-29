@@ -6,7 +6,6 @@ import com.lov.lovwebapp.service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +33,8 @@ public class GoalServiceImplementation implements GoalService {
     public void addGoal(Goal goal) {
         goal.setGoalStartDate(goal.getGoalStartDate().plusDays(1));
         goal.setGoalEndDate(goal.getGoalEndDate().plusDays(1));
+        goal.setFailedActivityCounter(0);
+        goal.setSucceededActivityCounter(0);
         goalRepo.save(goal);
     }
 

@@ -35,12 +35,12 @@ public class LoginController {
     @RequestMapping("/login-success")
     public String loginSuccess(Principal principal) {
         activityService.deleteExpiredActivity(principal);
+        //TODO mailer, usuwanie gola, reward (po ukonczeniu x procent aktywnosci odblokowuje), penalty (po sfailowaniu paru aktywnosci pod rzad)
         return "redirect:/main";
     }
 
     @RequestMapping("/main")
     public String main(Model model, Principal principal) {
-        //model.addAttribute("points", userService.getUserByName(principal.getName()).getPoints());
         User user = userService.getUserByName(principal.getName());
         model.addAttribute("user", user);
         return "main";
