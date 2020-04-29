@@ -1,7 +1,7 @@
 package com.lov.lovwebapp.serviceimpl;
 
 import com.lov.lovwebapp.model.Penalty;
-import com.lov.lovwebapp.model.Reward;
+import com.lov.lovwebapp.repo.GoalRepo;
 import com.lov.lovwebapp.repo.PenaltyRepo;
 import com.lov.lovwebapp.service.PenaltyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +14,12 @@ import java.util.Optional;
 public class PenaltyServiceImplementation implements PenaltyService {
 
     private PenaltyRepo penaltyRepo;
+    private GoalRepo goalRepo;
 
     @Autowired
-    public PenaltyServiceImplementation(PenaltyRepo penaltyRepo) {
+    public PenaltyServiceImplementation(PenaltyRepo penaltyRepo,GoalRepo goalRepo) {
         this.penaltyRepo = penaltyRepo;
+        this.goalRepo = goalRepo;
     }
 
     @Override
@@ -31,8 +33,8 @@ public class PenaltyServiceImplementation implements PenaltyService {
     }
 
     @Override
-    public List<Penalty> getPenaltiesByGoalName(String goalName) {
-        return penaltyRepo.findAllByGoal_GoalName(goalName);
+    public List<Penalty> getPenaltiesByGoalNameAndUserName(String goalName,long userId) {
+        return penaltyRepo.findAllByGoal_GoalNameAndGoal_User_Id(goalName, userId);
     }
 
     @Override
@@ -42,18 +44,30 @@ public class PenaltyServiceImplementation implements PenaltyService {
     }
 
     @Override
-    public void addPenalty(Penalty penalty) {
+    public void addNewPenalty(Penalty penalty) {
+        //TODO LEPIEJ ADD NEW PENALTY BO ZERUJE FAILED IN A RAW
         penalty.setFailedInARow(0);
         penaltyRepo.save(penalty);
     }
 
     @Override
+    public void addPenalty(Penalty penalty) {
+        penaltyRepo.save(penalty);
+    }
+
+
+    @Override
     public void setFailedInARow(List<Penalty> penaltyList, boolean done) {
         for(Penalty penalty:penaltyList) {
-            int value = penalty.getFailedInARowLimit();
-            if (done) {
+            int value = penalty.getFailedInARow();
+            if(done) {
                 penalty.setFailedInARow(++value);
-            } else {
+
+                if(value>=penalty.getFailedInARowLimit()) {
+                    penalty.setGoal(goalRepo.findById(1L).get());
+                }
+            }
+            else if(!done){
                 if (value >= 0) penalty.setFailedInARow(0);
             }
         }

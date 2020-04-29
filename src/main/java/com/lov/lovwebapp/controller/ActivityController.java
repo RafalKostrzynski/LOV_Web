@@ -1,12 +1,8 @@
 package com.lov.lovwebapp.controller;
 
-import com.lov.lovwebapp.model.Activity;
-import com.lov.lovwebapp.model.Goal;
-import com.lov.lovwebapp.model.User;
+import com.lov.lovwebapp.model.*;
 import com.lov.lovwebapp.repo.UserRepo;
-import com.lov.lovwebapp.service.ActivityService;
-import com.lov.lovwebapp.service.GoalService;
-import com.lov.lovwebapp.service.UserService;
+import com.lov.lovwebapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -28,13 +25,17 @@ public class ActivityController {
     private UserService userService;
     private GoalService goalService;
     private UserRepo userRepo;
+    private RewardService rewardService;
+    private PenaltyService penaltyService;
 
     @Autowired
-    public ActivityController(ActivityService activityService, UserService userService, GoalService goalService, UserRepo userRepo) {
+    public ActivityController(ActivityService activityService, UserService userService, GoalService goalService, UserRepo userRepo,RewardService rewardService,PenaltyService penaltyService) {
         this.activityService = activityService;
         this.userService = userService;
         this.goalService = goalService;
         this.userRepo = userRepo;
+        this.rewardService=rewardService;
+        this.penaltyService=penaltyService;
 
         User user = new User("admin", "admin@wp.pl",
                 "$2y$10$JpNwyaj/Hl8oklQDx9pewu8Tyi9TgH5UfPUIeB4biIE3st7dGi60m",

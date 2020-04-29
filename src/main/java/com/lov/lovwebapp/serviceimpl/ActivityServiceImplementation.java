@@ -1,8 +1,6 @@
 package com.lov.lovwebapp.serviceimpl;
 
-import com.lov.lovwebapp.model.Activity;
-import com.lov.lovwebapp.model.Goal;
-import com.lov.lovwebapp.model.User;
+import com.lov.lovwebapp.model.*;
 import com.lov.lovwebapp.repo.ActivityRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
 import com.lov.lovwebapp.service.ActivityService;
@@ -32,7 +30,8 @@ public class ActivityServiceImplementation implements ActivityService {
     private RewardService rewardService;
 
     @Autowired
-    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService,GoalRepo goalRepo,PenaltyService penaltyService,RewardService rewardService) {
+    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService,GoalRepo goalRepo,
+                                         PenaltyService penaltyService,RewardService rewardService) {
         this.activityRepo = activityRepo;
         this.userService = userService;
         this.goalRepo=goalRepo;
@@ -90,10 +89,11 @@ public class ActivityServiceImplementation implements ActivityService {
         addDuplicateActivity(activity);
         setStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,false);
+        List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
+        if(!penaltyList.isEmpty()) penaltyService.setFailedInARow(penaltyList,true);
 
-        penaltyService.setFailedInARow(penaltyService.getPenaltiesByGoalName(activity.getActivityGoal().getGoalName()),true);
-        rewardService.setPercentage(rewardService.getRewardsByGoalName(activity.getActivityGoal().getGoalName()),
-                getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
+        List<Reward> rewardList =rewardService.getRewardsByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
+        if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
 
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
@@ -112,9 +112,11 @@ public class ActivityServiceImplementation implements ActivityService {
         setStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,true);
 
-        penaltyService.setFailedInARow(penaltyService.getPenaltiesByGoalName(activity.getActivityGoal().getGoalName()),true);
-        rewardService.setPercentage(rewardService.getRewardsByGoalName(activity.getActivityGoal().getGoalName()),
-                getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
+        List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
+        if(!penaltyList.isEmpty()) penaltyService.setFailedInARow(penaltyList,false);
+
+        List<Reward> rewardList =rewardService.getRewardsByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
+        if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
 
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
@@ -139,7 +141,7 @@ public class ActivityServiceImplementation implements ActivityService {
         List<Activity> activityList = activityRepo.findAllByActivityGoal_GoalName(goalName);
         for(Activity activity:activityList){
             String counterString=activity.getCounterString();
-            value = value + Integer.parseInt(counterString.substring(counterString.indexOf("/")));
+            value = value + Integer.parseInt(counterString.substring(counterString.indexOf("/")+1));
         }
         return value;
     }
@@ -157,7 +159,7 @@ public class ActivityServiceImplementation implements ActivityService {
         goalRepo.save(goal);
     }
 
-    private Activity setStringCounter(Activity activity){
+    private void setStringCounter(Activity activity){
         if(activity.getFrequency().equals("daily")) {
             activity.setCounterString(getBeginningOfCounter(activity) + "/" + DAYS.between(activity.getStartDate(),
                     activity.getActivityGoal().getGoalEndDate()));
@@ -166,7 +168,6 @@ public class ActivityServiceImplementation implements ActivityService {
             activity.setCounterString(getBeginningOfCounterWeekly(activity) + "/"
                     + (DAYS.between(activity.getStartDate(), activity.getActivityGoal().getGoalEndDate())/7));
         }
-        return activity;
     }
 
 

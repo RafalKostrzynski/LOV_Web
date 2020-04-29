@@ -1,18 +1,23 @@
 package com.lov.lovwebapp.controller;
 
+import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.UserService;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -36,10 +41,16 @@ public class LoginController {
     }
 
     @RequestMapping("/login-success")
-    public String loginSuccess(Principal principal) {
+    public String loginSuccess(Principal principal, RedirectAttributes redirectAttributes) throws JSONException {
         activityService.deleteExpiredActivity(principal);
-        goalService.checkGoalExpiration(userService.getUserByName(principal.getName()));
-        //TODO mailer, usuwanie gola, reward (po ukonczeniu x procent aktywnosci odblokowuje), penalty (po sfailowaniu paru aktywnosci pod rzad)
+        boolean checkGoalExpiration = goalService.checkGoalExpiration(userService.getUserByName(principal.getName()));
+        JSONObject alertObj = new JSONObject();
+        if(checkGoalExpiration){
+            alertObj.put("type", "fail");
+            alertObj.put("msg", "You have gotten a penalty!");
+            redirectAttributes.addFlashAttribute("alert", alertObj);
+        }
+        //TODO mailer
         return "redirect:/main";
     }
 
@@ -65,6 +76,8 @@ public class LoginController {
         if (checkData(user)) {
             if (!checkIfTaken(user)) {
                 userService.saveUser(user, httpServletRequest);
+                Goal goal= new Goal("forAdding", LocalDate.now(), LocalDate.now().plusDays(5), user);
+                goalService.addGoal(goal);
                 email = user.getEmail();
                 return new ModelAndView("redirect:/token-sent");
             }

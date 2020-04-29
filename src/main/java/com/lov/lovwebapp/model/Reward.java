@@ -21,6 +21,10 @@ public class Reward {
     public Reward() {
     }
 
+    public Reward(String contents,int percentageLimit,Goal goal) {
+
+    }
+
     public int getPercentageLimit() {
         return percentageLimit;
     }

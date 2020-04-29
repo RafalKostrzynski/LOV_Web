@@ -1,31 +1,29 @@
 package com.lov.lovwebapp.serviceimpl;
 
-import com.lov.lovwebapp.model.Goal;
-import com.lov.lovwebapp.model.Penalty;
-import com.lov.lovwebapp.model.Reward;
-import com.lov.lovwebapp.model.User;
+import com.lov.lovwebapp.model.*;
 import com.lov.lovwebapp.repo.GoalRepo;
+import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.PenaltyService;
-import com.lov.lovwebapp.service.RewardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class GoalServiceImplementation implements GoalService {
     private GoalRepo goalRepo;
     private PenaltyService penaltyService;
-    private RewardService rewardService;
+    private ActivityService activityService;
 
     @Autowired
-    public GoalServiceImplementation(GoalRepo goalRepo,PenaltyService penaltyService,RewardService rewardService) {
+    public GoalServiceImplementation(GoalRepo goalRepo,PenaltyService penaltyService,ActivityService activityService) {
         this.goalRepo = goalRepo;
         this.penaltyService=penaltyService;
-        this.rewardService=rewardService;
+        this.activityService=activityService;
     }
 
     @Override
@@ -42,20 +40,38 @@ public class GoalServiceImplementation implements GoalService {
     }
 
     @Override
-    public void checkGoalExpiration(User user) {
+    public boolean checkGoalExpiration(User user) {
         List<Goal>goalList = goalRepo.findAllByUserId(user.getId());
+        List<Activity> activityList = activityService.getAllActivities(user.getId());
+        List<Penalty> penaltyList = penaltyService.getAllPenalties(user.getId());
+        int check=0;
         for(Goal goal:goalList){
             if(goal.getGoalEndDate().isBefore(LocalDate.now())){
-                checkActiveRewardAndPenalty(goal);
+                check += checkActivePenalty(goal,activityList,penaltyList);
                 deleteGoal(goal.getId());
             }
         }
+        return check != 0;
     }
 
-    private boolean checkActiveRewardAndPenalty(Goal goal){
-        boolean active=false;
-        return false;
-
+    private int checkActivePenalty(Goal goal, List<Activity> activityList,List<Penalty> penaltyList){
+        List<Activity> goalsActivityList = activityList.stream().filter(e->e.getActivityGoal().equals(goal)).collect(Collectors.toList());
+        List<Penalty> goalPenaltyList = penaltyList.stream().filter(e->e.getGoal().equals(goal)).collect(Collectors.toList());
+        if(!goalPenaltyList.isEmpty() && !goalsActivityList.isEmpty()) {
+            int failedActivity = 0;
+            int penaltyIndex = 0;
+            for (Activity activity : goalsActivityList) {
+                failedActivity += activity.getCounter();
+                Penalty penalty = goalPenaltyList.get(penaltyIndex);
+                if (failedActivity > penalty.getFailedInARowLimit()) {
+                    penalty.setGoal(getGoal(1L));
+                    penaltyService.addPenalty(penalty);
+                    penaltyIndex++;
+                }
+            }
+            return penaltyIndex;
+        }
+        return 0;
     }
 
     @Override

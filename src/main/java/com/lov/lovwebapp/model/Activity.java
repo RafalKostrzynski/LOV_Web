@@ -38,14 +38,14 @@ public class Activity {
         this.endDateTime = endDateTime;
     }
 
-    public Activity(long id, String activityName, String activityUnit, Goal activityGoal, int activityPoints, int activityAmount) {
-        this.id = id;
-        this.activityName = activityName;
-        this.activityUnit = activityUnit;
-        this.activityGoal = activityGoal;
-        this.activityPoints = activityPoints;
-        this.activityAmount = activityAmount;
-    }
+//    public Activity(long id, String activityName, String activityUnit, Goal activityGoal, int activityPoints, int activityAmount) {
+//        this.id = id;
+//        this.activityName = activityName;
+//        this.activityUnit = activityUnit;
+//        this.activityGoal = activityGoal;
+//        this.activityPoints = activityPoints;
+//        this.activityAmount = activityAmount;
+//    }
 
     public Activity() {
     }

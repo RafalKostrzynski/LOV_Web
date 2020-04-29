@@ -2,7 +2,6 @@ package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.Penalty;
-import com.lov.lovwebapp.model.Reward;
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.PenaltyService;
@@ -41,9 +40,9 @@ public class PenaltyController {
     }
 
     @RequestMapping("/redirectToAddPenalty")
-    public ModelAndView redirectToAddActivity(Principal principal, Model model) {
+    public ModelAndView redirectToAddActivity(Principal principal) {
         List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
-        if(!goalList.isEmpty()) return new ModelAndView("redirect:/addpenalty");
+        if (!goalList.isEmpty()) return new ModelAndView("redirect:/addpenalty");
         return new ModelAndView("redirect:/addgoalnoactivity?warning=a_penalty&endpoint=penalty");
     }
 
@@ -56,7 +55,7 @@ public class PenaltyController {
 
     @RequestMapping("/savepenalty")
     public ModelAndView savePenalty(Penalty penalty) {
-        penaltyService.addPenalty(penalty);
+        penaltyService.addNewPenalty(penalty);
         return new ModelAndView("redirect:/penalties");
     }
 

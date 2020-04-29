@@ -1,7 +1,9 @@
 package com.lov.lovwebapp.serviceimpl;
 
 import com.lov.lovwebapp.model.Reward;
+import com.lov.lovwebapp.repo.GoalRepo;
 import com.lov.lovwebapp.repo.RewardRepo;
+import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.RewardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +15,12 @@ import java.util.Optional;
 public class RewardServiceImplementation implements RewardService {
 
     private RewardRepo rewardRepo;
+    private GoalRepo goalRepo;
 
     @Autowired
-    public RewardServiceImplementation(RewardRepo rewardRepo) {
+    public RewardServiceImplementation(RewardRepo rewardRepo,GoalRepo goalRepo) {
         this.rewardRepo = rewardRepo;
+        this.goalRepo=goalRepo;
     }
 
     @Override
@@ -30,10 +34,8 @@ public class RewardServiceImplementation implements RewardService {
     }
 
     @Override
-    public List<Reward> getRewardsByGoalName(String goalName) {
-        List<Reward> rewardList= rewardRepo.findAllByGoal_GoalName(goalName);
-        if(!rewardList.isEmpty())return rewardList;
-        return null;
+    public List<Reward> getRewardsByGoalNameAndUserName(String goalName,long userId) {
+        return rewardRepo.findAllByGoal_GoalNameAndGoal_User_Id(goalName,userId);
     }
 
     @Override
@@ -49,11 +51,10 @@ public class RewardServiceImplementation implements RewardService {
     }
 
     @Override
-    public void setPercentage(List<Reward> rewardList, int allActivities, int succeededActivities) {
+    public void setPercentage(List<Reward> rewardList,int succeededActivities, int allActivities) {
         for(Reward reward:rewardList){
-
-            reward.setPercentage((succeededActivities / allActivities) * 100);
-
+            reward.setPercentage((int)(((double)succeededActivities / (double) allActivities) * 100));
+            if(reward.getPercentage()>reward.getPercentageLimit())reward.setGoal(goalRepo.findById(1L).get());
         }
         rewardRepo.saveAll(rewardList);
     }

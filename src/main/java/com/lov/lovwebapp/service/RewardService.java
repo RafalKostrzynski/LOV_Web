@@ -10,7 +10,7 @@ public interface RewardService {
 
     List<Reward> getAllActiveRewards();
 
-    List<Reward> getRewardsByGoalName(String goalName);
+    List<Reward> getRewardsByGoalNameAndUserName(String goalName, long userId);
 
     Reward getReward(Long id);
 

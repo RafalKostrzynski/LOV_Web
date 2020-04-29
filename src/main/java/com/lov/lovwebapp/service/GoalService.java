@@ -8,7 +8,7 @@ import java.util.List;
 public interface GoalService {
     List<Goal> getAllGoals(long userId);
     Goal getGoal(Long id);
-    void checkGoalExpiration(User user);
+    boolean checkGoalExpiration(User user);
     void addGoal(Goal goal);
     boolean deleteGoal(Long id);
     boolean updateGoal(Goal goal);

@@ -1,6 +1,5 @@
 package com.lov.lovwebapp.model;
 
-import jdk.internal.jline.internal.Nullable;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -21,6 +20,13 @@ public class Penalty {
 
     public Penalty() {
 
+    }
+
+    public Penalty(String contents,int failedInARow ,int failedInARowLimit, Goal goal) {
+        this.contents=contents;
+        this.failedInARow=failedInARow;
+        this.failedInARowLimit=failedInARowLimit;
+        this.goal=goal;
     }
 
     public int getFailedInARowLimit() {

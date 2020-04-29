@@ -11,9 +11,11 @@ public interface PenaltyService {
 
     List<Penalty> getAllActivePenalties();
 
-    List<Penalty> getPenaltiesByGoalName(String goalName);
+    List<Penalty> getPenaltiesByGoalNameAndUserName(String goalName, long userId);
 
     Penalty getPenalty(Long id);
+
+    void addNewPenalty(Penalty penalty);
 
     void addPenalty(Penalty penalty);
 
