@@ -2,6 +2,7 @@ package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.ActivityService;
+import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,12 +20,14 @@ public class LoginController {
 
     private UserService userService;
     private ActivityService activityService;
+    private GoalService goalService;
     private String email;
 
     @Autowired
-    public LoginController(UserService userService, ActivityService activityService) {
+    public LoginController(UserService userService, ActivityService activityService,GoalService goalService) {
         this.activityService = activityService;
         this.userService = userService;
+        this.goalService=goalService;
     }
 
     @RequestMapping("/login")
@@ -35,6 +38,7 @@ public class LoginController {
     @RequestMapping("/login-success")
     public String loginSuccess(Principal principal) {
         activityService.deleteExpiredActivity(principal);
+        goalService.checkGoalExpiration(userService.getUserByName(principal.getName()));
         //TODO mailer, usuwanie gola, reward (po ukonczeniu x procent aktywnosci odblokowuje), penalty (po sfailowaniu paru aktywnosci pod rzad)
         return "redirect:/main";
     }

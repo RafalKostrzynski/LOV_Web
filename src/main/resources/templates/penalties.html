@@ -33,10 +33,14 @@
         <table>
             <tr>
                 <th>Penalty</th>
+                <th>Failed in a row</th>
+                <th>Failed in a row Limit</th>
                 <th>Goal</th>
             </tr>
             <tr th:each="penalty: ${penaltyList}">
                 <td th:text="${penalty.contents}" />
+                <td th:text="${penalty.failedInARow}" />
+                <td th:text="${penalty.failedInARowLimit}" />
                 <td th:text="${penalty.goal.goalName}" />
                 <td>
                     <a th:href="@{/penalties/delete/{id}(id=${penalty.id})}" onclick="return deleteConfirmation()">

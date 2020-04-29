@@ -1,5 +1,6 @@
 package com.lov.lovwebapp.model;
 
+import jdk.internal.jline.internal.Nullable;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -12,12 +13,30 @@ public class Penalty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String contents;
+    private int failedInARow;
+    private int failedInARowLimit;
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Goal goal;
 
     public Penalty() {
 
+    }
+
+    public int getFailedInARowLimit() {
+        return failedInARowLimit;
+    }
+
+    public void setFailedInARowLimit(int failedInARowLimit) {
+        this.failedInARowLimit = failedInARowLimit;
+    }
+
+    public int getFailedInARow() {
+        return failedInARow;
+    }
+
+    public void setFailedInARow(int failedInARow) {
+        this.failedInARow = failedInARow;
     }
 
     public long getId() {

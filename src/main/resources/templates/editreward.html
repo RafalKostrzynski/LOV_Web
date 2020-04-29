@@ -22,6 +22,8 @@
         </select>
         <p class="label"><b>or create your own:</b></p>
         <input type="text" id="rewardcontents" name="rewardcontents" th:field="*{contents}"/> <br />
+        <p class="label"><b>Set a minimal percentage of succeeded activities for this reward to activate:</b></p>
+        <input type="number" min="50" value="50" max="100" id="rawardpercentage" name="rawardpercentage" th:field="*{percentage}"/> <br />
         <p class="label"><b>Choose goal for your reward:</b></p>
         <select id="availablegoals" th:field="*{goal}">
             <option th:each="goal: ${goalList}" th:text="${goal.goalName}" th:value="${goal.id}"></option>

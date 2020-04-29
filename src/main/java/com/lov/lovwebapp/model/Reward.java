@@ -12,11 +12,29 @@ public class Reward {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String contents;
+    private int percentage;
+    private int percentageLimit;
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Goal goal;
 
     public Reward() {
+    }
+
+    public int getPercentageLimit() {
+        return percentageLimit;
+    }
+
+    public void setPercentageLimit(int percentageLimit) {
+        this.percentageLimit = percentageLimit;
+    }
+
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(int percentage) {
+        this.percentage = percentage;
     }
 
     public long getId() {

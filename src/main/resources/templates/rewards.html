@@ -33,10 +33,14 @@
         <table>
             <tr>
                 <th>Reward</th>
+                <th>Actual Percentage</th>
+                <th>Percentage Limit</th>
                 <th>Goal</th>
             </tr>
             <tr th:each="reward: ${rewardList}">
                 <td th:text="${reward.contents}" />
+                <td th:text="${reward.percentage}" />
+                <td th:text="${reward.percentageLimit}" />
                 <td th:text="${reward.goal.goalName}" />
                 <td>
                     <a th:href="@{/rewards/delete/{id}(id=${reward.id})}" onclick="return deleteConfirmation()">

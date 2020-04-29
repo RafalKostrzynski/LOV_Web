@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ActivityRepo extends JpaRepository<Activity, Long> {
     List<Activity> findAllByActivityGoal_User_Id(long id);
-
+    List<Activity> findAllByActivityGoal_GoalName(String goalName);
 }

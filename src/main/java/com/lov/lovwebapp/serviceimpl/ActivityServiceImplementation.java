@@ -6,6 +6,8 @@ import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.repo.ActivityRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
 import com.lov.lovwebapp.service.ActivityService;
+import com.lov.lovwebapp.service.PenaltyService;
+import com.lov.lovwebapp.service.RewardService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -26,12 +28,16 @@ public class ActivityServiceImplementation implements ActivityService {
     private ActivityRepo activityRepo;
     private UserService userService;
     private GoalRepo goalRepo;
+    private PenaltyService penaltyService;
+    private RewardService rewardService;
 
     @Autowired
-    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService,GoalRepo goalRepo) {
+    public ActivityServiceImplementation(ActivityRepo activityRepo, UserService userService,GoalRepo goalRepo,PenaltyService penaltyService,RewardService rewardService) {
         this.activityRepo = activityRepo;
         this.userService = userService;
         this.goalRepo=goalRepo;
+        this.penaltyService=penaltyService;
+        this.rewardService=rewardService;
     }
 
     @Override
@@ -84,6 +90,11 @@ public class ActivityServiceImplementation implements ActivityService {
         addDuplicateActivity(activity);
         setStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,false);
+
+        penaltyService.setFailedInARow(penaltyService.getPenaltiesByGoalName(activity.getActivityGoal().getGoalName()),true);
+        rewardService.setPercentage(rewardService.getRewardsByGoalName(activity.getActivityGoal().getGoalName()),
+                getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
+
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
         points = points - activity.getActivityPoints();
@@ -92,6 +103,45 @@ public class ActivityServiceImplementation implements ActivityService {
         userService.saveUser(user);
         if(activity.getCounter() <= 0)
         activityRepo.deleteById(id);
+    }
+
+    @Override
+    public void deleteCompletedActivity(long id) {
+        Activity activity = activityRepo.findById(id).get();
+        addDuplicateActivity(activity);
+        setStringCounter(activity);
+        GoalSucceededAndFailedActivityCounter(activity,true);
+
+        penaltyService.setFailedInARow(penaltyService.getPenaltiesByGoalName(activity.getActivityGoal().getGoalName()),true);
+        rewardService.setPercentage(rewardService.getRewardsByGoalName(activity.getActivityGoal().getGoalName()),
+                getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
+
+        User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
+        int points = user.getPoints();
+        user.setPoints(points + activity.getActivityPoints());
+        userService.saveUser(user);
+        if(activity.getCounter() <= 0)
+            activityRepo.deleteById(id);
+    }
+
+    private int getMaxActivityPoints(String goalName) {
+        int value=0;
+        List<Activity> activityList = activityRepo.findAllByActivityGoal_GoalName(goalName);
+        for(Activity activity:activityList){
+            String counterString=activity.getCounterString();
+            value = value + Integer.parseInt(counterString.substring(0,counterString.indexOf("/")));
+        }
+        return value;
+    }
+
+    private int getSucceededActivityPoints(String goalName) {
+        int value=0;
+        List<Activity> activityList = activityRepo.findAllByActivityGoal_GoalName(goalName);
+        for(Activity activity:activityList){
+            String counterString=activity.getCounterString();
+            value = value + Integer.parseInt(counterString.substring(counterString.indexOf("/")));
+        }
+        return value;
     }
 
     private void GoalSucceededAndFailedActivityCounter(Activity activity, boolean succeedFailed) {
@@ -119,19 +169,6 @@ public class ActivityServiceImplementation implements ActivityService {
         return activity;
     }
 
-    @Override
-    public void deleteCompletedActivity(long id) {
-        Activity activity = activityRepo.findById(id).get();
-        addDuplicateActivity(activity);
-        setStringCounter(activity);
-        GoalSucceededAndFailedActivityCounter(activity,true);
-        User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
-        int points = user.getPoints();
-        user.setPoints(points + activity.getActivityPoints());
-        userService.saveUser(user);
-        if(activity.getCounter() <= 0)
-        activityRepo.deleteById(id);
-    }
 
     @Override
     public boolean updateActivity(Activity activity) {
