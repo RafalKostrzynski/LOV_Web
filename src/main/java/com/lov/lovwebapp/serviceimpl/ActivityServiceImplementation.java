@@ -87,29 +87,26 @@ public class ActivityServiceImplementation implements ActivityService {
     public void deleteFailedActivity(long id) {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
-        setStringCounter(activity);
+        changeStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,false);
         List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
         if(!penaltyList.isEmpty()) penaltyService.setFailedInARow(penaltyList,true);
-
-        List<Reward> rewardList =rewardService.getRewardsByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
-        if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
-
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
         points = points - activity.getActivityPoints();
         if (points < 0) points = 0;
         user.setPoints(points);
         userService.saveUser(user);
-        if(activity.getCounter() <= 0)
-        activityRepo.deleteById(id);
+        if(activity.getCounter() <= 0){
+            activityRepo.deleteById(id);
+        }
     }
 
     @Override
     public void deleteCompletedActivity(long id) {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
-        setStringCounter(activity);
+        changeStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,true);
 
         List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
@@ -122,9 +119,20 @@ public class ActivityServiceImplementation implements ActivityService {
         int points = user.getPoints();
         user.setPoints(points + activity.getActivityPoints());
         userService.saveUser(user);
-        if(activity.getCounter() <= 0)
+        if(activity.getCounter() <= 0) {
             activityRepo.deleteById(id);
+//            deleteIfNoActivityIsLeft(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
+        }
     }
+
+    private void changeStringCounter(Activity activity) {
+        String counter = activity.getCounterString();
+        int firstNumber = Integer.parseInt(counter.substring(0,counter.indexOf("/")));
+        firstNumber++;
+        String newCounter = firstNumber + counter.substring(counter.indexOf("/"));
+        activity.setCounterString(newCounter);
+    }
+
 
     private int getMaxActivityPoints(String goalName) {
         int value=0;
@@ -185,9 +193,10 @@ public class ActivityServiceImplementation implements ActivityService {
         if (counter > 0) {
             activity.setCounter(counter - 1);
             activity.setEndDateTime(activity.getEndDateTime().plusDays(1));
-
             //TODO gdzies to gowniane startDate sie dekrementuje
-            activity.setStartDate(activity.getStartDate().plusDays(1));
+//            activity.getActivityGoal().setGoalStartDate(activity.getActivityGoal().getGoalStartDate().plusDays(1));
+//            activity.getActivityGoal().setGoalEndDate(activity.getActivityGoal().getGoalEndDate().plusDays(1));
+//            activity.setStartDate(activity.getStartDate().plusDays(1));
             activityRepo.save(activity);
         }
     }

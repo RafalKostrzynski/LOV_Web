@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class PenaltyServiceImplementation implements PenaltyService {
@@ -24,13 +25,16 @@ public class PenaltyServiceImplementation implements PenaltyService {
 
     @Override
     public List<Penalty> getAllPenalties(long userId) {
-        return penaltyRepo.findAllByGoal_User_Id(userId);
+        List<Penalty> penaltyList = penaltyRepo.findAllByGoal_User_Id(userId);
+        return penaltyList.stream().filter(e->e.getFailedInARow() < e.getFailedInARowLimit()).collect(Collectors.toList());
     }
 
     @Override
-    public List<Penalty> getAllActivePenalties() {
-        return penaltyRepo.findAllByGoal_User_Id(0);
+    public List<Penalty> getAllActivePenalties(long userId) {
+        List<Penalty> penaltyList = penaltyRepo.findAllByGoal_User_Id(userId);
+        return penaltyList.stream().filter(e->e.getFailedInARow() >= e.getFailedInARowLimit()).collect(Collectors.toList());
     }
+
 
     @Override
     public List<Penalty> getPenaltiesByGoalNameAndUserName(String goalName,long userId) {
@@ -87,5 +91,10 @@ public class PenaltyServiceImplementation implements PenaltyService {
     public boolean updatePenalty(Penalty penalty) {
         addPenalty(penalty);
         return penaltyRepo.findById(penalty.getId()).get().equals(penalty);
+    }
+
+    @Override
+    public void deleteAllPenaltiesByGoal_GoalNameAndGoal_User_Id(String goalName, long userId) {
+        penaltyRepo.deleteAllByGoal_GoalNameAndGoal_User_Id(goalName,userId);
     }
 }

@@ -1,8 +1,10 @@
 package com.lov.lovwebapp.controller;
 
+import com.lov.lovwebapp.model.Activity;
 import com.lov.lovwebapp.model.Goal;
 import com.lov.lovwebapp.model.Reward;
 import com.lov.lovwebapp.model.User;
+import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.RewardService;
 import com.lov.lovwebapp.service.UserService;
@@ -22,25 +24,33 @@ public class RewardController {
     private RewardService rewardService;
     private UserService userService;
     private GoalService goalService;
+    private ActivityService activityService;
 
-    public RewardController(RewardService rewardService, UserService userService, GoalService goalService) {
+    public RewardController(RewardService rewardService, UserService userService, GoalService goalService,ActivityService activityService) {
         this.rewardService = rewardService;
         this.userService = userService;
         this.goalService = goalService;
+        this.activityService=activityService;
     }
 
     @RequestMapping("/rewards")
     public String rewards(Model model, Principal principal) {
-        model.addAttribute("rewardList", rewardService.getAllRewards(userService.getUserByName(principal.getName()).getId()));
+        long id =userService.getUserByName(principal.getName()).getId();
+        model.addAttribute("rewardList", rewardService.getAllRewards(id));
+        model.addAttribute("activeRewardList",rewardService.getAllActiveRewards(id));
         User user = userService.getUserByName(principal.getName());
         model.addAttribute("user", user);
         return "rewards";
     }
 
     @RequestMapping("/redirectToAddReward")
-    public ModelAndView redirectToAddActivity(Principal principal, Model model) {
+    public ModelAndView redirectToAddReward(Principal principal) {
         List<Goal> goalList = goalService.getAllGoals(userService.getUserByName(principal.getName()).getId());
-        if(!goalList.isEmpty()) return new ModelAndView("redirect:/addreward");
+        List<Activity> activityList = activityService.getAllActivities(userService.getUserByName(principal.getName()).getId());
+        if (!goalList.isEmpty()) {
+            if(!activityList.isEmpty()) return new ModelAndView("redirect:/addreward");
+            else return new ModelAndView("redirect:/addactivityfail?warning=a_reward&endpoint=reward");
+        }
         return new ModelAndView("redirect:/addgoalnoactivity?warning=a_reward&endpoint=reward");
     }
 

@@ -9,7 +9,7 @@ public interface PenaltyService {
 
     List<Penalty> getAllPenalties(long userId);
 
-    List<Penalty> getAllActivePenalties();
+    List<Penalty> getAllActivePenalties(long goalId);
 
     List<Penalty> getPenaltiesByGoalNameAndUserName(String goalName, long userId);
 
@@ -25,4 +25,5 @@ public interface PenaltyService {
 
     boolean updatePenalty(Penalty penalty);
 
+    void deleteAllPenaltiesByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
 }

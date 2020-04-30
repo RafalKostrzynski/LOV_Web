@@ -5,8 +5,6 @@ import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.UserService;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,22 +39,20 @@ public class LoginController {
     }
 
     @RequestMapping("/login-success")
-    public String loginSuccess(Principal principal, RedirectAttributes redirectAttributes) throws JSONException {
+    public String loginSuccess(Principal principal, RedirectAttributes redirectAttributes){
         activityService.deleteExpiredActivity(principal);
         boolean checkGoalExpiration = goalService.checkGoalExpiration(userService.getUserByName(principal.getName()));
-        JSONObject alertObj = new JSONObject();
         if(checkGoalExpiration){
-            alertObj.put("type", "fail");
-            alertObj.put("msg", "You have gotten a penalty!");
-            redirectAttributes.addFlashAttribute("alert", alertObj);
+            redirectAttributes.addAttribute("checkGoalExpiration",checkGoalExpiration);
         }
         //TODO mailer
         return "redirect:/main";
     }
 
     @RequestMapping("/main")
-    public String main(Model model, Principal principal) {
+    public String main(@RequestParam(required = false, defaultValue = "false") boolean checkGoalExpiration, Model model, Principal principal) {
         User user = userService.getUserByName(principal.getName());
+        model.addAttribute("checkGoalExpiration",checkGoalExpiration);
         model.addAttribute("user", user);
         return "main";
     }

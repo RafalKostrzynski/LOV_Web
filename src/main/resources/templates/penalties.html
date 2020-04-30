@@ -57,6 +57,28 @@
     </div>
 </div>
 
+<div class="wrapper">
+    <div class="activegoalsdiv">
+        <table>
+            <tr>
+                <th>Penalty</th>
+                <th>Failed in a row</th>
+                <th>Failed in a row Limit</th>
+            </tr>
+            <tr th:each="penalty: ${activePenaltyList}">
+                <td th:text="${penalty.contents}" />
+                <td th:text="${penalty.failedInARow}" />
+                <td th:text="${penalty.failedInARowLimit}" />
+                <td>
+                    <a th:href="@{/penalties/delete/{id}(id=${penalty.id})}" onclick="return deleteConfirmation()">
+                        <input type="button" value="Delete" id="delete-button1" >
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 
 <script>
     function deleteConfirmation() {

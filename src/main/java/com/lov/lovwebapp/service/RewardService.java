@@ -8,7 +8,7 @@ public interface RewardService {
 
     List<Reward> getAllRewards(long userId);
 
-    List<Reward> getAllActiveRewards();
+    List<Reward> getAllActiveRewards(long goalId);
 
     List<Reward> getRewardsByGoalNameAndUserName(String goalName, long userId);
 
@@ -21,5 +21,7 @@ public interface RewardService {
     boolean deleteReward(Long id);
 
     boolean updateReward(Reward reward);
+
+    void deleteAllRewardsByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
 
 }

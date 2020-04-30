@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class RewardServiceImplementation implements RewardService {
@@ -25,12 +26,14 @@ public class RewardServiceImplementation implements RewardService {
 
     @Override
     public List<Reward> getAllRewards(long userId) {
-        return rewardRepo.findAllByGoal_User_Id(userId);
+        List<Reward> rewardList = rewardRepo.findAllByGoal_User_Id(userId);
+        return rewardList.stream().filter(e->e.getPercentage() < e.getPercentageLimit()).collect(Collectors.toList());
     }
 
     @Override
-    public List<Reward> getAllActiveRewards() {
-        return rewardRepo.findAllByGoal_User_Id(0);
+    public List<Reward> getAllActiveRewards(long userId) {
+        List<Reward> rewardList = rewardRepo.findAllByGoal_User_Id(userId);
+        return rewardList.stream().filter(e->e.getPercentage()>=e.getPercentageLimit()).collect(Collectors.toList());
     }
 
     @Override
@@ -72,5 +75,10 @@ public class RewardServiceImplementation implements RewardService {
     public boolean updateReward(Reward reward) {
         addReward(reward);
         return rewardRepo.findById(reward.getId()).get().equals(reward);
+    }
+
+    @Override
+    public void deleteAllRewardsByGoal_GoalNameAndGoal_User_Id(String goalName, long userId) {
+        rewardRepo.deleteAllByGoal_GoalNameAndGoal_User_Id(goalName,userId);
     }
 }
