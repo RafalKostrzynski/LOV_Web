@@ -11,7 +11,7 @@
 <a th:href="@{/redirectToPenalties}"><input type="button" value="Return" id="back-button"></a>
 
 <div id="wrapper">
-    <h1>Edit your reward!</h1>
+    <h1>Edit your penalty!</h1>
     <form th:action="@{/penalties/editpenalty/{id}(id=${penalty.id})}" th:object="${penalty}" method="post" onsubmit="return dataValidation()">
         <p class="label"><b>Choose penalty:</b></p>
         <select id="rewardtemplates" onchange="myFunction(this)">
@@ -45,7 +45,7 @@
     }
 
     function myFunction(data) {
-        document.getElementById("rewardcontents").value=data.value;
+        document.getElementById("penaltycontents").value=data.value;
     }
 </script>
 </html>

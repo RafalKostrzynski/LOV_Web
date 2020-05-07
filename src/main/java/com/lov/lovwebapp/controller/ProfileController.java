@@ -1,6 +1,7 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.User;
+import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,11 +15,14 @@ import java.security.Principal;
 @Controller
 public class ProfileController {
 
+    private String notificationFrequency;
     private UserService userService;
+    private MailInfoService mailInfoService;
 
     @Autowired
-    public ProfileController(UserService userService) {
+    public ProfileController(UserService userService,MailInfoService mailInfoService) {
         this.userService = userService;
+        this.mailInfoService=mailInfoService;
     }
 
     @RequestMapping("/redirectToProfile")
@@ -34,6 +38,7 @@ public class ProfileController {
     @RequestMapping("/editprofile")
     public String editProfile(Principal principal, Model model) {
         User user = userService.getUserByName(principal.getName());
+
         model.addAttribute("user", user);
         return "editprofile";
     }
@@ -44,7 +49,6 @@ public class ProfileController {
         model.addAttribute("user", user);
         return "profile";
     }
-
 
     @RequestMapping(value = "/updateprofile", method = RequestMethod.POST)
     public String editProfile(User user, Principal principal) {

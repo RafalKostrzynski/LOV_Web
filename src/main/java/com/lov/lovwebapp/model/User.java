@@ -20,18 +20,28 @@ public class User implements UserDetails {
     private String password;
     private String passwordRepeat;
     private int points;
+    private String notificationFrequency;
     private boolean isEnabled;
 
     public User() {
     }
 
-    public User(String username, String email, String password, String passwordRepeat, int points, boolean isEnabled) {
+    public User(String username, String email, String password, String passwordRepeat, int points, boolean isEnabled,String notificationFrequency) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.passwordRepeat = passwordRepeat;
         this.points = points;
         this.isEnabled = isEnabled;
+        this.notificationFrequency=notificationFrequency;
+    }
+
+    public String getNotificationFrequency() {
+        return notificationFrequency;
+    }
+
+    public void setNotificationFrequency(String notificationFrequency) {
+        this.notificationFrequency = notificationFrequency;
     }
 
     public String getPasswordRepeat() {

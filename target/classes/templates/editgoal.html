@@ -29,10 +29,12 @@
         let startDate=new Date(document.getElementById("startdate").value);
         let endDate=new Date(document.getElementById("enddate").value);
         var goalName=document.getElementById("goalname").value;
-        if (goalName !== "" && startDate <= endDate) {
+        var today = new Date(Date.now());
+        today.setDate(today.getDate()-1);
+        if (goalName !== "" && startDate < endDate && startDate !== endDate && endDate > today && startDate > today && endDate !== today) {
             return true;
         }
-        alert("Invalid data!");
+        alert("Invalid data!")
         return false;
     }
 </script>

@@ -28,4 +28,5 @@ public interface UserService extends UserDetailsService {
     boolean checkIfTakenEdit(User user);
 
     void updateUser(User user, Principal principal);
+
 }

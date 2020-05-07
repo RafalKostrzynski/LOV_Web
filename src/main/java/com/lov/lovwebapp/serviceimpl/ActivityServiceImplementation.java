@@ -8,7 +8,6 @@ import com.lov.lovwebapp.service.PenaltyService;
 import com.lov.lovwebapp.service.RewardService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
@@ -20,7 +19,6 @@ import java.util.Optional;
 import static java.time.temporal.ChronoUnit.DAYS;
 
 @Service
-@EnableScheduling
 public class ActivityServiceImplementation implements ActivityService {
 
     private ActivityRepo activityRepo;
@@ -116,7 +114,7 @@ public class ActivityServiceImplementation implements ActivityService {
 
         List<Reward> rewardList =rewardService.getRewardsByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
         int maxActivityPoint = getMaxActivityPoints(activity.getActivityGoal().getGoalName());
-        int succeededActivityPoints =getSucceededActivityPoints(activity.getActivityGoal().getGoalName());
+        int succeededActivityPoints = getSucceededActivityPoints(activity.getActivityGoal().getGoalName());
         if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, maxActivityPoint,succeededActivityPoints);
         rewardService.fullPercentageReward(maxActivityPoint,succeededActivityPoints);
 
@@ -139,7 +137,6 @@ public class ActivityServiceImplementation implements ActivityService {
         String newCounter = firstNumber + counter.substring(counter.indexOf("/"));
         activity.setCounterString(newCounter);
     }
-
 
     private int getMaxActivityPoints(String goalName) {
         int value=0;

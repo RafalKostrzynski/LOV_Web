@@ -1,9 +1,14 @@
 package com.lov.lovwebapp.serviceimpl;
 
+import com.lov.lovwebapp.model.GoalForInfo;
+import com.lov.lovwebapp.model.MailerInfo;
 import com.lov.lovwebapp.model.Reward;
+import com.lov.lovwebapp.repo.GoalForInfoRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
+import com.lov.lovwebapp.repo.MailerInfoRepo;
 import com.lov.lovwebapp.repo.RewardRepo;
 import com.lov.lovwebapp.service.GoalService;
+import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.RewardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +23,15 @@ public class RewardServiceImplementation implements RewardService {
 
     private RewardRepo rewardRepo;
     private GoalRepo goalRepo;
+    private MailInfoService mailInfoService;
+    private GoalForInfoRepo goalForInfoRepo;
 
     @Autowired
-    public RewardServiceImplementation(RewardRepo rewardRepo,GoalRepo goalRepo) {
+    public RewardServiceImplementation(RewardRepo rewardRepo,GoalRepo goalRepo,MailInfoService mailInfoService,GoalForInfoRepo goalForInfoRepo) {
         this.rewardRepo = rewardRepo;
         this.goalRepo=goalRepo;
+        this.mailInfoService=mailInfoService;
+        this.goalForInfoRepo=goalForInfoRepo;
     }
 
     @Override
@@ -57,8 +66,18 @@ public class RewardServiceImplementation implements RewardService {
     @Override
     public void setPercentage(List<Reward> rewardList,int succeededActivities, int allActivities) {
         for(Reward reward:rewardList){
-            reward.setPercentage((int)(((double)succeededActivities / (double) allActivities) * 100));
-            if(reward.getPercentage()>reward.getPercentageLimit())reward.setGoal(goalRepo.findById(1L).get());
+            int result=(int)(((double)succeededActivities / (double) allActivities) * 100);
+            MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(reward.getGoal().getUser());
+            List<GoalForInfo> goalForInfoList = mailerInfo.getGoalForInfo();
+            GoalForInfo goalForInfo = goalForInfoList.stream().filter(e->e.getGoalName().equals(reward.getGoal().getGoalName())).findFirst().get();
+            goalForInfo.setPercentage(result);
+            goalForInfoRepo.save(goalForInfo);
+
+            reward.setPercentage(result);
+            if(reward.getPercentage()>reward.getPercentageLimit()){
+                reward.setGoal(goalRepo.findById(1L).get());
+
+            }
         }
         rewardRepo.saveAll(rewardList);
     }

@@ -7,7 +7,6 @@ import com.lov.lovwebapp.service.UserService;
 import com.lov.lovwebapp.service.VerificationTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -38,6 +37,7 @@ public class UserServiceImplementation implements UserService {
     @Override
     public void saveUser(User user, HttpServletRequest request) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setNotificationFrequency("disabled");
         userRepo.save(user);
 
         String url = "http://" + request.getServerName() +
@@ -96,6 +96,7 @@ public class UserServiceImplementation implements UserService {
                 && user.getUsername().matches(patternUsername);
     }
 
+
     @Override
     public boolean checkIfTaken(User user) {
         List<User> userList = getAllUsers();
@@ -117,6 +118,7 @@ public class UserServiceImplementation implements UserService {
         user.setEnabled(userBefore.isEnabled());
         user.setEmail(userBefore.getEmail());
         user.setPoints(userBefore.getPoints());
+        user.setNotificationFrequency(user.getNotificationFrequency());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setPasswordRepeat(passwordEncoder.encode(user.getPassword()));
         userRepo.save(user);

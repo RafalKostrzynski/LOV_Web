@@ -1,14 +1,18 @@
 package com.lov.lovwebapp.serviceimpl;
 
 import com.lov.lovwebapp.model.*;
+import com.lov.lovwebapp.repo.GoalForInfoRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
+import com.lov.lovwebapp.repo.MailerInfoRepo;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
+import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.PenaltyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -18,12 +22,17 @@ public class GoalServiceImplementation implements GoalService {
     private GoalRepo goalRepo;
     private PenaltyService penaltyService;
     private ActivityService activityService;
+    private GoalForInfoRepo goalForInfoRepo;
+    private MailInfoService mailInfoService;
 
     @Autowired
-    public GoalServiceImplementation(GoalRepo goalRepo,PenaltyService penaltyService,ActivityService activityService) {
+    public GoalServiceImplementation(GoalRepo goalRepo,PenaltyService penaltyService,
+                                     ActivityService activityService,GoalForInfoRepo goalForInfoRepo,MailInfoService mailInfoService) {
         this.goalRepo = goalRepo;
         this.penaltyService=penaltyService;
         this.activityService=activityService;
+        this.goalForInfoRepo=goalForInfoRepo;
+        this.mailInfoService=mailInfoService;
     }
 
     @Override
@@ -57,13 +66,20 @@ public class GoalServiceImplementation implements GoalService {
     private int checkActivePenalty(Goal goal, List<Activity> activityList,List<Penalty> penaltyList){
         List<Activity> goalsActivityList = activityList.stream().filter(e->e.getActivityGoal().equals(goal)).collect(Collectors.toList());
         List<Penalty> goalPenaltyList = penaltyList.stream().filter(e->e.getGoal().equals(goal)).collect(Collectors.toList());
+
+        MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(goal.getUser());
+        List<GoalForInfo> goalForInfoList = mailerInfo.getGoalForInfo();
+        GoalForInfo goalForInfo = goalForInfoList.stream().filter(e->e.getGoalName().equals(goal.getGoalName())).findFirst().get();
+        goalForInfo.setActive(false);
+        goalForInfoRepo.save(goalForInfo);
+
         if(!goalPenaltyList.isEmpty() && !goalsActivityList.isEmpty()) {
             int failedActivity = 0;
             int penaltyIndex = 0;
             for (Activity activity : goalsActivityList) {
                 failedActivity += activity.getCounter();
                 Penalty penalty = goalPenaltyList.get(penaltyIndex);
-                if (failedActivity > penalty.getFailedInARowLimit()) {
+                if (failedActivity > penalty.getFailedInARowLimit()){
                     penalty.setGoal(getGoal(1L));
                     penaltyService.addPenalty(penalty);
                     penaltyIndex++;
@@ -81,12 +97,24 @@ public class GoalServiceImplementation implements GoalService {
         goal.setFailedActivityCounter(0);
         goal.setSucceededActivityCounter(0);
         goalRepo.save(goal);
+        GoalForInfo goalForInfo=new GoalForInfo(goal.getGoalName(),0,true);
+        MailerInfo mailerInfo= mailInfoService.getMailerInfoByUser(goal.getUser());
+        goalForInfoRepo.save(goalForInfo);
+        List<GoalForInfo> goalForInfos=mailerInfo.getGoalForInfo();
+        goalForInfos.add(goalForInfo);
+        mailerInfo.setGoalForInfo(goalForInfos);
+        mailInfoService.saveMailerInfo(mailerInfo);
     }
 
     @Override
     public boolean deleteGoal(Long id) {
-        if (goalRepo.findById(id).isPresent()) {
+        Optional<Goal> goal = goalRepo.findById(id);
+        if (goal.isPresent()) {
             goalRepo.deleteById(id);
+            MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(goal.get().getUser());
+            List<GoalForInfo> goalForInfoList = mailerInfo.getGoalForInfo();
+            Optional<GoalForInfo> first = goalForInfoList.stream().filter(e -> e.getGoalName().equals(goal.get().getGoalName())).findFirst();
+            first.ifPresent(goalForInfo -> goalForInfoRepo.delete(goalForInfo));
             return true;
         }
         return false;

@@ -24,8 +24,13 @@ h1 {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 460px;
-    height: 430px;
+    height: 630px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#notifications{
+    text-align: left;
+    margin-left: 140px;
 }
 
 #login-wrapper{

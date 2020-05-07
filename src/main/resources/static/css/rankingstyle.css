@@ -8,7 +8,7 @@ body {
     background-size: cover;
 }
 
-#delete-button, #delete-button1{
+#delete-button{
     height: 30px;
     width: 50px;
     border: none;
@@ -36,8 +36,9 @@ body {
     transition: 0.4s;
     background: red;
 }
-#delete-button:hover, #completed-button:hover, #failed-button:hover, #delete-button1:hover{
+#delete-button:hover, #completed-button:hover, #failed-button:hover{
     background: #50B3FF;
+
 }
 
 #edit-button{
@@ -78,12 +79,10 @@ body {
 
 }
 
-
 .topnav {
     overflow: hidden;
     background-color: #1490a6;
 }
-
 
 .topnav a {
     float: left;
@@ -142,18 +141,12 @@ body {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 30%;
     height: auto;
 
 }
 
 .goalsdiv{
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.activegoalsdiv{
     background: white;
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -176,24 +169,6 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-#addgoal-button{
-    height: 30px;
-    width: auto;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 40px;
-
-    color: white;
-    font-size: 15px;
-    transition: 0.4s;
-    background: #2890E1;
-}
-
-#addgoal-button:hover{
-    background: #50B3FF;
-}
-
 .pointsbox{
     padding-top: 12px;
     position:absolute;
@@ -204,8 +179,6 @@ tr:nth-child(even) {
 }
 
 .points{
-
-
     font-size: 20px;
     color: white;
 }

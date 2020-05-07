@@ -1,9 +1,11 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.Goal;
+import com.lov.lovwebapp.model.MailerInfo;
 import com.lov.lovwebapp.model.User;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
+import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,13 +26,15 @@ public class LoginController {
     private UserService userService;
     private ActivityService activityService;
     private GoalService goalService;
+    private MailInfoService mailInfoService;
     private String email;
 
     @Autowired
-    public LoginController(UserService userService, ActivityService activityService,GoalService goalService) {
+    public LoginController(UserService userService, ActivityService activityService,GoalService goalService,MailInfoService mailInfoService) {
         this.activityService = activityService;
         this.userService = userService;
         this.goalService=goalService;
+        this.mailInfoService=mailInfoService;
     }
 
     @RequestMapping("/login")
@@ -72,6 +76,8 @@ public class LoginController {
         if (checkData(user)) {
             if (!checkIfTaken(user)) {
                 userService.saveUser(user, httpServletRequest);
+                MailerInfo mailerInfo=new MailerInfo(user);
+                mailInfoService.saveMailerInfo(mailerInfo);
                 Goal goal= new Goal("forAdding", LocalDate.now(), LocalDate.now().plusDays(5), user);
                 goalService.addGoal(goal);
                 email = user.getEmail();
