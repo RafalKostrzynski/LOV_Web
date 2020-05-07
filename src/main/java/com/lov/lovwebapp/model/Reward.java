@@ -21,8 +21,11 @@ public class Reward {
     public Reward() {
     }
 
-    public Reward(String contents,int percentageLimit,Goal goal) {
-
+    public Reward(String contents,int percentage,int percentageLimit,Goal goal) {
+        this.contents=contents;
+        this.percentage=percentage;
+        this.percentageLimit=percentageLimit;
+        this.goal=goal;
     }
 
     public int getPercentageLimit() {

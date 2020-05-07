@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -60,6 +61,15 @@ public class RewardServiceImplementation implements RewardService {
             if(reward.getPercentage()>reward.getPercentageLimit())reward.setGoal(goalRepo.findById(1L).get());
         }
         rewardRepo.saveAll(rewardList);
+    }
+
+    public void fullPercentageReward(int succeededActivities, int allActivities){
+        if((int)(((double)succeededActivities / (double) allActivities) * 100)==100) {
+            String[] rewards = {"Cheat meal", "Day off", "Beer", "Go out", "Play video games", "Read favourite book", "Buy something", "Enjoy sun", "Nap time", "Netflix"};
+            Random random = new Random();
+            Reward reward = new Reward(rewards[random.nextInt(10)], 100,100, goalRepo.findById(1L).get());
+            rewardRepo.save(reward);
+        }
     }
 
     @Override

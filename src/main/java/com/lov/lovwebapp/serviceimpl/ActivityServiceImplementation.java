@@ -108,14 +108,19 @@ public class ActivityServiceImplementation implements ActivityService {
     public void deleteCompletedActivity(long id) {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
-        changeStringCounter(activity);
+        //changeStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,true);
 
         List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
         if(!penaltyList.isEmpty()) penaltyService.setFailedInARow(penaltyList,false);
 
         List<Reward> rewardList =rewardService.getRewardsByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
-        if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, getMaxActivityPoints(activity.getActivityGoal().getGoalName()),getSucceededActivityPoints(activity.getActivityGoal().getGoalName()));
+        int maxActivityPoint = getMaxActivityPoints(activity.getActivityGoal().getGoalName());
+        int succeededActivityPoints =getSucceededActivityPoints(activity.getActivityGoal().getGoalName());
+        if(!rewardList.isEmpty()) rewardService.setPercentage(rewardList, maxActivityPoint,succeededActivityPoints);
+        rewardService.fullPercentageReward(maxActivityPoint,succeededActivityPoints);
+
+        changeStringCounter(activity);
 
         User user = userService.getUserByID(activity.getActivityGoal().getUser().getId());
         int points = user.getPoints();
