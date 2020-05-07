@@ -53,17 +53,19 @@ public class ActivityServiceImplementation implements ActivityService {
     @Override
     public void addActivity(Activity activity) {
         Goal activityGoal = activity.getActivityGoal();
-        activity.setStartDate(LocalDate.now());
+        activity.setStartDate(activityGoal.getGoalStartDate());
         switch (activity.getFrequency()){
             case "daily":
-                activity.setCounter((int) DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()));
-                activity.setEndDateTime(LocalDateTime.now().plusDays(1));
+               // activity.setCounter((int) DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()));
+                activity.setCounter((int) DAYS.between(activityGoal.getGoalStartDate(), activityGoal.getGoalEndDate()));
+                activity.setEndDateTime(LocalDateTime.now().plusDays((DAYS.between(LocalDate.now(),activityGoal.getGoalStartDate()))+1));
                 activity.setCounterString(getBeginningOfCounter(activity) + "/" + DAYS.between(activity.getStartDate(),
                         activity.getActivityGoal().getGoalEndDate()));
                 break;
             case "weekly":
-                activity.setCounter(((int)DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()))/7);
-                activity.setEndDateTime(LocalDateTime.now().plusDays(7));
+               // activity.setCounter(((int)DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()))/7);
+                activity.setCounter((int) DAYS.between(activityGoal.getGoalStartDate(), activityGoal.getGoalEndDate())/7);
+                activity.setEndDateTime(LocalDateTime.now().plusDays((DAYS.between(LocalDate.now(),activityGoal.getGoalStartDate()))+7));
                 activity.setCounterString(getBeginningOfCounterWeekly(activity) + "/"
                         + (DAYS.between(activity.getStartDate(), activity.getActivityGoal().getGoalEndDate())/7));
                 break;
