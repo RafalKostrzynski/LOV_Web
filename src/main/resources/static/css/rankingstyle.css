@@ -38,7 +38,6 @@ body {
 }
 #delete-button:hover, #completed-button:hover, #failed-button:hover{
     background: #50B3FF;
-
 }
 
 #edit-button{
@@ -79,10 +78,12 @@ body {
 
 }
 
+
 .topnav {
     overflow: hidden;
     background-color: #1490a6;
 }
+
 
 .topnav a {
     float: left;
@@ -135,7 +136,7 @@ body {
 }
 
 .wrapper{
-    margin-top: 200px;
+    margin-top: 400px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -179,6 +180,8 @@ tr:nth-child(even) {
 }
 
 .points{
+
+
     font-size: 20px;
     color: white;
 }

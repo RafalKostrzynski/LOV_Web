@@ -40,7 +40,10 @@ public class PenaltyController {
     public String penalties(Model model, Principal principal) {
         long id=userService.getUserByName(principal.getName()).getId();
         model.addAttribute("penaltyList", penaltyService.getAllPenalties(id));
-        model.addAttribute("activePenaltyList",penaltyService.getAllActivePenalties(id));
+        List<Penalty> activePenaltyList=penaltyService.getAllActivePenalties(id);
+        model.addAttribute("activePenaltyList",activePenaltyList);
+
+        model.addAttribute("checkActivePenalties", !activePenaltyList.isEmpty());
         User user = userService.getUserByName(principal.getName());
         model.addAttribute("user", user);
         return "penalties";

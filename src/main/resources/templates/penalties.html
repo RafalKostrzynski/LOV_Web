@@ -59,7 +59,7 @@
 
 <div class="wrapper">
     <div class="activegoalsdiv">
-        <table>
+        <table id="penaltyTable" th:if="${checkActivePenalties==true}" >
             <tr>
                 <th>Penalty</th>
                 <th>Failed in a row</th>
@@ -71,7 +71,7 @@
                 <td th:text="${penalty.failedInARowLimit}" />
                 <td>
                     <a th:href="@{/penalties/delete/{id}(id=${penalty.id})}" onclick="return deleteConfirmation()">
-                        <input type="button" value="Delete" id="delete-button1" >
+                        <input type="button" value="Done" id="delete-button1" >
                     </a>
                 </td>
             </tr>

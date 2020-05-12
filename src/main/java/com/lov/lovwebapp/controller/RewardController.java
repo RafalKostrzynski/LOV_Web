@@ -37,7 +37,10 @@ public class RewardController {
     public String rewards(Model model, Principal principal) {
         long id =userService.getUserByName(principal.getName()).getId();
         model.addAttribute("rewardList", rewardService.getAllRewards(id));
-        model.addAttribute("activeRewardList",rewardService.getAllActiveRewards(id));
+        List<Reward> activeRewardList=rewardService.getAllActiveRewards(id);
+        model.addAttribute("activeRewardList",activeRewardList);
+
+        model.addAttribute("checkActiveRewards", !activeRewardList.isEmpty());
         User user = userService.getUserByName(principal.getName());
         model.addAttribute("user", user);
         return "rewards";

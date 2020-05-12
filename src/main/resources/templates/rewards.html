@@ -59,7 +59,7 @@
 
 <div class="wrapper">
     <div class="activegoalsdiv">
-        <table>
+        <table id="rewardsTable"  th:if="${checkActiveRewards==true}">
             <tr>
                 <th>Active Reward</th>
                 <th>Actual Percentage</th>
@@ -68,10 +68,10 @@
             <tr th:each="reward: ${activeRewardList}">
                 <td th:text="${reward.contents}" />
                 <td th:text="${reward.percentage}" />
-                <td th:text="${reward.percentageLimit}" />
+                <td th:text="${reward.percentageLimit}"/>
                 <td>
                     <a th:href="@{/rewards/delete/{id}(id=${reward.id})}" onclick="return deleteConfirmation()">
-                        <input type="button" value="Delete" id="delete-button1" >
+                        <input type="button" value="Done" id="delete-button1" >
                     </a>
                 </td>
             </tr>
@@ -81,6 +81,7 @@
 
 
 <script>
+
     function deleteConfirmation() {
         return window.confirm("Are you sure you want to delete this reward?");
     }
