@@ -183,3 +183,8 @@ tr:nth-child(even) {
     font-size: 20px;
     color: white;
 }
+
+.current-user-ranking{
+    border: 2px solid black;
+
+}
