@@ -142,8 +142,9 @@ body {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 95%;
     height: auto;
+    max-width: 90%;
 
 }
 
@@ -151,6 +152,7 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 100%;
 }
 
 .activegoalsdiv{
@@ -163,12 +165,12 @@ table {
     padding: 20px;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
