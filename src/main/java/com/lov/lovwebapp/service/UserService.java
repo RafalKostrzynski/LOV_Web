@@ -13,7 +13,7 @@ public interface UserService extends UserDetailsService {
 
     void saveUser(User user);
 
-    void verifyToken(User user, String token);
+    void verifyToken( String token);
 
     List<User> getAllUsers();
 

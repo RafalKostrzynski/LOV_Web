@@ -127,8 +127,8 @@ public class LoginController {
     }
 
     @RequestMapping("/verify-token")
-    public ModelAndView verifyToken(@RequestParam String token, User user) {
-        userService.verifyToken(user, token);
+    public ModelAndView verifyToken(@RequestParam String token) {
+        userService.verifyToken(token);
         return new ModelAndView("redirect:/login");
     }
 }

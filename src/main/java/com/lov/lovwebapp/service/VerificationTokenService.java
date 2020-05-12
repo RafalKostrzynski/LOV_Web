@@ -19,17 +19,16 @@ public class VerificationTokenService {
     }
 
     public String sendToken(User user) {
-
         String token = UUID.randomUUID().toString();
         VerificationToken verificationToken = new VerificationToken(user,token);
-
         verificationTokenRepo.save(verificationToken);
         return token;
     }
 
-    public void verifyToken(User user, String token) {
-        user = verificationTokenRepo.findByValue(token).getUser();
+    public User verifyToken(String token) {
+        User user = verificationTokenRepo.findByValue(token).getUser();
         user.setEnabled(true);
+        return user;
     }
 
 }

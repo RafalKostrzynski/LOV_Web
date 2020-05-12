@@ -11,7 +11,7 @@ public class MailerInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @OneToOne
-    User user;
+    private User user;
 
     @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GoalForInfo> goalForInfo=new ArrayList<>();

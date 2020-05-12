@@ -37,6 +37,7 @@ public class UserServiceImplementation implements UserService {
     @Override
     public void saveUser(User user, HttpServletRequest request) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPasswordRepeat(passwordEncoder.encode(user.getPasswordRepeat()));
         user.setNotificationFrequency("disabled");
         userRepo.save(user);
 
@@ -62,8 +63,8 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public void verifyToken(User user, String token) {
-        verificationTokenService.verifyToken(user, token);
+    public void verifyToken(String token) {
+        User user = verificationTokenService.verifyToken(token);
         userRepo.save(user);
     }
 
@@ -100,7 +101,6 @@ public class UserServiceImplementation implements UserService {
     @Override
     public boolean checkIfTakenEdit(User user) {
         List<User> userList = getAllUsers();
-
         if(userList.remove(user)) return userList.stream().anyMatch(e -> e.getUsername().equals(user.getUsername()) || e.getEmail().equals(user.getEmail()));
         return false;
     }
@@ -114,7 +114,7 @@ public class UserServiceImplementation implements UserService {
         user.setPoints(userBefore.getPoints());
         user.setNotificationFrequency(user.getNotificationFrequency());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setPasswordRepeat(passwordEncoder.encode(user.getPassword()));
+        user.setPasswordRepeat(passwordEncoder.encode(user.getPasswordRepeat()));
         userRepo.save(user);
     }
 }
