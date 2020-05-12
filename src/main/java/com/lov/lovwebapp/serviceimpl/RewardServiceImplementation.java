@@ -5,9 +5,7 @@ import com.lov.lovwebapp.model.MailerInfo;
 import com.lov.lovwebapp.model.Reward;
 import com.lov.lovwebapp.repo.GoalForInfoRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
-import com.lov.lovwebapp.repo.MailerInfoRepo;
 import com.lov.lovwebapp.repo.RewardRepo;
-import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.RewardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,8 +104,4 @@ public class RewardServiceImplementation implements RewardService {
         return rewardRepo.findById(reward.getId()).get().equals(reward);
     }
 
-    @Override
-    public void deleteAllRewardsByGoal_GoalNameAndGoal_User_Id(String goalName, long userId) {
-        rewardRepo.deleteAllByGoal_GoalNameAndGoal_User_Id(goalName,userId);
-    }
 }

@@ -12,7 +12,8 @@ public class MailerInfo {
     private long id;
     @OneToOne
     User user;
-    @OneToMany(fetch = FetchType.EAGER)
+
+    @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GoalForInfo> goalForInfo=new ArrayList<>();
 
     public MailerInfo() {

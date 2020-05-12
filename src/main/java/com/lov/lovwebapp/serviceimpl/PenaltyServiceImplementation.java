@@ -49,7 +49,6 @@ public class PenaltyServiceImplementation implements PenaltyService {
 
     @Override
     public void addNewPenalty(Penalty penalty) {
-        //TODO LEPIEJ ADD NEW PENALTY BO ZERUJE FAILED IN A RAW
         penalty.setFailedInARow(0);
         penaltyRepo.save(penalty);
     }
@@ -93,8 +92,4 @@ public class PenaltyServiceImplementation implements PenaltyService {
         return penaltyRepo.findById(penalty.getId()).get().equals(penalty);
     }
 
-    @Override
-    public void deleteAllPenaltiesByGoal_GoalNameAndGoal_User_Id(String goalName, long userId) {
-        penaltyRepo.deleteAllByGoal_GoalNameAndGoal_User_Id(goalName,userId);
-    }
 }

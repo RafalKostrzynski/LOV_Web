@@ -98,12 +98,6 @@ public class UserServiceImplementation implements UserService {
 
 
     @Override
-    public boolean checkIfTaken(User user) {
-        List<User> userList = getAllUsers();
-        return userList.stream().anyMatch(e -> e.getUsername().equals(user.getUsername()) || e.getEmail().equals(user.getEmail()));
-    }
-
-    @Override
     public boolean checkIfTakenEdit(User user) {
         List<User> userList = getAllUsers();
 

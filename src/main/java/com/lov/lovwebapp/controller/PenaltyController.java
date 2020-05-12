@@ -71,7 +71,6 @@ public class PenaltyController {
 
     @RequestMapping("/saveactivityfail/{endpoint}")
     public ModelAndView saveActivityFail(@PathVariable String endpoint, Activity activity) {
-        //goal.setUser(userService.getUserByName(principal.getName()));
         activityService.addActivity(activity);
         switch (endpoint) {
             case "reward":
@@ -88,7 +87,6 @@ public class PenaltyController {
     @RequestMapping("/addpenalty")
     public ModelAndView addPenalty(Model model, Principal principal) {
         model.addAttribute("goalList", goalService.getAllGoals(userService.getUserByName(principal.getName()).getId()));
-        //model.addAttribute("goalId", 0);
         return new ModelAndView("addpenalty", "penalty", new Penalty());
     }
 

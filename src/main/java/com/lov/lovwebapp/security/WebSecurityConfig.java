@@ -44,8 +44,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/ranking/**").authenticated()
                 .and()
                 .formLogin().loginPage("/login").defaultSuccessUrl("/login-success").permitAll()
-//                .and()
-//                .rememberMe().tokenRepository(persistentTokenRepository())
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
     }

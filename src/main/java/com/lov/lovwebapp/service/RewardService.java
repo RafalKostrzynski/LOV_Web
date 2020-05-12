@@ -22,8 +22,6 @@ public interface RewardService {
 
     boolean updateReward(Reward reward);
 
-    void deleteAllRewardsByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
-
     void fullPercentageReward(int succeededActivities, int allActivities);
 
 }

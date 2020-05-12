@@ -49,7 +49,6 @@ public class LoginController {
         if(checkGoalExpiration){
             redirectAttributes.addAttribute("checkGoalExpiration",checkGoalExpiration);
         }
-        //TODO mailer
         return "redirect:/main";
     }
 
@@ -78,7 +77,7 @@ public class LoginController {
                 userService.saveUser(user, httpServletRequest);
                 MailerInfo mailerInfo=new MailerInfo(user);
                 mailInfoService.saveMailerInfo(mailerInfo);
-                Goal goal= new Goal("forAdding", LocalDate.now(), LocalDate.now().plusDays(5), user);
+                Goal goal= new Goal("forAdding", LocalDate.now(), LocalDate.now().plusYears(10), user);
                 goalService.addGoal(goal);
                 email = user.getEmail();
                 return new ModelAndView("redirect:/token-sent");

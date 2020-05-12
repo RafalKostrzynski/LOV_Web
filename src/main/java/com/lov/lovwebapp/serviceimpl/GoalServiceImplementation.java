@@ -3,7 +3,6 @@ package com.lov.lovwebapp.serviceimpl;
 import com.lov.lovwebapp.model.*;
 import com.lov.lovwebapp.repo.GoalForInfoRepo;
 import com.lov.lovwebapp.repo.GoalRepo;
-import com.lov.lovwebapp.repo.MailerInfoRepo;
 import com.lov.lovwebapp.service.ActivityService;
 import com.lov.lovwebapp.service.GoalService;
 import com.lov.lovwebapp.service.MailInfoService;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -26,13 +24,13 @@ public class GoalServiceImplementation implements GoalService {
     private MailInfoService mailInfoService;
 
     @Autowired
-    public GoalServiceImplementation(GoalRepo goalRepo,PenaltyService penaltyService,
-                                     ActivityService activityService,GoalForInfoRepo goalForInfoRepo,MailInfoService mailInfoService) {
+    public GoalServiceImplementation(GoalRepo goalRepo, PenaltyService penaltyService,
+                                     ActivityService activityService, GoalForInfoRepo goalForInfoRepo, MailInfoService mailInfoService) {
         this.goalRepo = goalRepo;
-        this.penaltyService=penaltyService;
-        this.activityService=activityService;
-        this.goalForInfoRepo=goalForInfoRepo;
-        this.mailInfoService=mailInfoService;
+        this.penaltyService = penaltyService;
+        this.activityService = activityService;
+        this.goalForInfoRepo = goalForInfoRepo;
+        this.mailInfoService = mailInfoService;
     }
 
     @Override
@@ -50,36 +48,36 @@ public class GoalServiceImplementation implements GoalService {
 
     @Override
     public boolean checkGoalExpiration(User user) {
-        List<Goal>goalList = goalRepo.findAllByUserId(user.getId());
+        List<Goal> goalList = goalRepo.findAllByUserId(user.getId());
         List<Activity> activityList = activityService.getAllActivities(user.getId());
         List<Penalty> penaltyList = penaltyService.getAllPenalties(user.getId());
-        int check=0;
-        for(Goal goal:goalList){
-            if(goal.getGoalEndDate().isBefore(LocalDate.now())){
-                check += checkActivePenalty(goal,activityList,penaltyList);
+        int check = 0;
+        for (Goal goal : goalList) {
+            if (goal.getGoalEndDate().isBefore(LocalDate.now())) {
+                check += checkActivePenalty(goal, activityList, penaltyList);
                 deleteGoal(goal.getId());
             }
         }
         return check != 0;
     }
 
-    private int checkActivePenalty(Goal goal, List<Activity> activityList,List<Penalty> penaltyList){
-        List<Activity> goalsActivityList = activityList.stream().filter(e->e.getActivityGoal().equals(goal)).collect(Collectors.toList());
-        List<Penalty> goalPenaltyList = penaltyList.stream().filter(e->e.getGoal().equals(goal)).collect(Collectors.toList());
+    private int checkActivePenalty(Goal goal, List<Activity> activityList, List<Penalty> penaltyList) {
+        List<Activity> goalsActivityList = activityList.stream().filter(e -> e.getActivityGoal().equals(goal)).collect(Collectors.toList());
+        List<Penalty> goalPenaltyList = penaltyList.stream().filter(e -> e.getGoal().equals(goal)).collect(Collectors.toList());
 
         MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(goal.getUser());
         List<GoalForInfo> goalForInfoList = mailerInfo.getGoalForInfo();
-        GoalForInfo goalForInfo = goalForInfoList.stream().filter(e->e.getGoalName().equals(goal.getGoalName())).findFirst().get();
+        GoalForInfo goalForInfo = goalForInfoList.stream().filter(e -> e.getGoalName().equals(goal.getGoalName())).findFirst().get();
         goalForInfo.setActive(false);
         goalForInfoRepo.save(goalForInfo);
 
-        if(!goalPenaltyList.isEmpty() && !goalsActivityList.isEmpty()) {
+        if (!goalPenaltyList.isEmpty() && !goalsActivityList.isEmpty()) {
             int failedActivity = 0;
             int penaltyIndex = 0;
             for (Activity activity : goalsActivityList) {
                 failedActivity += activity.getCounter();
                 Penalty penalty = goalPenaltyList.get(penaltyIndex);
-                if (failedActivity > penalty.getFailedInARowLimit()){
+                if (failedActivity > penalty.getFailedInARowLimit()) {
                     penalty.setGoal(getGoal(1L));
                     penaltyService.addPenalty(penalty);
                     penaltyIndex++;
@@ -97,10 +95,10 @@ public class GoalServiceImplementation implements GoalService {
         goal.setFailedActivityCounter(0);
         goal.setSucceededActivityCounter(0);
         goalRepo.save(goal);
-        GoalForInfo goalForInfo=new GoalForInfo(goal.getGoalName(),0,true);
-        MailerInfo mailerInfo= mailInfoService.getMailerInfoByUser(goal.getUser());
+        MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(goal.getUser());
+        GoalForInfo goalForInfo = new GoalForInfo(goal.getGoalName(), 0, true, mailerInfo);
         goalForInfoRepo.save(goalForInfo);
-        List<GoalForInfo> goalForInfos=mailerInfo.getGoalForInfo();
+        List<GoalForInfo> goalForInfos = mailerInfo.getGoalForInfo();
         goalForInfos.add(goalForInfo);
         mailerInfo.setGoalForInfo(goalForInfos);
         mailInfoService.saveMailerInfo(mailerInfo);
@@ -114,7 +112,11 @@ public class GoalServiceImplementation implements GoalService {
             MailerInfo mailerInfo = mailInfoService.getMailerInfoByUser(goal.get().getUser());
             List<GoalForInfo> goalForInfoList = mailerInfo.getGoalForInfo();
             Optional<GoalForInfo> first = goalForInfoList.stream().filter(e -> e.getGoalName().equals(goal.get().getGoalName())).findFirst();
-            first.ifPresent(goalForInfo -> goalForInfoRepo.delete(goalForInfo));
+            if (first.isPresent()) {
+                goalForInfoList.remove(first.get());
+                mailerInfo.setGoalForInfo(goalForInfoList);
+                mailInfoService.saveMailerInfo(mailerInfo);
+            }
             return true;
         }
         return false;

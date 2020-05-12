@@ -8,6 +8,4 @@ import java.util.List;
 public interface RewardRepo extends JpaRepository<Reward, Long> {
     List<Reward> findAllByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
     List<Reward> findAllByGoal_User_Id(long id);
-    List<Reward> findAllByGoal_Id(long id);
-    void deleteAllByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
 }

@@ -1,9 +1,6 @@
 package com.lov.lovwebapp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class GoalForInfo {
@@ -13,14 +10,26 @@ public class GoalForInfo {
     private String goalName;
     private int percentage;
     private boolean active;
+    @ManyToOne
+    @JoinColumn
+    private MailerInfo parent;
 
     public GoalForInfo() {
     }
 
-    public GoalForInfo(String goalName, int percentage, boolean active) {
+    public GoalForInfo(String goalName, int percentage, boolean active, MailerInfo mailerInfo) {
         this.goalName=goalName;
         this.percentage=percentage;
         this.active=active;
+        this.parent=mailerInfo;
+    }
+
+    public MailerInfo getParent() {
+        return parent;
+    }
+
+    public void setParent(MailerInfo parent) {
+        this.parent = parent;
     }
 
     public long getId() {

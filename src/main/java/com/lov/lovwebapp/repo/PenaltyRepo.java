@@ -8,7 +8,4 @@ import java.util.List;
 public interface PenaltyRepo extends JpaRepository<Penalty, Long> {
     List<Penalty> findAllByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
     List<Penalty> findAllByGoal_User_Id(long id);
-    List<Penalty> findAllByGoal_Id(long id);
-    void deleteAllByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
-
 }

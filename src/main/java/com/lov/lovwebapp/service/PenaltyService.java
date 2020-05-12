@@ -1,7 +1,6 @@
 package com.lov.lovwebapp.service;
 
 import com.lov.lovwebapp.model.Penalty;
-import com.lov.lovwebapp.model.Reward;
 
 import java.util.List;
 
@@ -25,5 +24,4 @@ public interface PenaltyService {
 
     boolean updatePenalty(Penalty penalty);
 
-    void deleteAllPenaltiesByGoal_GoalNameAndGoal_User_Id(String goalName, long userId);
 }

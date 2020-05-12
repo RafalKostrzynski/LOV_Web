@@ -15,7 +15,6 @@ import java.security.Principal;
 @Controller
 public class ProfileController {
 
-    private String notificationFrequency;
     private UserService userService;
     private MailInfoService mailInfoService;
 
@@ -38,7 +37,6 @@ public class ProfileController {
     @RequestMapping("/editprofile")
     public String editProfile(Principal principal, Model model) {
         User user = userService.getUserByName(principal.getName());
-
         model.addAttribute("user", user);
         return "editprofile";
     }

@@ -54,14 +54,12 @@ public class ActivityServiceImplementation implements ActivityService {
         activity.setStartDate(activityGoal.getGoalStartDate());
         switch (activity.getFrequency()){
             case "daily":
-               // activity.setCounter((int) DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()));
                 activity.setCounter((int) DAYS.between(activityGoal.getGoalStartDate(), activityGoal.getGoalEndDate()));
                 activity.setEndDateTime(LocalDateTime.now().plusDays((DAYS.between(LocalDate.now(),activityGoal.getGoalStartDate()))+1));
                 activity.setCounterString(getBeginningOfCounter(activity) + "/" + DAYS.between(activity.getStartDate(),
                         activity.getActivityGoal().getGoalEndDate()));
                 break;
             case "weekly":
-               // activity.setCounter(((int)DAYS.between(LocalDate.now(), activityGoal.getGoalEndDate()))/7);
                 activity.setCounter((int) DAYS.between(activityGoal.getGoalStartDate(), activityGoal.getGoalEndDate())/7);
                 activity.setEndDateTime(LocalDateTime.now().plusDays((DAYS.between(LocalDate.now(),activityGoal.getGoalStartDate()))+7));
                 activity.setCounterString(getBeginningOfCounterWeekly(activity) + "/"
@@ -106,7 +104,6 @@ public class ActivityServiceImplementation implements ActivityService {
     public void deleteCompletedActivity(long id) {
         Activity activity = activityRepo.findById(id).get();
         addDuplicateActivity(activity);
-        //changeStringCounter(activity);
         GoalSucceededAndFailedActivityCounter(activity,true);
 
         List<Penalty> penaltyList =penaltyService.getPenaltiesByGoalNameAndUserName(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
@@ -126,7 +123,6 @@ public class ActivityServiceImplementation implements ActivityService {
         userService.saveUser(user);
         if(activity.getCounter() <= 0) {
             activityRepo.deleteById(id);
-//            deleteIfNoActivityIsLeft(activity.getActivityGoal().getGoalName(),activity.getActivityGoal().getUser().getId());
         }
     }
 
@@ -197,10 +193,6 @@ public class ActivityServiceImplementation implements ActivityService {
         if (counter > 0) {
             activity.setCounter(counter - 1);
             activity.setEndDateTime(activity.getEndDateTime().plusDays(1));
-            //TODO gdzies to gowniane startDate sie dekrementuje
-//            activity.getActivityGoal().setGoalStartDate(activity.getActivityGoal().getGoalStartDate().plusDays(1));
-//            activity.getActivityGoal().setGoalEndDate(activity.getActivityGoal().getGoalEndDate().plusDays(1));
-//            activity.setStartDate(activity.getStartDate().plusDays(1));
             activityRepo.save(activity);
         }
     }
@@ -209,7 +201,7 @@ public class ActivityServiceImplementation implements ActivityService {
     public void deleteExpiredActivity(Principal principal) {
         List<Activity> activityList = activityRepo.findAllByActivityGoal_User_Id(userService.getUserByName(principal.getName()).getId());
         for (Activity activity : activityList) {
-            if (activity.getEndDateTime().isAfter(LocalDateTime.now())) {
+            if (activity.getEndDateTime().isBefore(LocalDateTime.now())) {
                 deleteFailedActivity(activity.getId());
             }
         }
