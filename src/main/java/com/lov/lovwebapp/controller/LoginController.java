@@ -37,6 +37,11 @@ public class LoginController {
         this.mailInfoService=mailInfoService;
     }
 
+    @RequestMapping("/")
+    public String defaultRedirect() {
+        return "login";
+    }
+
     @RequestMapping("/login")
     public String login() {
         return "login";

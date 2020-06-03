@@ -1,7 +1,6 @@
 package com.lov.lovwebapp.controller;
 
 import com.lov.lovwebapp.model.User;
-import com.lov.lovwebapp.service.MailInfoService;
 import com.lov.lovwebapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +15,10 @@ import java.security.Principal;
 public class ProfileController {
 
     private UserService userService;
-    private MailInfoService mailInfoService;
 
     @Autowired
-    public ProfileController(UserService userService,MailInfoService mailInfoService) {
+    public ProfileController(UserService userService) {
         this.userService = userService;
-        this.mailInfoService=mailInfoService;
     }
 
     @RequestMapping("/redirectToProfile")

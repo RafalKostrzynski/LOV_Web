@@ -32,7 +32,7 @@ public class ActivityController {
 
     @Autowired
     public ActivityController(ActivityService activityService, UserService userService,
-                              GoalService goalService, UserRepo userRepo,MailInfoService mailInfoService) {
+                              GoalService goalService) {
         this.activityService = activityService;
         this.userService = userService;
         this.goalService = goalService;
