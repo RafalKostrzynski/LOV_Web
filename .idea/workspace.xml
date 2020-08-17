@@ -2,28 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b63de0e-4260-4c50-af8b-4559b74a2367" name="LW-75 Dodawanie aktywności cyklicznie" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/model/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/ActivityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/ActivityServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/ActivityServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lovwebapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lovwebapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addactivity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addpenalty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addreward.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editpenalty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editpenalty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/penalties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/rewards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/rewards.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/LovwebappApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/LovwebappApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/Goal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/Goal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/VerificationToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/model/VerificationToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/GoalRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/GoalRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/UserRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/VerificationTokenRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/repo/VerificationTokenRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/GoalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/GoalService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/MailSenderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/MailSenderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/VerificationTokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/service/VerificationTokenService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/serviceimpl/UserServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lov/lovwebapp/LovwebappApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lov/lovwebapp/LovwebappApplicationTests.class" afterDir="false" />
     </list>
     <list id="2015d9fb-b7e6-4e24-b550-8bbc64688f8d" name="Default Changelist" comment="" />
     <list id="1a2c9dbe-f24d-43de-bead-da43daa4e39c" name="LW-27 Baza danych użytkowników" comment="" />
@@ -47,15 +47,7 @@
     <list id="a6e49b36-30de-4c8a-a0a3-73cb8710bf65" name="LW-59 Potwierdzenie usuwania" comment="" />
     <list id="4fc504ee-7663-49cf-891b-0ec559f9f948" name="LW-60 Pola unit i amount obok siebie" comment="" />
     <list id="1bdcfcad-7d66-4233-bab7-2f73bd4d7b8b" name="LW-62 Logika biznesowa dodawania kary" comment="" />
-    <list id="f717ae48-2817-4ed0-a65f-4d2bb21ea120" name="LW-64 Logika biznesowa edycji kary" comment="LW-64 Logika biznesowa edycji kary">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editprofile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lov/lovwebapp/controller/GoalController.class" afterDir="false" />
-    </list>
+    <list id="f717ae48-2817-4ed0-a65f-4d2bb21ea120" name="LW-64 Logika biznesowa edycji kary" comment="LW-64 Logika biznesowa edycji kary" />
     <list id="50e8e552-ce38-4ea2-b0e6-ce58e816037c" name="LW-66 Logika dodawania nagrody" comment="" />
     <list id="6ad83a1f-de5f-45bd-b355-5c38d7286fad" name="LW-74 Logika usuwania kary" comment="LW-74 Logika usuwania kary" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,76 +90,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/resources/templates/activities.html">
-      <ranges>
-        <range start1="35" end1="35" start2="35" end2="37" changelist="f717ae48-2817-4ed0-a65f-4d2bb21ea120" />
-        <range start1="52" end1="52" start2="54" end2="55" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="20" changelist="f717ae48-2817-4ed0-a65f-4d2bb21ea120" />
-        <range start1="3" end1="6" start2="21" end2="22" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="7" end1="8" start2="23" end2="34" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="10" end1="11" start2="36" end2="37" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="12" end1="13" start2="38" end2="44" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="35" end1="37" start2="66" end2="75" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="39" end1="42" start2="77" end2="78" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="77" end1="78" start2="113" end2="114" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="83" end1="84" start2="119" end2="132" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="85" end1="87" start2="133" end2="185" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="106" end1="107" start2="204" end2="204" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="120" end1="121" start2="217" end2="218" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="136" end1="136" start2="233" end2="240" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="138" end1="141" start2="242" end2="242" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="154" end1="160" start2="255" end2="257" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="583" end1="584" start2="680" end2="680" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="597" end1="598" start2="693" end2="693" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="650" end1="651" start2="745" end2="746" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="661" end1="663" start2="756" end2="791" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="669" end1="670" start2="797" end2="798" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="671" end1="672" start2="799" end2="800" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="703" end1="704" start2="831" end2="833" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="710" end1="712" start2="839" end2="841" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="715" end1="718" start2="844" end2="847" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="720" end1="721" start2="849" end2="851" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="724" end1="725" start2="854" end2="855" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="734" end1="734" start2="864" end2="868" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="743" end1="744" start2="877" end2="878" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="747" end1="748" start2="881" end2="882" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="749" end1="750" start2="883" end2="884" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="754" end1="755" start2="888" end2="889" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="760" end1="761" start2="894" end2="895" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="765" end1="768" start2="899" end2="902" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="772" end1="775" start2="906" end2="909" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="779" end1="782" start2="913" end2="916" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="786" end1="789" start2="920" end2="923" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="793" end1="796" start2="927" end2="930" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="800" end1="803" start2="934" end2="937" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="807" end1="810" start2="941" end2="944" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="814" end1="818" start2="948" end2="952" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="820" end1="821" start2="954" end2="955" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="822" end1="824" start2="956" end2="958" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="826" end1="827" start2="960" end2="961" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="828" end1="830" start2="962" end2="964" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="832" end1="833" start2="966" end2="967" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="834" end1="836" start2="968" end2="970" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="838" end1="839" start2="972" end2="973" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="845" end1="847" start2="979" end2="981" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="850" end1="852" start2="984" end2="986" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="856" end1="857" start2="990" end2="991" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="867" end1="867" start2="1001" end2="1005" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-        <range start1="883" end1="883" start2="1021" end2="1025" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/lov/lovwebapp/controller/ActivityController.java">
-      <ranges>
-        <range start1="41" end1="53" start2="41" end2="54" changelist="f717ae48-2817-4ed0-a65f-4d2bb21ea120" />
-        <range start1="57" end1="57" start2="58" end2="59" changelist="9b63de0e-4260-4c50-af8b-4559b74a2367" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -190,7 +112,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.jetbrains.youtrack.notifications" value="114-4499" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -198,9 +120,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="tasks.open.task.update.state.enabled" value="true" />
@@ -753,6 +675,7 @@
       <workItem from="1587122682756" duration="27000" />
       <workItem from="1587561833610" duration="12595000" />
       <workItem from="1587574745819" duration="435000" />
+      <workItem from="1597658804351" duration="4015000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />
@@ -798,195 +721,61 @@
     <option name="LAST_COMMIT_MESSAGE" value="LW-76 username przy edycji profilu" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="447" y="119" key="#Project_Structure" timestamp="1584635662561">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="447" y="119" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1584635662561" />
-    <state x="447" y="119" key="#Servers" timestamp="1587044708682">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="503" y="135" key="#Servers/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440430737" />
-    <state x="402" y="107" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1587034742050" />
-    <state x="447" y="119" key="#Servers/0.0.1707.920@0.0.1707.920" timestamp="1587044708682" />
-    <state x="613" y="242" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1587046203028">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1584547627863" />
-    <state x="613" y="242" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1587046203028" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1587573517174">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1597658855371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585251186118" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587573517174" />
-    <state x="680" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1586352612317" />
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587038227862">
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1597658855371" />
+    <state x="524" y="115" key="#xdebugger.evaluate" timestamp="1597662603030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587038227862" />
-    <state x="462" y="386" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585227454240">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="462" y="386" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1707.920@0.0.1707.920" timestamp="1585227454240" />
-    <state x="639" y="330" width="429" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587044851291">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="639" y="330" width="429" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1707.920@0.0.1707.920" timestamp="1587044851291" />
-    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585826796847">
+    <state x="524" y="115" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1597662603030" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1597662686442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1585826796847" />
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587035215764">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597662686442" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1597662686442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587035215764" />
-    <state x="555" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1585144241808" />
-    <state x="586" y="346" width="488" height="472" key="#xdebugger.evaluate" timestamp="1587571186003">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597662686442" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1597662686441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="826" y="208" width="450" height="595" key="#xdebugger.evaluate/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585254587800" />
-    <state x="586" y="346" width="488" height="472" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1587571186003" />
-    <state x="734" y="184" width="667" height="592" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1585150021739" />
-    <state x="480" y="55" key="CommitChangelistDialog2" timestamp="1587045109732">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="540" y="62" key="CommitChangelistDialog2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255006136" />
-    <state x="432" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585842713995" />
-    <state x="480" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587045109732" />
-    <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1586351098489">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="571" y="193" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585136114624" />
-    <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1586351098489" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597662686441" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1597662686442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
-    <state width="1323" height="407" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597662686442" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
-    <state width="1323" height="407" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
-    <state width="1323" height="407" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631515" />
-    <state width="1323" height="407" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1587574444434">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.1.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
-    <state width="1323" height="407" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587574444434" />
-    <state width="1664" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1597662677787">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.1.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
-    <state width="1323" height="407" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597662677787" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.1.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
-    <state width="1323" height="407" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1587574444433">
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="571" key="GridCell.Tab.1.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441631516" />
-    <state width="1323" height="407" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585296456176" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587574444433" />
-    <state width="1664" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1587048160168" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1587574444434">
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1597662677786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587574444434" />
-    <state width="1664" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1587574444434">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1587574444434" />
-    <state width="1664" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1587574444434">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1587574444434" />
-    <state width="1664" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1587574444434">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255261220" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1587574444434" />
-    <state width="1664" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1586353662188" />
-    <state x="409" y="116" key="SettingsEditor" timestamp="1586440498186">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="409" y="116" key="SettingsEditor/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586440498186" />
-    <state x="364" y="103" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1584619927993" />
-    <state x="494" y="197" key="SimpleOpenTaskDialog" timestamp="1587045454190">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="673" y="312" key="SimpleOpenTaskDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586441534520" />
-    <state x="538" y="247" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1587038631213" />
-    <state x="494" y="197" key="SimpleOpenTaskDialog/0.0.1707.920@0.0.1707.920" timestamp="1587045454190" />
-    <state x="447" y="194" key="Vcs.Push.Dialog.v2" timestamp="1587045261385">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="503" y="219" key="Vcs.Push.Dialog.v2/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585255238830" />
-    <state x="402" y="174" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585842725981" />
-    <state x="447" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1587045261385" />
-    <state width="859" height="466" key="XDebugger.FullValuePopup" timestamp="1584631176061">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="859" height="466" key="XDebugger.FullValuePopup/0.0.1707.920@0.0.1707.920" timestamp="1584631176061" />
-    <state x="426" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1587032035060">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="533" y="267" key="com.intellij.ide.util.TipDialog/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586436344701" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585296537917" />
-    <state x="426" y="212" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587032035060" />
-    <state x="666" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587047927409">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="666" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920@0.0.1707.920" timestamp="1587047927409" />
-    <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1585242732109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="125" width="607" height="789" key="find.popup/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585242732109" />
-    <state x="401" y="132" width="1138" height="596" key="new project wizard" timestamp="1585312677743">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="401" y="132" width="1138" height="596" key="new project wizard/0.0.1707.920@0.0.1707.920" timestamp="1585312677743" />
-    <state x="511" y="43" key="refactoring.ChangeSignatureDialog" timestamp="1585136374923">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="511" y="43" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1585136374923" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1585241598841">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/-1366.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1585241598841" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587568482502">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587568482502" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1597662677786" />
   </component>
 </project>
